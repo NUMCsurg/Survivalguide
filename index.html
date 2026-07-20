@@ -382,7 +382,7 @@
    AUTHOR_MODE = false → resident build: content is read-only & always from SEED,
                           only checkbox states persist on the resident's device. */
 const AUTHOR_MODE = false;
-const CONTENT_VERSION = "2026.06.29";   // bump this whenever you publish new content
+const CONTENT_VERSION = "2026.07.19";   // bump this whenever you publish new content
 
 const STORE_KEY = "surgical_cards_v1";          // author-mode full state
 const CHECK_KEY = "surgical_cards_checks_v1";    // resident-mode checkbox states only
@@ -464,7 +464,7 @@ const SEED = {
           ],
           procedures: [
             { name:"Robotic Sleeve Gastrectomy / RYGB", groups:[
-              { label:"Set up", items:["Doesn't tuck arms","LE taped to bed at ankle/knee/feet, footrest in place","36 Fr ViSiGi bougie"] },
+              { label:"Set up", items:["Doesn't tuck arms","LE taped to bed at ankle/knee/feet, footrest in place","36 Fr ViSiGi","If Roux-en-Y: always foley"] },
               { label:"Sutures", items:["0 polyglactin CT-1: fascial closure","2-0 V-LOC nonabsorbable: HH repair"] },
               { label:"Abdominal entry", items:["Veress needle in LUQ","8 mm Optiview trocar + 5 mm 0° scope, left of umbilicus","12 mm R abdomen","Two more 8 mm trocars on left abdomen","Nathanson liver retractor in RUQ"] },
               { label:"Robotic instruments", items:["Vessel sealer arm 3","Fenestrated bipolar grasper arm 1","Tip-up fenestrated bipolar grasper arm 4","60 mm endo GIA: first green load, then multiple blue loads"] },
@@ -487,6 +487,7 @@ const SEED = {
         {
           attending: "Dr. Gonzalez",
           header: [
+            { lead:"On-call dinner:", val:"Wayback, Calda, Pearl Inn" },
             { lead:"DVT ppx:", val:"holds" },
             { lead:"Music:", val:"Latin" },
             { lead:"Glove:", val:"7.5 brown / 7.5 white" },
@@ -546,7 +547,7 @@ const SEED = {
             { name:"Open Hernia", groups:[
               { label:"Position", items:["Supine, doesn't tuck arms (all types)"] },
               { label:"Local (all)", items:["0.25% bupivacaine with epinephrine"] },
-              { label:"Umbilical", items:["Sutures: 2-0 polyglactin SH · 2-0 prolene CT-2 · 4-0 poliglecaprone PS-2 · 0 polyglactin ties · 3-0 polyglactin ties"] },
+              { label:"Umbilical", items:["Sutures: 2-0 polyglactin SH · 2-0 prolene CT-2 · 4-0 poliglecaprone PS-2 · 0 polyglactin ties · 3-0 polyglactin ties","Mesh: mesh plug"] },
               { label:"Inguinal", items:["Sutures: 3-0 polyglactin SH · 2-0 prolene CT-2 ×3 · 4-0 poliglecaprone PS-2 · 0 polyglactin ties · 3-0 polyglactin ties","Mesh: mesh plug","Other: peanuts, ½\" Penrose drain"] },
               { label:"Ventral / incisional", items:["Sutures: 2-0 polyglactin CT-2 · 3-0 polyglactin CT-2 · 4-0 poliglecaprone PS-2","Mesh: Bard dual mesh"] }
             ]},
@@ -561,16 +562,12 @@ const SEED = {
           attending: "Dr. Gordon",
           header: [
             { lead:"DVT ppx:", val:"does not hold" },
+            { lead:"Glove:", val:"7 green / 6.5 white" },
             { lead:"Local:", val:"1% lidocaine with epinephrine + 0.5% bupivacaine" },
             { lead:"Closure:", val:"4-0 poliglecaprone, dermabond" },
             { lead:"Set up:", val:"NO blue towels; stickies for all cases; cleans belly button with alcohol swab every time" }
           ],
           procedures: [
-            { name:"Laparoscopic Cholecystectomy", groups:[
-              { label:"Set up", items:["Does not tuck arms"] },
-              { label:"Abdominal entry", items:["5 mm 30° scope","Supraumbilical Hassan 12 mm trocar","5 mm ×3"] },
-              { label:"Sutures", items:["0 polyglactin: figure-of-8 fascial closure","4-0 poliglecaprone PS-2 ×2: skin"] }
-            ]},
             { name:"Appendectomy", groups:[
               { label:"Set up", items:["Tuck left arm"] },
               { label:"Abdominal entry", items:["5 mm 0° scope","Hassan at umbilicus","5 mm suprapubic + LLQ"] },
@@ -578,9 +575,148 @@ const SEED = {
               { label:"Sutures", items:["0 polyglactin UR-6: fascial closure","4-0 poliglecaprone PS-2: skin"] }
             ]}
           ]
+        },
+        {
+          attending: "Dr. K Mehta",
+          header: [
+            { lead:"On-call dinner:", val:"Protein" },
+            { lead:"DVT ppx:", val:"almost never holds" },
+            { lead:"Music:", val:"Heavy Metal" },
+            { lead:"Glove:", val:"8 ×2 white" },
+            { lead:"Local:", val:"0.25% bupivacaine for robotic TAPP block; 0.25% bupivacaine + 1% lidocaine for skin/soft tissue" },
+            { lead:"Closure:", val:"suture passer for lap cases; 4-0 poliglecaprone, dermabond" }
+          ],
+          procedures: [
+            { name:"Robotic Cholecystectomy", groups:[
+              { label:"Set up", items:["Patient double taped; appreciates steep reverse Trendelenburg","5 mm 30° scope in the warmer","Always 2.5 mg ICG pre-op"] },
+              { label:"Abdominal entry", items:["Local before port placement AND at end of case","Veress at Palmer's point","Optiview trocar periumbilical: 5 mm 0° scope up to 8","Two right-sided 8 mm ports · one left-sided 8 mm port"] },
+              { label:"Arms", items:["#1 fenestrated bipolar · #2 camera · #3 hook/clips/scissors · #4 Prograsp"] },
+              { label:"Sutures", items:["0 polyglactin: fascial closure","4-0 poliglecaprone PS-2 ×2: skin"] },
+              { label:"If cholangiogram", items:["Clip onto cystic duct with ductotomy, pass the cholangiocath"] }
+            ]},
+            { name:"Laparoscopic Appendectomy", groups:[
+              { label:"Set up", items:["Left arm tucked","Always foley (no foley in robotic appendectomy)"] },
+              { label:"Abdominal entry", items:["0.25% bupivacaine before ports and at end","Veress at Palmer's point","Two 5 mm trocars: first Visiport at Veress site if anatomy allows, otherwise peri-umbilical; second suprapubic midline","12 mm trocar LLQ","Steep Trendelenburg, right side up · 5 mm 30° scope"] },
+              { label:"Instruments", items:["LigaSure + blunt dissection to mobilize appendix (atraumatic to mesentery)","Endo GIA 45 mm purple load to transect appendix","LigaSure or endo GIA 45 mm vascular (gold/tan) for mesoappendix"] },
+              { label:"Sutures", items:["0 polyglactin: fascial closure","4-0 poliglecaprone PS-2: skin"] },
+              { label:"Dressings", items:["Dermabond"] }
+            ]},
+            { name:"Robotic Hernia", groups:[
+              { label:"Set up", items:["Tuck left arm","0.25% bupivacaine before ports and at end"] },
+              { label:"Abdominal entry", items:["Veress at Palmer's point","8 mm trocar ×3; have a 12 mm in the room","#2 scissors · #3 camera · #4 fenestrated bipolar"] },
+              { label:"Sutures", items:["4-0 poliglecaprone","2-0 V-LOC absorbable: close peritoneal defects","2-0 V-LOC nonabsorbable: primarily close ventral hernia defects"] },
+              { label:"Mesh", items:["Covidien Symbotex composite mesh"] }
+            ]},
+            { name:"Trach and Gastrostomy Tube", groups:[
+              { label:"Set up", items:["OR table","Shoulder roll to extend neck","Communication with anesthesia key; prefers another attending to bronch","7–8 Fr Shiley tracheostomy","0.25% bupivacaine"] },
+              { label:"Kit", items:["Percutaneous Blue Rhino kit vs open trach kit — variable"] },
+              { label:"PEG tube", items:["Have abdominal binder in room","OK to start feeds immediately on return to ICU","Lap-assisted G tube: Avanos introducer kit + standard PEG kit"] }
+            ]}
+          ]
+        },
+        {
+          attending: "Dr. Senese",
+          header: [
+            { lead:"On-call dinner:", val:"mood-dependent" },
+            { lead:"DVT ppx:", val:"varies, hold night before" },
+            { lead:"Music:", val:"Pop, Hip Hop, Throwbacks" },
+            { lead:"Glove:", val:"7 ×1 white" },
+            { lead:"Local:", val:"0.25% bupivacaine for robotic TAPP block; 0.25% bupivacaine w/ epi + 1% lidocaine for skin/soft tissue" },
+            { lead:"Closure:", val:"suture passer for lap cases; 4-0 poliglecaprone, dermabond" },
+            { lead:"Note:", val:"gives local before port placement and at the end of the case" }
+          ],
+          procedures: [
+            { name:"Robotic Cholecystectomy", groups:[
+              { label:"Set up", items:["Patient double taped; appreciates steep reverse Trendelenburg","5 mm 30° scope in the warmer","Always ICG pre-op"] },
+              { label:"Abdominal entry", items:["Veress at Palmer's point","Optiview trocar periumbilical: 5 mm 0° scope up to 8","Two right-sided 8 mm ports · one left-sided 8 mm port"] },
+              { label:"Arms", items:["#1 fenestrated bipolar · #2 camera · #3 hook/clips/scissors · #4 Prograsp"] },
+              { label:"Sutures", items:["0 polyglactin: fascial closure","4-0 poliglecaprone PS-2 ×2: skin"] }
+            ]},
+            { name:"Laparoscopic Appendectomy", groups:[
+              { label:"Set up", items:["Left arm tucked","Foley varies"] },
+              { label:"Abdominal entry", items:["0.25% bupivacaine before ports and at end","Umbilical Hassan","Two 5 mm trocars · 12 mm umbilical Hassan","Steep Trendelenburg, right side up · 5 mm 30° scope"] },
+              { label:"Instruments", items:["LigaSure + blunt dissection to mobilize appendix","Endo GIA 45 mm purple load to transect appendix"] },
+              { label:"Sutures", items:["0 polyglactin: figure-of-8 fascial closure","4-0 poliglecaprone PS-2: skin"] },
+              { label:"Dressings", items:["Dermabond"] }
+            ]}
+          ]
+        },
+        {
+          attending: "Dr. De Oliveira",
+          header: [
+            { lead:"Pre-op pearls:", val:"Hemoglobin >10; anyone over 60 gets an echo" },
+            { lead:"Tamponade:", val:"cardiology should be the one reading tamponade on echo" },
+            { lead:"Note:", val:"usually in contact with device reps" }
+          ],
+          procedures: [
+            { name:"Tracheostomy", groups:[
+              { label:"Set up", items:["5 towels and a stapler, vertical shoulder roll","Have size 6, 7, 8 and XLTs available in the room","Have surgicel and a clip applier in the room","2 Weitlaner retractors, 15 blade"] },
+              { label:"Post-op", items:["NEVER remove trach sutures post-operatively"] },
+              { label:"Sutures (varies)", items:["2-0 nylon · 2-0 silk · 2-0 silk ties","4-0 poliglecaprone · 2-0 ethibond"] }
+            ]}
+          ]
+        },
+        {
+          attending: "Dr. Suman",
+          header: [
+            { lead:"Parathyroid:", val:"talk to shared labs ahead of time about ordering PTH and Ca so the lab doesn't cancel them" },
+            { lead:"General prep:", val:"neck roll with 2 rolled sheets; tuck both arms with blue towels" }
+          ],
+          procedures: [
+            { name:"Post-op Thyroid (varies — clarify per case)", groups:[
+              { label:"Orders", items:["No DVT ppx","Labs depend on procedure and need for electrolyte checks","Clears to start, regular next day"] },
+              { label:"Meds", items:["Calcium acetate 667 mg TID","Calcitriol 0.5 mcg daily or BID","Levothyroxine — may depend on pre-op endocrine recommendation"] }
+            ]}
+          ]
+        },
+        {
+          attending: "Dr. Velcu",
+          header: [
+            { lead:"DVT ppx:", val:"holds" },
+            { lead:"Closure:", val:"4-0 poliglecaprone and dermabond" }
+          ],
+          procedures: [
+            { name:"Robotic Cholecystectomy", groups:[
+              { label:"Set up", items:["Pre-operative ICG"] },
+              { label:"Abdominal entry", items:["Hassan at umbilicus 12 mm, two 0 polyglactin sutures for stays","3 × 5 mm ports"] }
+            ]},
+            { name:"Appendectomy", groups:[
+              { label:"Set up", items:["Tuck left arm"] },
+              { label:"Abdominal entry", items:["Hassan anchored with 0 polyglactin ×2 at umbilicus","Two 5 mm trocars suprapubic and LLQ"] },
+              { label:"Stapler", items:["Endo GIA through a window for both base and mesoappendix"] },
+              { label:"Sutures", items:["0 polyglactin ×2: fascia","4-0 poliglecaprone: skin"] }
+            ]}
+          ]
+        },
+        {
+          attending: "Dr. V Mehta",
+          header: [
+            { lead:"On-call dinner:", val:"vegetarian, Indian food" },
+            { lead:"DVT ppx:", val:"DOES NOT HOLD — for longer cases / obese patients gives a pre-induction dose" },
+            { lead:"Music:", val:"variety, Hipster BBQ Spotify playlist" },
+            { lead:"Glove:", val:"7.5 green / 7 white" },
+            { lead:"Local:", val:"varies — 0.25% bupivacaine + 1% lidocaine 50/50, or 0.25% bupivacaine w/ epi, or plain 0.25%" },
+            { lead:"Closure:", val:"suture passer with cone (lap cases); 4-0 poliglecaprone, dermabond. Does NOT use figure-of-8 in fascia" },
+            { lead:"Set up:", val:"leave stickies on drape (heavy scissors to shape); silk tape to double-tape legs; steep reverse Trendelenburg; Ioban if mesh will be used" }
+          ],
+          procedures: [
+            { name:"Appendectomy", groups:[
+              { label:"Set up", items:["Left arm tucked","Void before case, no foley"] },
+              { label:"Abdominal entry", items:["0.25% bupivacaine w/ epi before ports and at end","Veress at Palmer's point","Two 5 mm trocars: first Visiport at Veress site if anatomy allows, else peri-umbilical; second suprapubic midline","12 mm trocar LLQ","Steep Trendelenburg, right side up · 5 mm 30° scope"] },
+              { label:"Instruments", items:["LigaSure + blunt dissection (atraumatic to mesentery)","Endo GIA 45 mm purple load for appendix","LigaSure or endo GIA 45 mm vascular (gold/tan) for mesoappendix"] },
+              { label:"Sutures", items:["0 polyglactin with needle cut off: suture-passer fascial closure","4-0 poliglecaprone PS-2: skin"] },
+              { label:"Other", items:["Irrigate the 12 mm port site with a sloppy wet before closing skin","Dressings: dermabond"] }
+            ]},
+            { name:"Open Inguinal Hernia Repair", groups:[
+              { label:"Set up", items:["Does not tuck arms","Ioban if mesh will be used"] },
+              { label:"Mesh", items:["Bard lightweight pre-shape or Bard 3D Max","Does NOT like plug mesh (migration/adhesion/SBO risk)","2-0 prolene to anchor mesh at pubic tubercle, run along shelving edge"] },
+              { label:"Incision", items:["~8 cm, 2 fingerbreadths superior and 1 fingerbreadth lateral to pubic tubercle","Metzenbaum to enter external oblique aponeurosis"] },
+              { label:"Sutures", items:["0 prolene CT-2 ×2","0 silk: suture ligation of hernia sac if needed","3-0 polyglactin: Scarpa's closure","2-0 polyglactin: external oblique reapproximation","4-0 poliglecaprone: skin"] },
+              { label:"Other", items:["Bacitracin irrigation","Scrotal support at end of case"] }
+            ]}
+          ]
         }
       ],
-
       sections: [
         { name: "Pre-op — Documentation", items: [
             { t: "H&P within 30 days", note: "Signed by the attending" },
@@ -598,6 +734,8 @@ const SEED = {
             { t: "NPO / stopped tube feeds after midnight", note: "Anesthesia wants NPO from midnight regardless. NJ/post-duodenal feeds + intubated non-airway cases are exceptions" },
             { t: "Hold anticoagulation after midnight", note: "Attending-specific — confirm" },
             { t: "ICG given at appropriate time", note: "If indicated, per senior resident" },
+            { t: "Local anesthetic + charge orders", note: "Attending-specific — see Attending Preferences" },
+            { t: "Fluoroscopy ordered + front desk informed", note: "For angiograms, IOC" },
             { t: "Notify GS chief of any hold-ups", note: "Keeps cases running smoothly" }
         ]},
         { name: "Before You Scrub", items: [
@@ -605,8 +743,8 @@ const SEED = {
             { t: "Tell the team you're scrubbing", note: "So they know who's unavailable — communication is key" }
         ]},
         { name: "Post-op — Documentation", items: [
-            { t: "Brief Op Note", note: "Within 30 min of case completion" },
-            { t: "Operative Report", note: "Within 2 hrs of case completion" },
+            { t: "Brief Op Note — before you leave the OR", note: "Must be written at completion of the case" },
+            { t: "Operative Report — within 1 hr", note: "Of case completion" },
             { t: "LOG your cases", note: "" }
         ]},
         { name: "Post-op — If Going Home (ASU)", items: [
@@ -640,7 +778,7 @@ const SEED = {
             ]},
             { name: "VTE Prophylaxis", items: [
                 { t: "SCDs — bilateral LE", note: "All patients, unless contraindicated. While in bed. Frequency: standing" },
-                { t: "Chemical DVT ppx — discuss with senior first", note: "Heparin SC 5000 units q8h · enoxaparin: GS 40 mg SC daily, trauma 30 mg SC BID, head bleed 40 mg SC daily (only when cleared). Check CrCl before enoxaparin" }
+                { t: "Chemical DVT ppx — discuss with senior first", note: "Heparin SC 5000 units q8h · Enoxaparin (check CrCl first): GS 40 mg daily · Trauma 30 mg BID — obesity by actual weight: 61–99 kg 40 mg BID, 100+ kg 50 mg BID · Head bleed 40 mg daily (ONLY when cleared) · Bariatric: BMI 40+ 40 mg BID, BMI 50+ 60 mg BID" }
             ]},
             { name: "Pain Meds", items: [
                 { t: "Acetaminophen IV 1000 mg q6h standing", note: "Needs verification by another resident" },
@@ -648,7 +786,8 @@ const SEED = {
                 { t: "Morphine 2 mg IV q2h PRN", note: "Severe pain" },
                 { t: "Lidocaine patch", note: "Rib fractures" },
                 { t: "Consider NSAIDs", note: "If no contraindications" },
-                { t: "Consider gabapentin / cyclobenzaprine", note: "Uncontrolled pain" }
+                { t: "Consider gabapentin / cyclobenzaprine", note: "Uncontrolled pain" },
+                { t: "Geriatric: reduce oxycodone", note: "2.5 mg q6 PRN moderate · 5 mg q6 PRN severe" }
             ]},
             { name: "Other Meds", items: [
                 { t: "IVF — LR or NS at maintenance", note: "Unless otherwise specified" },
@@ -695,7 +834,8 @@ const SEED = {
                 { t: "Oxycodone 5 mg q6h PRN", note: "Moderate pain" },
                 { t: "Morphine 2 mg IV q2h PRN", note: "Severe pain" },
                 { t: "Lidocaine patch", note: "Rib fractures" },
-                { t: "Consider NSAIDs / gabapentin / cyclobenzaprine", note: "NSAIDs if no contraindications; others for uncontrolled pain" }
+                { t: "Consider NSAIDs / gabapentin / cyclobenzaprine", note: "NSAIDs if no contraindications; others for uncontrolled pain" },
+                { t: "Geriatric: reduce oxycodone", note: "2.5 mg q6 PRN moderate · 5 mg q6 PRN severe" }
             ]},
             { name: "Other Meds", items: [
                 { t: "IVF — LR or NS at maintenance", note: "Unless otherwise specified" },
@@ -710,7 +850,7 @@ const SEED = {
             ]},
             { name: "Nursing", items: [
                 { t: "Neuro / neurovascular checks q1h", note: "Neurovascular for injured extremities" },
-                { t: "Condition: critical · vitals q1h", note: "" },
+                { t: "Condition: critical (q2h) · vitals q1h", note: "" },
                 { t: "Activity", note: "OOBTC w/ assist daily. Bedrest w/ spinal precautions in spinal trauma. Set weight-bearing status" },
                 { t: "Strict I/Os q1h", note: "" },
                 { t: "Incentive spirometry", note: "10x every hour while awake" },
@@ -726,6 +866,59 @@ const SEED = {
                 { t: "Hold oral diabetic meds on admission", note: "" },
                 { t: "Hold metformin 48h if IV contrast", note: "Even if discharged" },
                 { t: "Insulin sliding scale (regular)", note: "Q6h if NPO · before meals + bedtime if on diet · fingersticks same frequency · basal insulin detemir if indicated" }
+            ]}
+          ]
+        },
+        {
+          name: "Floor / CDS",
+          accent: "#a78bfa",
+          sections: [
+            { name: "DO THESE FIRST", items: [
+                { t: "SATC", note: "To admitting attending + first call to intern service pager. Order before anything else — avoids pop-ups" },
+                { t: "Thrombosis risk assessment", note: "Open blue box, answer age / current dx / contraindications" }
+            ]},
+            { name: "Labs", items: [
+                { t: "Routine daily labs for 0400", note: "CBC, BMP, magnesium, phosphorus, PT/INR, PTT" },
+                { t: "Type & Screen on admission", note: "All patients" },
+                { t: "UA + MRSA screen", note: "Utox/detox panel for trauma or suspected drug use" },
+                { t: "B-hCG / urine pregnancy", note: "All pre-menopausal females" }
+            ]},
+            { name: "Meds & Diet", items: [
+                { t: "Same as SICU admission", note: "See the SICU tab for pain, IVF, home meds, GI ppx, bowel regimen" }
+            ]},
+            { name: "Nursing (floor frequencies)", items: [
+                { t: "Condition: stable · vitals q4h", note: "" },
+                { t: "Checks q4h", note: "Floor orders cannot be more frequent than q4" },
+                { t: "Drains / tubes / I&Os — every shift", note: "" }
+            ]},
+            { name: "CDS (\u201CObs\u201D)", items: [
+                { t: "Use CDS documents, not AMB/INP", note: "CDS H&P · CDS Progress Note · CDS Discharge Plan · CDS Discharge Summary · CDS provider note" },
+                { t: "9th floor, up to 48 hrs", note: "If admission continues past 48h: place an \u201Cadmit\u201D order to gen surg/trauma floor + write a new INP H&P" },
+                { t: "Continuous cardiac monitoring → 11th floor", note: "Required for IV push beta blockers or anti-HTN; needs a continuous cardiac monitoring order" },
+                { t: "Patients under arrest → 18th floor", note: "" }
+            ]}
+          ]
+        },
+        {
+          name: "Hip Fx",
+          accent: "#f472b6",
+          banner: "In addition to the standard SICU admit orders.",
+          sections: [
+            { name: "Consults", items: [
+                { t: "Orthopedics", note: "If not already placed" },
+                { t: "Medicine / Cardiology", note: "If indicated by chief or attending" },
+                { t: "PM&R", note: "" },
+                { t: "Physical therapy", note: "" },
+                { t: "Case management", note: "" },
+                { t: "Social work", note: "" },
+                { t: "Speech & swallow", note: "Do NOT place until after surgery. Only for patients unable to pass bedside S&S per Yale protocol" }
+            ]},
+            { name: "Orders", items: [
+                { t: "Foley — insert AND maintain", note: "Two separate orders; if indicated by chief or attending" },
+                { t: "Anticoagulation — one STAT dose", note: "Ask senior: SC heparin vs enoxaparin. Give before day of procedure" },
+                { t: "EKG 12-lead", note: "All patients" },
+                { t: "Echo", note: "As indicated by chief or attending" },
+                { t: "2 units pRBC on hold", note: "Usually needed" }
             ]}
           ]
         },
@@ -767,6 +960,33 @@ const SEED = {
             ]},
             { name: "POD1 PM / Night", items: [
                 { t: "If tolerating bariatric liquid diet → home", note: "When chief / bari PA says OK" }
+            ]},
+            { name: "Discharge Meds", items: [
+                { t: "LIQUID acetaminophen 650 mg (20.3 mL) q6 × 2 weeks", note: "" },
+                { t: "Famotidine 20 mg BID × 14 days (30 tabs)", note: "Very small tabs — can be taken whole" },
+                { t: "Ursodiol 300 mg BID × 6 months", note: "Give 180 with 1 refill. Open capsule, pour powder into liquid — do NOT swallow whole. Not needed if s/p band or prior cholecystectomy" },
+                { t: "Enoxaparin 40 mg BID × 30 days", note: "Or higher per BMI — see VTE dosing" },
+                { t: "Diabetic: do NOT restart home meds", note: "Send with ISS (regular insulin). PCP within 1 week. Confirm they have glucometer/needles/test strips at home" },
+                { t: "HTN: crushable or liquid only", note: "If neither, PCP follow-up within 1 week. Extended-release CANNOT be crushed" },
+                { t: "Follow-up in bariatric clinic within 1 week", note: "Tue 1230 or Thu 0900, 6th floor" }
+            ]},
+            { name: "Diet Advancement", items: [
+                { t: "Bari clear — POD 1–2", note: "" },
+                { t: "Bari full — 2 weeks", note: "" },
+                { t: "Bari puree — 2 weeks", note: "" },
+                { t: "Bari regular — from 4 weeks post-op, for life", note: "" }
+            ]},
+            { name: "Crushing Meds", items: [
+                { t: "Size reference: famotidine tab (0.5 × 0.5 cm)", note: "That's the biggest that can be swallowed whole" },
+                { t: "Crushable: all beta blockers, metformin, amlodipine", note: "Beta blockers crushable UNLESS extended-release" },
+                { t: "NOT crushable: valsartan, pantoprazole, enteric-coated ASA", note: "Enteric ASA can be switched to chewable ASA" },
+                { t: "Extended-release may convert to immediate-release", note: "Ask pharmacy" },
+                { t: "IV:PO conversions", note: "Levothyroxine 1:2 (50 mcg IV = 100 mcg PO) · Metoprolol 1:2.5. Call pharmacy if unsure" }
+            ]},
+            { name: "CT A/P with Oral Contrast", items: [
+                { t: "Dilute contrast in 300 cc sterile water", note: "" },
+                { t: "Patient drinks only 100 mL (3–4 oz) before the scan", note: "" },
+                { t: "Last sip on the CT table right before scanning", note: "" }
             ]}
           ]
         }
@@ -782,17 +1002,21 @@ const SEED = {
         { name: "How to dial", items: [
             { name: "Full number for any extension", phone: "516-572", pager: "or 516-296", noCall: true },
             { name: "Operator", phone: "0", pager: "" },
-            { name: "Dial out", phone: "9-1", pager: "then number", noCall: true }
+            { name: "Dial out", phone: "9-1", pager: "then number", noCall: true },
+            { name: "Page someone", phone: "9651", pager: "then pager #", noCall: true },
+            { name: "Overhead announcements", phone: "26222", pager: "" }
         ]},
         { name: "Surgery", items: [
             { name: "Surgery Office", phone: "26703", pager: "" },
             { name: "Surgery Clinic", phone: "62294", pager: "" },
-            { name: "PST", phone: "23161", pager: "" },
+            { name: "PST", phone: "23161", pager: "26051" },
             { name: "OR Main", phone: "23181", pager: "" },
             { name: "OR Booking", phone: "26750", pager: "" },
-            { name: "PACU", phone: "26291", pager: "or 26292" },
+            { name: "ORs", phone: "625", pager: "+ room #", noCall: true },
+            { name: "PACU", phone: "26291", pager: "26292" },
             { name: "SICU", phone: "26191", pager: "" },
-            { name: "SICU back room", phone: "24822", pager: "" }
+            { name: "SICU back room", phone: "24822", pager: "" },
+            { name: "SPA", phone: "62159", pager: "" }
         ]},
         { name: "Radiology — Reading Rooms", items: [
             { name: "Neuro", phone: "28861", pager: "" },
@@ -803,15 +1027,59 @@ const SEED = {
             { name: "Other", phone: "67385", pager: "62751 / 25653" }
         ]},
         { name: "Radiology — Imaging", items: [
-            { name: "XR 2nd floor", phone: "25627", pager: "" },
-            { name: "XR ER", phone: "62325", pager: "" },
             { name: "CT ER", phone: "26524", pager: "" },
             { name: "CT 2nd floor", phone: "28766", pager: "" },
-            { name: "MRI", phone: "25777", pager: "26380 / 50079" },
+            { name: "XR ER", phone: "62325", pager: "" },
+            { name: "XR 2nd floor", phone: "25627", pager: "" },
+            { name: "MRI", phone: "25777", pager: "26380" },
             { name: "US (ultrasound)", phone: "29411", pager: "26872" }
+        ]},
+        { name: "Pagers (dial 651 + number)", items: [
+            { name: "Ortho", phone: "4556", pager: "", noCall: true },
+            { name: "Neurosurgery", phone: "5050", pager: "", noCall: true },
+            { name: "Radiology", phone: "5416", pager: "", noCall: true },
+            { name: "Intern — Trauma", phone: "6575", pager: "", noCall: true },
+            { name: "Intern — Gen Surg", phone: "8865", pager: "", noCall: true },
+            { name: "ENT", phone: "8911", pager: "", noCall: true },
+            { name: "Urology", phone: "5474", pager: "", noCall: true },
+            { name: "Midlevel — Trauma", phone: "1287", pager: "", noCall: true },
+            { name: "Midlevel — Gen Surg", phone: "0106", pager: "", noCall: true },
+            { name: "Trauma Chief", phone: "7006", pager: "", noCall: true }
+        ]},
+        { name: "Other Services", items: [
+            { name: "Blood bank", phone: "26344", pager: "" },
+            { name: "Pharmacy", phone: "23241", pager: "" },
+            { name: "Shared labs", phone: "24901", pager: "" },
+            { name: "Chemistry", phone: "25148", pager: "" },
+            { name: "MAR", phone: "21615", pager: "" },
+            { name: "Medical examiner", phone: "24779", pager: "25043" },
+            { name: "ED", phone: "62100", pager: "62400 / 62300" },
+            { name: "Interpreter", phone: "6-CHAT", pager: "", noCall: true },
+            { name: "Clinic appointments", phone: "62525", pager: "" },
+            { name: "CCU", phone: "24771", pager: "50456" },
+            { name: "MICU", phone: "26516", pager: "50452" },
+            { name: "IR nursing station", phone: "50423", pager: "26637" },
+            { name: "Rehab (5th)", phone: "24721", pager: "63248" },
+            { name: "BURN (6th)", phone: "23207", pager: "" },
+            { name: "11E", phone: "25831", pager: "" },
+            { name: "9E", phone: "64915", pager: "" },
+            { name: "Beth Beyer", phone: "24817", pager: "" },
+            { name: "Katie Eslinger", phone: "62113", pager: "" }
+        ]},
+        { name: "Room Codes", items: [
+            { name: "SICU hallway", phone: "6911", pager: "", noCall: true },
+            { name: "BURN supply closet", phone: "9494", pager: "", noCall: true },
+            { name: "OR locker room", phone: "6477", pager: "", noCall: true },
+            { name: "8th floor stairway door", phone: "2201", pager: "", noCall: true },
+            { name: "11th floor med/saline room", phone: "7606", pager: "", noCall: true },
+            { name: "9th floor med/saline room", phone: "8713", pager: "", noCall: true }
+        ]},
+        { name: "On-Call Attending", items: [
+            { name: "On-Call Attending", phone: "516-591-4887", pager: "" }
         ]}
       ]
     },
+
     {
       id: "weekly-clinic-schedule",
       type: "reference",
@@ -820,7 +1088,7 @@ const SEED = {
       secondaryLabel: "",
       sections: [
         { name: "Trauma", items: [
-          { name:"Mon", detail:"Rounds 0600 · Morning report 0700" },
+          { name:"Mon", detail:"Rounds 0600 · Morning report 0700 · Endocrine clinic 1300" },
           { name:"Tue", detail:"Rounds 0600 · Morning report 0700 · Multi-D 0900" },
           { name:"Wed", detail:"Rounds 0600 · M&M 0700 · Grand rounds 0800 · Education 0900" },
           { name:"Thu", detail:"Rounds 0600 · Morning report 0700 · Mega clinic 0830" },
@@ -829,7 +1097,7 @@ const SEED = {
           { name:"Sun", detail:"Rounds 0600 · Morning report 0700" }
         ]},
         { name: "General Surgery", items: [
-          { name:"Mon", detail:"Rounds 0600 · Morning report 0700 · GU clinic 1300" },
+          { name:"Mon", detail:"Rounds 0600 · Morning report 0700 · GU clinic 1300 · Endocrine clinic 1300" },
           { name:"Tue", detail:"Rounds 0600 · Morning report 0700 · Vascular clinic 0830 · Multi-D 0900" },
           { name:"Wed", detail:"Rounds 0600 · M&M 0700 · Grand rounds 0800 · Education 0900 · C's colonoscopies 1200 · Breast clinic 1230" },
           { name:"Thu", detail:"Rounds 0600 · Morning report 0700 · Biopsy clinic 0800 · Mega clinic 0830 · Endocrine clinic 1100" },
@@ -852,7 +1120,8 @@ const SEED = {
           { name:"Plastic surgery hand", detail:"Tue 1pm" },
           { name:"Plastic surgery", detail:"Mon 1pm" },
           { name:"OMFS", detail:"Mon 9am" },
-          { name:"Ortho fracture", detail:"Wed 9am" }
+          { name:"Ortho fracture", detail:"Wed 9am" },
+          { name:"Endocrine clinic", detail:"Every other Thu 1pm" }
         ]}
       ]
     },
@@ -906,10 +1175,17 @@ const SEED = {
         { name: "Blood Runner", items: [
           { lead:"You are the most important person on the team.", info:"Keep the right blood products always available, trend real-time labs, and keep every team member aware of where the MTP stands. You are the point person between all teams." }
         ]},
+        { name: "When to Activate", items: [
+          { info:"Class 4 shock (>2 L EBL) with no imminent end." },
+          { info:"6+ units pRBC given in a 4-hour period." },
+          { lead:"ABC score >2:", info:"penetrating mechanism · ED SBP <90 · ED HR >120 · positive FAST." },
+          { lead:"Pediatrics:", info:"shock with EBL >20 mL/kg." }
+        ]},
         { name: "Activate MTP", items: [
-          { lead:"Order:", info:"MTP1" },
+          { lead:"Order:", info:"MTP1 Blood Component Order Set, OR MTP1 Whole Blood Order Set — your chief/attending will tell you which." },
+          { lead:"Whole blood:", info:"2 units are in the trauma bay fridge. If you use them, when picking up the first cooler also bring down the white WB pickup slip and the transfusion sheet, plus a new pickup sheet for the cooler." },
           { lead:"Call blood bank:", info:"26344 — give your info as the contact person." },
-          { lead:"Transfusion slip:", info:"half-sheet of paper (grab several as backups):", sub:[
+          { lead:"Transfusion slip:", info:"half-sheet of paper (grab several as backups, in the trauma packet):", sub:[
               "CORRECT patient sticker (check the wristband)",
               "Product requested",
               "Ordering physician (you)",
@@ -933,8 +1209,29 @@ const SEED = {
           { lead:"Acidosis", info:"" },
           { lead:"Coagulopathy:", info:"monitor coags." }
         ]},
+        { name: "Blood Usage Criteria", items: [
+          { lead:"Blood:", info:"EBL 500 cc+ · Hgb <7 or Hct <21%." },
+          { lead:"Plasma:", info:"PT >17 sec (INR >1.5) · PTT >55 sec." },
+          { lead:"Platelets:", info:"", sub:[
+              "<10k/uL if not on platelet antagonists",
+              "IR: <50k/uL",
+              "Routine surgical procedures: <80k/uL",
+              "Neurosurgical and ophthalmic procedures: <100k/uL"
+          ]}
+        ]},
+        { name: "Transfusion Facts", items: [
+          { info:"Type & Screen is good for 3 days. Confirmatory must NOT be drawn at the same time as the type & screen." },
+          { info:"If something delays prompt infusion, return to blood bank within 30 minutes of issuance." },
+          { info:"Once a unit is spiked it cannot be returned — infuse within 4 hours of spike time, or discard and document." }
+        ]},
         { name: "Labs", items: [
           { info:"Order, collect, label properly, send down, then receive and trend results." }
+        ]},
+        { name: "Kcentra (warfarin reversal)", items: [
+          { lead:"Dose:", info:"units/kg × kg. Units/kg depends on pretreatment INR — ranges 25–50 u/kg, maximum 5000 u." },
+          { info:"Kcentra comes in 500 u and 1000 u vials, but the actual units are written on the vial." },
+          { lead:"Also give:", info:"vitamin K IV (typically 10 mg IV)." },
+          { info:"See the AC safety program on ITWeb or the Chief folder for more." }
         ]},
         { name: "Cancel MTP", items: [
           { info:"Once told by the senior resident, call the blood bank at 26344 and tell them to cancel MTP. Do NOT \u201Ccancel\u201D any orders in the computer." },
@@ -943,19 +1240,20 @@ const SEED = {
         ]}
       ]
     },
+
     {
       id: "clinic-guide",
       type: "reference",
       tag: "NUMC",
       title: "Clinic Guide",
       sections: [
-        { name: "Purple Pack (pre-op an outpatient)", items: [
-          { info:"Usually done by our NPs — but be ready to do it if they're out." },
-          { lead:"Book case:", info:"itweb → medical services → OR case request. Print the booking-slip confirmation page (pops up after booking)." },
-          { lead:"Paperwork for PST:", info:"copy of booking slip · medical necessity form · pre-surgical testing form · AMB surgery H&P · consent.", sub:[
-              "Call PST to get the patient a PST appointment",
-              "Give the patient a copy of the PST form; put one copy in the purple pack"
-          ]},
+        { name: "Booking / Pre-opping (outpatient)", items: [
+          { info:"Usually done by our NPs — but be ready to do it if they're out (especially endo clinic)." },
+          { lead:"Book case:", info:"itweb → medical services → OR case request." },
+          { info:"Forward the submitted booking sheet/info to the operating attending and involved residents." },
+          { lead:"AMB Surgery Clinic Note / H&P:", info:"good for 30 days." },
+          { lead:"Consent:", info:"good for 60 days." },
+          { lead:"PST clearance:", info:"good for 30 days — they call the patient automatically." },
           { info:"Order any needed pre-op labs / imaging." }
         ]},
         { name: "Colonoscopy Prep", items: [
@@ -975,6 +1273,25 @@ const SEED = {
         ]},
         { name: "Anorectal Case Prep", items: [
           { lead:"Fleet enema:", info:"1 PR at 10 PM the night before AND 1 PR the morning of, 1 hr before scheduled arrival." }
+        ]},
+        { name: "Endocrine Clinic", items: [
+          { info:"6th floor, every other Thursday 1300. One general surgery resident is assigned to cover." },
+          { info:"Bring the ultrasound from SICU to clinic (let the SICU team know)." },
+          { info:"You do the booking here \u2014 this clinic has no dedicated booking person." },
+          { lead:"Always ask Dr. Suman:", info:"does the patient need medical clearance or special testing?" },
+          { lead:"Admission type:", info:"usually AM Admit (confirm with Dr. Suman). If AM admit, ICU bed required = always yes." },
+          { lead:"In free-text area write:", info:"CBC, CMP, Mg, Phos, EKG." },
+          { lead:"Pre-admission orders:", info:"session type = PreAdmission testing \u2192 Pre-Surgical Testing Orders.", sub:[
+              "CBC, CMP, Mg, Phos, EKG",
+              "NPO day of surgery",
+              "T&S + confirmatory, with 2 units pRBC on hold for day of surgery"
+          ]},
+          { lead:"Pre-op orders:", info:"session type = ASU/Preop orders.", sub:[
+              "Fill out date and procedure",
+              "Whole blood K (if dialysis) morning of surgery",
+              "Fingerstick glucose (if DM) morning of surgery",
+              "Saline lock"
+          ]}
         ]}
       ]
     },
@@ -999,6 +1316,30 @@ const SEED = {
         ]},
         { name: "Chest Tube", items: [
           { info:"Suction set-up (nursing readies it) · pleura-vac, appropriately filled · chest tube · #10 blade · betadine or chlorhexidine · lidocaine with epinephrine · 18G + 25G needles · 10 cc syringe · chest tube tray · bundle kit · sterile gloves · 4×4s · 5\"×9\" Xeroform · silk tape · 2 Ethilon (heavy non-absorbable) sutures." }
+        ]},
+        { name: "Chest Tube Removal", items: [
+          { info:"If a purse-string/U-stitch is present, TWO people are required: one ties the stitch, one pulls the tube." },
+          { lead:"Supplies:", info:"dressing (gauze/tape: several 6\" silk tape strips, 4×4s, 5\"×9\" Xeroform — or duoderm sheet ± Xeroform) · chuck · suture removal kit." },
+          { info:"Always perform a post-pull x-ray." }
+        ]},
+        { name: "Bronchoscopy", items: [
+          { info:"Bronchoscopy machine · bronchoscope · bronchoscopy kit (lubrication, sputum trap, drape, ET tube adapter) · sterile gloves · saline flushes / small cup of saline · suction set-up · 1% lidocaine · rocuronium 50 mg · sedative." },
+          { lead:"Not a sterile procedure.", info:"Pre-oxygenate at 100% FiO2 for at least 10 minutes. Always post-procedure CXR." }
+        ]},
+        { name: "Procedure Note — what to document", items: [
+          { lead:"Chest tube placement:", info:"laterality · depth of insertion · indication (pneumo vs hemo vs effusion) · what came out on entry · post-placement x-ray findings." },
+          { lead:"Central line:", info:"laterality/location · post-placement x-ray findings." },
+          { lead:"Arterial line:", info:"location." },
+          { lead:"Laceration repair:", info:"thickness · location · size (length, width, depth, shape) · tissues involved · suture type and number placed." },
+          { lead:"Bronchoscopy:", info:"presence/absence and quality of secretions · mucosal findings · pre-medications given." },
+          { lead:"Chest tube / JP removal:", info:"short INP provider note is fine." },
+          { lead:"Foley:", info:"\u201CUrinary Device Placement Procedure Note.\u201D" }
+        ]},
+        { name: "Lines & Tubes — daily", items: [
+          { info:"For ANY drain, at rounds and sign-out know: color, consistency, amount drained, and whether it changed." },
+          { lead:"Chest tube:", info:"check tubing + canister daily for color, clarity, amount, air leak. Canister filled correctly. Occlusive dressing. Daily CXR. Orders: suction vs water seal, I&O qShift. When swapping the pleura-vac, fill water seal and air leak chambers before connecting." },
+          { lead:"NG tube:", info:"3 black marks on the proximal end — you want 2 inside the nose. Keep a 60 cc Tumi syringe + sterile water to flush. Replace output qShift, usually 1:1 with NS (check with senior). Switch meds to IV where possible." },
+          { lead:"JP drain:", info:"strip on rounds daily. Misc nursing order for suction vs gravity, and JP teaching if going home with it." }
         ]}
       ]
     },
@@ -1025,6 +1366,256 @@ const SEED = {
           { info:"Connect a 3-way stopcock to the chest tube and flush (pigtail only — for a regular chest tube, administer directly into the tube; clamp, disconnect from pleura-vac, attach syringe before unclamping so it's never open to air). Stay sterile." },
           { lead:"Inject in order:", info:"alteplase → dornase → 10 mL normal saline." },
           { info:"Clamp the chest tube for 1 hour — monitor vitals carefully — then return to suction." }
+        ]}
+      ]
+    },
+    {
+      id: "ent",
+      type: "reference",
+      tag: "Rotation",
+      title: "ENT",
+      intro: "One trauma intern covers ENT each month. Round with trauma in the AM.",
+      sections: [
+        { name: "Responsibilities", items: [
+          { info:"All patients admitted to ENT go on BOTH the trauma and ENT lists. All consults admitted to other services go on the ENT list." },
+          { info:"Round on all consults and inpatients daily — daily progress notes, and discuss with the appropriate attending. Includes weekends and holidays." },
+          { info:"ENT sign-out must be done with a mid-level resident present, every time." },
+          { lead:"Staffing:", info:"see new consults and staff DIRECTLY with the ENT attending." },
+          { lead:"Dr. Berman:", info:"very receptive to calls/texts and will come in if needed. Simple things (sinusitis) — an FYI text is fine. Major things (persistent epistaxis, peritonsillar abscess, foreign body) — call early." },
+          { info:"If unsure whether to call, run it by the mid-level on call. Overnight you can often see the patient, write the note, and call the attending in the morning." },
+          { lead:"Clinic:", info:"Tuesday and Friday afternoons at 1300." }
+        ]},
+        { name: "Neck / Peritonsillar Abscess", items: [
+          { lead:"Airway first:", info:"always be concerned — new stridor, snoring, or change in voice." },
+          { info:"Needs a CT scan with IV contrast." },
+          { info:"Abscesses <2 cm usually improve with antibiotics (ampicillin-sulbactam or clindamycin). If admitted, trend CRP and WBC." }
+        ]},
+        { name: "Epistaxis", items: [
+          { info:"First ask what's already been tried." },
+          { info:"If stable and bleeding is mild: have the primary team spray ¼ bottle of oxymetazoline in the bleeding nares and pinch the nose shut, holding pressure 20 minutes — this stops most bleeding." },
+          { lead:"Assess:", info:"vitals, hemoglobin, platelets, coags, and any anticoagulation/antiplatelet therapy." },
+          { info:"If bleeding continues: rhino rockets, or gauze soaked with lidocaine with epinephrine. If packing stays in, the patient needs antibiotics." }
+        ]}
+      ]
+    },
+    {
+      id: "gu",
+      type: "reference",
+      tag: "Rotation",
+      title: "GU",
+      intro: "One general surgery intern covers GU each month. Round with gen surg in the AM.",
+      sections: [
+        { name: "Responsibilities", items: [
+          { info:"All patients admitted to GU go on BOTH the general surgery and GU lists. All consults admitted to other services go on the GU list." },
+          { info:"Round on all consults and inpatients daily — daily progress notes, discussed with the appropriate attending. Includes weekends and holidays." },
+          { info:"GU sign-out must be done with a mid-level resident present, every time." },
+          { lead:"Staffing:", info:"see new consults and staff DIRECTLY with the GU attending. Simple things (stones, hematuria, foley) — FYI text. Major things (priapism, torsion, infected stones) — call early." },
+          { lead:"Clinic:", info:"Monday and Thursday afternoons 1300; Friday morning 0800." }
+        ]},
+        { name: "Torsion — SURGICAL EMERGENCY", items: [
+          { info:"See the patient IMMEDIATELY." },
+          { info:"Get the exact time it first occurred." },
+          { info:"Speak with the attending immediately." },
+          { info:"Will likely require urgent operative intervention depending on timing." }
+        ]},
+        { name: "Priapism", items: [
+          { info:"If the penis is bendable, likely no intervention. If not, they'll likely need aspiration ± intracavernosal phenylephrine." },
+          { info:"Order the phenylephrine (and plain lidocaine) early and make sure it gets sent up — pharmacy can take a while." },
+          { info:"A senior will come to the bedside to do this with you." }
+        ]},
+        { name: "Hematuria", items: [
+          { info:"Often benign, most often after foley placement. Mild hematuria is usually managed outpatient; if no obvious source send UA with micro and culture." },
+          { info:"If a foley is in, LEAVE IT IN." },
+          { lead:"Clot retention:", info:"place the largest foley you can (24 or 26 Fr three-way).", sub:[
+              "Irrigate foleys with significant hematuria (more than pink lemonade) to flush clots",
+              "Get an irrigation tray (60 cc catheter-tipped syringe) and a liter of sterile water",
+              "Always keep ≥60 cc in the bladder: instill 60, then another 60",
+              "Pull back the second 60, leaving 60 in. Repeat until urine runs clear — may take 500 cc to multiple liters",
+              "Patients may require CBI"
+          ]}
+        ]},
+        { name: "Stones", items: [
+          { info:"Obstructing stone with hydroureteronephrosis, Cr >1.5, elevated WBC, positive nitrites, fever, or unstable vitals → likely admit for IV antibiotics and urgent OR for cysto with ureteral stent." },
+          { info:"Smaller non-obstructing stones, or obstructing without systemic changes/infection → usually follow up in 2–4 weeks with medical expulsive therapy (fluids >2 L UOP/day, tamsulosin, strain urine)." },
+          { lead:"Likelihood of passing:", info:"<5 mm about 90% · 5–7 mm about 50% · >7 mm unlikely." }
+        ]},
+        { name: "Foleys", items: [
+          { info:"Always make sure an MD from their team has attempted placement before you agree — they should go up their own chain of command first." },
+          { lead:"Bigger is better:", info:"whatever size was attempted, grab several larger. If they tried a 16 Fr, get an 18, 20 and 22. Diameter provides the stiffness you need. Available in the OR office (bring a patient sticker)." },
+          { lead:"Coude catheters:", info:"designed to pass around large prostates (BPH). Try 18, 22 or 24 Fr Coude." },
+          { lead:"Traumatic foley:", info:"(pulled with balloon up, or false passage) — no foley needed if the patient voids spontaneously. Otherwise attempt a large foley ONCE, then leave in place 5–7 days." }
+        ]}
+      ]
+    },
+    {
+      id: "gi-ppx",
+      type: "reference",
+      tag: "ICU",
+      title: "GI Prophylaxis",
+      intro: "Indications for stress ulcer prophylaxis.",
+      sections: [
+        { name: "Any ONE of these", items: [
+          { info:"Mechanical ventilation > 48 hours." },
+          { lead:"Coagulopathy:", info:"platelets <50,000 · INR >1.5 · on therapeutic anticoagulation." },
+          { info:"TBI." },
+          { lead:"Significant burn:", info:">20% TBSA partial + full thickness." },
+          { info:"History of previous GI hemorrhage." },
+          { info:"It's on their home medication list." }
+        ]},
+        { name: "OR any TWO of these", items: [
+          { info:"Chronic NSAID / ASA use." },
+          { lead:"High-dose NSAID therapy:", info:"ibuprofen >1200 mg/day, or any standing ketorolac regimen." },
+          { info:"Sepsis." },
+          { info:"Vasopressor or inotropic therapy." },
+          { lead:"Corticosteroids:", info:"≥250 mg/day hydrocortisone equivalent." },
+          { info:"New gastroduodenal or gastrojejunal anastomosis." },
+          { info:"Spinal cord injury." }
+        ]},
+        { name: "Agents", items: [
+          { lead:"Pantoprazole", info:"40 mg daily." },
+          { lead:"Famotidine", info:"20 mg BID." },
+          { lead:"Esomeprazole", info:"20 mg daily — via tube for NGT/OGT/G-tube patients." }
+        ]}
+      ]
+    },
+    {
+      id: "electrolytes",
+      type: "reference",
+      tag: "ICU",
+      title: "Electrolytes",
+      intro: "There is a new order set. Do NOT replete in dialysis patients.",
+      sections: [
+        { name: "Watch carefully in", items: [
+          { lead:"Renal / dialysis:", info:"DO NOT replete electrolytes." },
+          { lead:"Neurosurgery:", info:"sodium levels." },
+          { info:"Patients receiving multiple transfusions." }
+        ]},
+        { name: "Potassium — goal >4", items: [
+          { info:"Every 10 mEq KCl raises K+ by about 0.10 mmol/L." },
+          { info:"Doses over 40 mEq need 4 hours between them." },
+          { info:"Do NOT exceed 60 mEq replacement without rechecking a BMP." },
+          { info:"Watch for EKG changes." },
+          { info:"IV KCl burns — switch to PO/tube when you can. Tabs cannot be crushed. Can give PO and IV together if very low; consult senior if very low." },
+          { lead:"Peripheral IV:", info:"KCl IVPB rider 10 mEq · q1h · rate 100 mL/hr · stop after 3." },
+          { lead:"Central line:", info:"KCl IVPB rider 20 mEq · q1h · rate 100 mL/hr · stop after 3 (can vary)." },
+          { lead:"PO / tube:", info:"potassium chloride liquid 10–20 mEq q1h, stop after 3 (can vary)." }
+        ]},
+        { name: "Phosphorus — goal >3.0", items: [
+          { info:"Phosphorus packets give minimal repletion — replete IV." },
+          { info:"Choose K-Phos vs sodium phos based on the K+ and Na+ levels." },
+          { lead:"If K+ low:", info:"K-Phos rider 15/30/45 mMol · q1h · stop after 1–2." },
+          { lead:"If K+ normal:", info:"sodium phosphate IVPB 45 mMol · q4h/once · D5W 500 mL · hang 4 hrs." }
+        ]},
+        { name: "Magnesium — goal >2.0", items: [
+          { info:"May need repleting if other electrolytes resist repletion." },
+          { info:"PO magnesium absorbs poorly — replete IV." },
+          { lead:"IV:", info:"magnesium sulfate IVPB premix 2 g · once · rate 100 mL/hr · hang 1 hr." }
+        ]},
+        { name: "Calcium — goal >8", items: [
+          { lead:"Correct for albumin first:", info:"measured Ca + 0.8 × (4 − albumin). Albumin should be within 3 days." },
+          { info:"Can also check ionized calcium." },
+          { info:"Calcium chloride is roughly 10× stronger than calcium gluconate." },
+          { info:"If the patient got pRBCs, order calcium repletion — the bicarb in pRBCs eats up calcium." },
+          { lead:"Gluconate:", info:"calcium gluconate 10% IVPB 1 g once." },
+          { lead:"Chloride:", info:"CaCl 10% IVPB 3 mL in NS 100 mL · once · rate 100 mL/hr · hang 1 hr (nurse instruction: dilute 3 mL in 100 mL NS)." }
+        ]}
+      ]
+    },
+    {
+      id: "sepsis",
+      type: "reference",
+      tag: "Protocol",
+      title: "Sepsis",
+      sections: [
+        { name: "Cultures & Labs", items: [
+          { lead:"Blood cultures:", info:"sterile technique · 4 bottles total (2 anaerobic, 2 aerobic) · one of each from 2 SEPARATE sticks · draw BEFORE antibiotics." },
+          { lead:"Lactate:", info:"repeat in 3 hours if the initial lactate is >2." },
+          { info:"Respiratory culture." },
+          { lead:"Urine:", info:"UA only if the patient has a foley; culture is fine if no foley." }
+        ]},
+        { name: "Antibiotics", items: [
+          { lead:"STAT dose:", info:"must be given within 1 hour. Call pharmacy to verify the med, then follow up to make sure it is actually hanging." },
+          { info:"Also order the standing dose." }
+        ]},
+        { name: "Fluids", items: [
+          { lead:"IVF:", info:"30 mL/kg crystalloid for hypotension or lactate >2." }
+        ]}
+      ]
+    },
+    {
+      id: "nutrition",
+      type: "reference",
+      tag: "ICU",
+      title: "Nutrition",
+      intro: "PepUp enteral nutrition protocol. 24-hr period runs 0600–0559.",
+      sections: [
+        { name: "How it works", items: [
+          { info:"EN orders are written as a dose VOLUME PER DAY, not a run rate. The nurse adjusts the rate to deliver the full dose over 24 hrs." },
+          { info:"Tell the nurse if a patient needs NPO after midnight so they can recalculate the rate and still deliver the full volume." },
+          { lead:"Pivot 1.5:", info:"semi-elemental tube feed — 45% carbs, 25% protein, 30% fat, with omega-3s." }
+        ]},
+        { name: "Orders — PepUp Panel", items: [
+          { info:"Confirm enteral access by CXR or other acceptable method first." },
+          { lead:"GRV checks q4h:", info:"not needed with a jejunal tube. GRV <500 mL needs no intervention unless other signs of intolerance." },
+          { lead:"Consider metoclopramide:", info:"10 mg IV q6h × 24 hr then reassess · 5 mg IV q6h × 24 hr if renal dysfunction." }
+        ]},
+        { name: "Volume-Based Feeding (by admission weight)", items: [
+          { lead:"≤50 kg:", info:"700 mL / 24 hrs" },
+          { lead:"50.1–65 kg:", info:"900 mL / 24 hrs" },
+          { lead:"65.1–80 kg:", info:"1100 mL / 24 hrs" },
+          { lead:"80.1–95 kg:", info:"1300 mL / 24 hrs" },
+          { lead:">95.1 kg:", info:"1600 mL / 24 hrs" },
+          { info:"Order the 24-hr volume by continuous drip. Do NOT include a run rate." }
+        ]},
+        { name: "Trophic Feeds", items: [
+          { info:"Start Pivot 1.5 at 30 mL/hr." },
+          { info:"For patients on vasopressors or not suitable for volume-based EN." },
+          { info:"Reassess for transition to volume-based feeding the next day." }
+        ]},
+        { name: "NPO", items: [
+          { lead:"Use when EN is contraindicated:", info:"bowel perforation, obstruction, active GI bleed, DKA, proximal high-output fistula." },
+          { info:"Consider a jejunally placed feeding tube. Reassess for enteral feeding every day." }
+        ]},
+        { name: "Diarrhea on EN", items: [
+          { lead:"Definition:", info:">4–5 loose stools or >750 mL liquid stool in 24 hrs." },
+          { info:"Review history for pre-existing causes (UC, short bowel, diverticulitis)." },
+          { info:"Assess the abdomen — distention, tympany, pain." },
+          { info:"Hold laxatives/cathartics 24 hrs and send stool for C. diff." },
+          { info:"Rule out impaction / overflow incontinence." },
+          { info:"Consult dietitian re: changing formula. Consider probiotics, or baby food via tube q8–12h." },
+          { info:"Consider a fecal management system (e.g. flexiseal) per unit protocol." },
+          { lead:"C. diff negative:", info:"consider an anti-diarrheal (loperamide, diphenoxylate-atropine)." },
+          { lead:"C. diff positive:", info:"start C. diff treatment." }
+        ]}
+      ]
+    },
+    {
+      id: "med-pearls",
+      type: "reference",
+      tag: "Pearls",
+      title: "Med Pearls",
+      sections: [
+        { name: "BID ≠ q12", items: [
+          { lead:"q12:", info:"patient gets it at 10 AM and 10 PM — usually choose this one." },
+          { lead:"BID:", info:"patient gets it at 10 AM and 6 PM." }
+        ]},
+        { name: "Antihypertensives", items: [
+          { info:"Always give HOLD parameters — e.g. \u201Chold for SBP <100 or HR <60.\u201D" }
+        ]},
+        { name: "PCA Pump (hydromorphone)", items: [
+          { lead:"Order as:", info:"Hydromorphone IV PCA." },
+          { lead:"Settings:", info:"total dose 20 mg · concentration 0.2 · base sodium chloride 0.9% 100 mL · IV · continuous · loading dose 1 mg · demand dose 0.2 mg · basal rate 0.2 mg/hr · admin rate 1 mL/hr · lockout 8 min · 4-hr limit 4 mg · hang time 102 hrs." }
+        ]},
+        { name: "Radiology — Trauma Panscan", items: [
+          { info:"CT head w/o contrast · CT c-spine w/o contrast · CT max/face w/o (if facial trauma) · CT angio thoracic · CT abd/pelvis with contrast." },
+          { lead:"Ortho:", info:"usually x-rays one bone above and below the injury." },
+          { lead:"MRI from the ED:", info:"if the tech is called in, order it URGENT so the attending radiologist reads it promptly." }
+        ]},
+        { name: "CT with Contrast", items: [
+          { info:"Check creatinine before IV contrast; bolus IVF beforehand to prevent contrast-induced kidney injury." },
+          { info:"Must call the radiology resident to protocol the scan once the order is placed." },
+          { lead:"Oral contrast:", info:"browse → diagnostic imaging contrast → CT scan contrast protocols. Diatrizoate meglumine 30 cc bottle mixed in 1 L normal saline." },
+          { lead:"PEG tube study:", info:"call pharmacy and have the 30 cc bottle sent up WITHOUT being mixed in saline." }
         ]}
       ]
     },
