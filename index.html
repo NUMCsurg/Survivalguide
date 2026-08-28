@@ -382,7 +382,7 @@
    AUTHOR_MODE = false → resident build: content is read-only & always from SEED,
                           only checkbox states persist on the resident's device. */
 const AUTHOR_MODE = false;
-const CONTENT_VERSION = "2026.07.19";   // bump this whenever you publish new content
+const CONTENT_VERSION = "2026.07.20";   // bump this whenever you publish new content
 
 const STORE_KEY = "surgical_cards_v1";          // author-mode full state
 const CHECK_KEY = "surgical_cards_checks_v1";    // resident-mode checkbox states only
@@ -391,25 +391,6 @@ const CHECK_KEY = "surgical_cards_checks_v1";    // resident-mode checkbox state
 const SEED = {
   active: 0,
   cards: [
-    {
-      id: "forest-hills-op",
-      tag: "Forest Hills",
-      title: "Operative Patient",
-      sections: [
-        { name: "Documentation", items: [
-            { t: "H&P", note: "" }
-        ]},
-        { name: "Labs", items: [
-            { t: "Full set of labs", note: "" },
-            { t: "Type and Screen", note: "Don't forget — needed for OR" },
-            { t: "Lipase", note: "for abdominal pain" },
-            { t: "hCG", note: "in women of childbearing age" }
-        ]},
-        { name: "Booking", items: [
-            { t: "Book case in EPIC", note: "" }
-        ]}
-      ]
-    },
     {
       id: "consult-daily",
       tag: "Daily To-Do",
