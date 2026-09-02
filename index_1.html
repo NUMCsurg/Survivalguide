@@ -1,0 +1,2596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0f172a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Surg Cards">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAFcklEQVR4nO3dTW4dRRSG4WOLeSSE5DWQIcthK4zZCsthGNYQCSFlBWF0k9i+P/1T3VV1zvPMSITdEt/b1dfXxk8xmA8vH7/2vgaO9eXzp6fe13DR9UKMnYteUZz+SY2eR86M4bRPZPisdUYIh38Cw2evI0M47AMbPq0dEULzD2j4HK1lCM+tPlCE8XOOljtrUpLh08ve02D3CWD89LR3f7sCMH5GsGeHmwMwfkaydY+bAjB+RrRll6sDMH5GtnafqwIwfmawZqeLAzB+ZrJ0r4sCMH5mtGS3DwMwfmb2aL9NvxUCZnM3AHd/Mri345sBGD+Z3NqzRyBKuxqAuz8ZXdu1E4DS3gXg7k9mb/ftBKC0VwG4+1PBjzt3AlDatwDc/anksncnAKUJgNKeIjz+UJcTgNIEQGkCoDQBUNqzF8BU5gSgNAFQmgAoTQCUJgBKEwClCYDSBEBpAqA0AVCaAChNAJQmAEoTAKUJgNJ+6n0BR/r1r7/f/dk/v//W4UoY1VPGH4i5Nvy3hEBEsgCWDP8tIdSW5jXAlvHv+ffIIU0AsEWKAPbexZ0CdaUIALaaPoBWd2+nQE3TBwB7CIBF/v3j596XcAgB8NBl/BkjEAB3vR19tgimD6DVO7neEX7v1tgzRTB9ABzj0cizRJAigL13b3f/bTJEkCIA2loz7NkjSBPA1ru4u/9rWwY9cwSpvh36ws8DbLN3yL/8+V+jKzlPygAu/ETYchXHH5E8AJapOv6IRK8B2Kby+CMEUFr18UcIoKyZv3LTkgDYJMPdP0IAJXn0+U4AxRj/awIoxPjfE0ARxn+dAAow/tsEkJzx3yeAxIz/MQEk5Y2uZQSQUIvxV7j7RwiAK6qMP0IA6XjuX0cAiRj/egJIwvi3EUACxr+dACZn/PsIYGLGv58AJmX8bQhgQt7lbUcABbn7f1cigEx3TI8+baUPINNvNzH+9lIHkOm3mxj/MdIGkOm3mxj/cVIGkOm3mxj/sdIFsHQwM0Rg/MdLFcDawYwcgfGfI00AWwczYgQjXlNWKQLYO5hsg3P3Xy5FAC3+g48SgUefc6UIICJHBMZ/vjQBRMwdgfH3kSqAiDkjMP5+0gUQMVcExt9XygAi5ojA+PtLG0DE2BEY/xhSBxAxZgS9v9rEd+kDiBgrAv/fzrGUCCBirAj2MP62ygQQ0T8Cz/3jKRVARL8IjH9M5QKIOD8C4x9XyQAizovA+MdWNoCI4yMw/vGVDiDiuAiMfw7lA4hoH4Hxz+Ppw8vHr70vYhQjfJ0/QgBncgL8YIThjXANlQjgjZ4DNP7zCeCKHkM0/j4EcMOZgzT+fgRwxxnDNP6+BPDAkQM1/v4EsMARQzX+MQhgoZaDNf5xCGAFw81HACs9imDv33MuAWxwa8SXP3/094xDABu9HfPaf2YMAthh6R3f+Mflu0EpzQlAaQKgNAFQmgAoTQCUJgBKEwClCYDSBEBpAqA0AVCaAChNAJQmAEoTAKUJgNIEQGkCoDQBUJoAKE0AlPb85fOnp94XAb04AShNAJQmAEoTAKU9R0R4IUxFXz5/enICUJoAKO1bAB6DqOSydycApb0KwClABT/u3AlAae8CcAqQ2dt9OwEo7WoATgEyurZrJwCl3QzAKUAmt/Z89wQQARnc27FHIEp7GIBTgJk92u+iE0AEzGjJbhc/AomAmSzd66rXACJgBmt2uvpFsAgY2dp9bvoqkAgY0ZZdbv4yqAgYydY97nofQASMYM8Od78RJgJ62ru/puP98PLxa8uPB7e0uvE2/VYIpwFnaLmzwwbrNKC1I26wh9+xhcBeRz5ZnPbIIgTWOuOR+vRndiHwyJmvJbu+aBUDF72+gPI/smYP7Efa6gEAAAAASUVORK5CYII=">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAFcklEQVR4nO3dTW4dRRSG4WOLeSSE5DWQIcthK4zZCsthGNYQCSFlBWF0k9i+P/1T3VV1zvPMSITdEt/b1dfXxk8xmA8vH7/2vgaO9eXzp6fe13DR9UKMnYteUZz+SY2eR86M4bRPZPisdUYIh38Cw2evI0M47AMbPq0dEULzD2j4HK1lCM+tPlCE8XOOljtrUpLh08ve02D3CWD89LR3f7sCMH5GsGeHmwMwfkaydY+bAjB+RrRll6sDMH5GtnafqwIwfmawZqeLAzB+ZrJ0r4sCMH5mtGS3DwMwfmb2aL9NvxUCZnM3AHd/Mri345sBGD+Z3NqzRyBKuxqAuz8ZXdu1E4DS3gXg7k9mb/ftBKC0VwG4+1PBjzt3AlDatwDc/anksncnAKUJgNKeIjz+UJcTgNIEQGkCoDQBUNqzF8BU5gSgNAFQmgAoTQCUJgBKEwClCYDSBEBpAqA0AVCaAChNAJQmAEoTAKUJgNJ+6n0BR/r1r7/f/dk/v//W4UoY1VPGH4i5Nvy3hEBEsgCWDP8tIdSW5jXAlvHv+ffIIU0AsEWKAPbexZ0CdaUIALaaPoBWd2+nQE3TBwB7CIBF/v3j596XcAgB8NBl/BkjEAB3vR19tgimD6DVO7neEX7v1tgzRTB9ABzj0cizRJAigL13b3f/bTJEkCIA2loz7NkjSBPA1ru4u/9rWwY9cwSpvh36ws8DbLN3yL/8+V+jKzlPygAu/ETYchXHH5E8AJapOv6IRK8B2Kby+CMEUFr18UcIoKyZv3LTkgDYJMPdP0IAJXn0+U4AxRj/awIoxPjfE0ARxn+dAAow/tsEkJzx3yeAxIz/MQEk5Y2uZQSQUIvxV7j7RwiAK6qMP0IA6XjuX0cAiRj/egJIwvi3EUACxr+dACZn/PsIYGLGv58AJmX8bQhgQt7lbUcABbn7f1cigEx3TI8+baUPINNvNzH+9lIHkOm3mxj/MdIGkOm3mxj/cVIGkOm3mxj/sdIFsHQwM0Rg/MdLFcDawYwcgfGfI00AWwczYgQjXlNWKQLYO5hsg3P3Xy5FAC3+g48SgUefc6UIICJHBMZ/vjQBRMwdgfH3kSqAiDkjMP5+0gUQMVcExt9XygAi5ojA+PtLG0DE2BEY/xhSBxAxZgS9v9rEd+kDiBgrAv/fzrGUCCBirAj2MP62ygQQ0T8Cz/3jKRVARL8IjH9M5QKIOD8C4x9XyQAizovA+MdWNoCI4yMw/vGVDiDiuAiMfw7lA4hoH4Hxz+Ppw8vHr70vYhQjfJ0/QgBncgL8YIThjXANlQjgjZ4DNP7zCeCKHkM0/j4EcMOZgzT+fgRwxxnDNP6+BPDAkQM1/v4EsMARQzX+MQhgoZaDNf5xCGAFw81HACs9imDv33MuAWxwa8SXP3/094xDABu9HfPaf2YMAthh6R3f+Mflu0EpzQlAaQKgNAFQmgAoTQCUJgBKEwClCYDSBEBpAqA0AVCaAChNAJQmAEoTAKUJgNIEQGkCoDQBUJoAKE0AlPb85fOnp94XAb04AShNAJQmAEoTAKU9R0R4IUxFXz5/enICUJoAKO1bAB6DqOSydycApb0KwClABT/u3AlAae8CcAqQ2dt9OwEo7WoATgEyurZrJwCl3QzAKUAmt/Z89wQQARnc27FHIEp7GIBTgJk92u+iE0AEzGjJbhc/AomAmSzd66rXACJgBmt2uvpFsAgY2dp9bvoqkAgY0ZZdbv4yqAgYydY97nofQASMYM8Od78RJgJ62ru/puP98PLxa8uPB7e0uvE2/VYIpwFnaLmzwwbrNKC1I26wh9+xhcBeRz5ZnPbIIgTWOuOR+vRndiHwyJmvJbu+aBUDF72+gPI/smYP7Efa6gEAAAAASUVORK5CYII=">
+<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjogIk5VTUMgU3VyZ2ljYWwgQ2FyZHMiLCAic2hvcnRfbmFtZSI6ICJTdXJnIENhcmRzIiwgImRlc2NyaXB0aW9uIjogIlF1aWNrLXJlZmVyZW5jZSBjaGVja2xpc3RzIGFuZCBwcm90b2NvbHMgZm9yIHN1cmdlcnkgcmVzaWRlbnRzIiwgInN0YXJ0X3VybCI6ICIuIiwgInNjb3BlIjogIi4iLCAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwgImJhY2tncm91bmRfY29sb3IiOiAiIzBmMTcyYSIsICJ0aGVtZV9jb2xvciI6ICIjMGYxNzJhIiwgIm9yaWVudGF0aW9uIjogInBvcnRyYWl0IiwgImljb25zIjogW3sic3JjIjogImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBTUFBQUFEQUNBWUFBQUJTM0d3SEFBQUZja2xFUVZSNG5PM2RUVzRkUlJTRzRXT0xlU1NFNURXUUljdGhLNHpaQ3N0aEdOWVFDU0ZsQldGMGs5aStQLzFUM1ZWMXp2UE1TSVRkRXQvYjFkZlh4azh4bUE4dkg3LzJ2Z2FPOWVYenA2ZmUxM0RSOVVLTW5ZdGVVWnorU1kyZVI4Nk00YlJQWlBpc2RVWUloMzhDdzJldkkwTTQ3QU1iUHEwZEVVTHpEMmo0SEsxbENNK3RQbENFOFhPT2xqdHJVcExoMDh2ZTAyRDNDV0Q4OUxSM2Y3c0NNSDVHc0dlSG13TXdma2F5ZFkrYkFqQitSclJsbDZzRE1INUd0bmFmcXdJd2ZtYXdacWVMQXpCK1pySjByNHNDTUg1bXRHUzNEd013Zm1iMmFMOU52eFVDWm5NM0FIZC9NcmkzNDVzQkdEK1ozTnF6UnlCS3V4cUF1ejhaWGR1MUU0RFMzZ1hnN2s5bWIvZnRCS0MwVndHNCsxUEJqenQzQWxEYXR3RGMvYW5rc25jbkFLVUpnTktlSWp6K1VKY1RnTklFUUdrQ29EUUJVTnF6RjhCVTVnU2dOQUZRbWdBb1RRQ1VKZ0JLRXdDbENZRFNCRUJwQXFBMEFWQ2FBQ2hOQUpRbUFFb1RBS1VKZ05KKzZuMEJSL3IxcjcvZi9kay92Ly9XNFVvWTFWUEdINGk1TnZ5M2hFQkVzZ0NXRFA4dElkU1c1alhBbHZIditmZklJVTBBc0VXS0FQYmV4WjBDZGFVSUFMYWFQb0JXZDIrblFFM1RCd0I3Q0lCRi92M2o1OTZYY0FnQjhOQmwvQmtqRUFCM3ZSMTl0Z2ltRDZEVk83bmVFWDd2MXRnelJUQjlBQnpqMGNpelJKQWlnTDEzYjNmL2JUSkVrQ0lBMmxvejdOa2pTQlBBMXJ1NHUvOXJXd1k5Y3dTcHZoMzZ3czhEYkxOM3lMLzgrVitqS3psUHlnQXUvRVRZY2hYSEg1RThBSmFwT3Y2SVJLOEIyS2J5K0NNRVVGcjE4VWNJb0t5WnYzTFRrZ0RZSk1QZFAwSUFKWG4wK1U0QXhSai9hd0lveFBqZkUwQVJ4bitkQUFvdy90c0VrSnp4M3llQXhJei9NUUVrNVkydVpRU1FVSXZ4VjdqN1J3aUFLNnFNUDBJQTZYanVYMGNBaVJqL2VnSkl3dmkzRVVBQ3hyK2RBQ1puL1BzSVlHTEd2NThBSm1YOGJRaGdRdDdsYlVjQUJibjdmMWNpZ0V4M1RJOCtiYVVQSU5Odk56SCs5bElIa09tM214ai9NZElHa09tM214ai9jVklHa09tM214ai9zZElGc0hRd00wUmcvTWRMRmNEYXdZd2NnZkdmSTAwQVd3Y3pZZ1FqWGxOV0tRTFlPNWhzZzNQM1h5NUZBQzMrZzQ4U2dVZWZjNlVJSUNKSEJNWi92alFCUk13ZGdmSDNrU3FBaURrak1QNSswZ1VRTVZjRXh0OVh5Z0FpNW9qQStQdExHMERFMkJFWS94aFNCeEF4WmdTOXY5ckVkK2tEaUJnckF2L2Z6ckdVQ0NCaXJBajJNUDYyeWdRUTBUOEN6LzNqS1JWQVJMOElqSDlNNVFLSU9EOEM0eDlYeVFBaXpvdkErTWRXTm9DSTR5TXcvdkdWRGlEaXVBaU1mdzdsQTRob0g0SHh6K1Bwdzh2SHI3MHZZaFFqZkowL1FnQm5jZ0w4WUlUaGpYQU5sUWpnalo0RE5QN3pDZUNLSGtNMC9qNEVjTU9aZ3pUK2ZnUnd4eG5ETlA2K0JQREFrUU0xL3Y0RXNNQVJRelgrTVFoZ29aYUROZjV4Q0dBRnc4MUhBQ3M5aW1EdjMzTXVBV3h3YThTWFAzLzA5NHhEQUJ1OUhmUGFmMllNQXRoaDZSM2YrTWZsdTBFcHpRbEFhUUtnTkFGUW1nQW9UUUNVSmdCS0V3Q2xDWURTQkVCcEFxQTBBVkNhQUNoTkFKUW1BRW9UQUtVSmdOSUVRR2tDb0RRQlVKb0FLRTBBbFBiODVmT25wOTRYQWIwNEFTaE5BSlFtQUVvVEFLVTlSMFI0SVV4Rlh6NS9lbklDVUpvQUtPMWJBQjZEcU9TeWR5Y0FwYjBLd0NsQUJUL3UzQWxBYWU4Q2NBcVEyZHQ5T3dFbzdXb0FUZ0V5dXJackp3Q2wzUXpBS1VBbXQvWjg5d1FRQVJuYzI3RkhJRXA3R0lCVGdKazkydStpRTBBRXpHakpiaGMvQW9tQW1TemQ2NnJYQUNKZ0JtdDJ1dnBGc0FnWTJkcDlidm9xa0FnWTBaWmRidjR5cUFnWXlkWTk3bm9mUUFTTVlNOE9kNzhSSmdKNjJydS9wdVA5OFBMeGE4dVBCN2UwdXZFMi9WWUlwd0ZuYUxtend3YnJOS0MxSTI2d2g5K3hoY0JlUno1Wm5QYklJZ1RXT3VPUit2Um5kaUh3eUptdkpidSthQlVERjcyK2dQSS9zbVlQN0VmYTZnRUFBQUFBU1VWT1JLNUNZSUk9IiwgInNpemVzIjogIjE5MngxOTIiLCAidHlwZSI6ICJpbWFnZS9wbmciLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifSwgeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFnQUFBQUlBQ0FZQUFBRDBlTlQ2QUFBU3EwbEVRVlI0bk8zZFRXN2pXSnFHVVRuUjh3QVNEY1FhT29hMW5OcEtqbnNydlp3ZVpxMGhnVVFEdVlMb1FaWWpiTm1TU09yeTN1L25uSEVoVEZFQzM0ZVUwL1Z5SWFRdlg3OTlYMzBNQUtQODljZnZMNnVQZ2ZlOElZc1llSUNmQk1KOFR2Z0V4aDVnUDFGd0xpZjNCQVlmWUR4Qk1KYVRPWURCQjVoUEVEekh5VHZJNkFQRUlRYjJjOEoyTVBvQThZbUJiWnlrQjR3K1FGNWk0RFluNWdiREQxQ0hFUGpJQ1huRDZBUFVKd2IrNWlSY0REOUFSOTFEb1BXTE4vd0FkQTJCbGkvYThBTndyVnNJdEhxeGhoK0FSN3FFUUlzWGFmZ0IyS3Q2Q1B5eStnRE9adndCT0tMNmZwU3RtK3B2SEFEelZId2FVTzRGR1g0QXpsSXBCRXA5QldEOEFUaFRwWjBwVVRLVjNoQUFjc2orTkNEOUV3RGpEOEFLMmZjbmRRQmtQL2tBNUpaNWgxSSt2c2g4d2dHb0tkdFhBdW1lQUJoL0FDTEt0aytwQWlEYnlRV2dsMHc3bGVKeFJhWVRDZ0NYUy95dkJNSS9BVEQrQUdRVWZiOUNCMEQwa3djQTkwVGVzYkFCRVBta0FjQldVZmNzWkFCRVBWa0FjRVRFWFFzWEFCRlBFZ0E4SzlxK2hRcUFhQ2NIQUVhS3RITmhBaURTU1FHQXMwVFp1eEFCRU9Wa0FNQU1FWFp2ZVFCRU9Ba0FNTnZxL1ZzYUFLdGZQQUNzdEhJSGx3V0E4UWVBZFh1NEpBQ01Qd0Q4dEdJWHB3ZUE4UWVBajJidjQ5UUFNUDRBY052TW5ad1dBTVlmQUI2YnRaZFRBc0Q0QThCMk0zWnorZDhCQUFEbU96MEEzUDBEd0g1bjcrZXBBV0Q4QWVDNE0zZjB0QUF3L2dEd3ZMUDIxTzhBQUVCRHB3U0F1MzhBR09lTVhSMGVBTVlmQU1ZYnZhOURBOEQ0QThCNVJ1NnMzd0VBZ0lhR0JZQzdmd0E0MzZpOUhSSUF4aDhBNWhteHU3NENBSUNHbmc0QWQvOEFNTit6KytzSkFBQTA5RlFBdVBzSGdIV2UyZUhEQVdEOEFXQzlvM3ZzS3dBQWFPaFFBTGo3QjRBNGp1eXlKd0FBME5EdUFIRDNEd0R4N04xblR3QUFvS0ZkQWVEdUh3RGkyclBUbmdBQVFFT2JBOERkUHdERXQzV3ZQUUVBZ0lZMkJZQzdmd0RJWTh0dWV3SUFBQTBKQUFCbzZHRUFlUHdQQVBrODJtOVBBQUNnb2JzQjRPNGZBUEs2dCtPZUFBQkFRd0lBQUJxNkdRQWUvd05BZnJmMjNCTUFBR2hJQUFCQVE1OEdnTWYvQUZESFo3dnVDUUFBTkNRQUFLQ2hEd0hnOFQ4QTFITzk3NTRBQUVCREFnQUFHaElBQU5EUXV3RHcvVDhBMVBWMjV6MEJBSUNHQkFBQU5DUUFBS0NoSHdIZyszOEFxTzkxN3owQkFJQ0dCQUFBTkNRQUFLQWhBUUFBRGIxY0xuNEJFQUM2OFFRQUFCb1NBQURRa0FBQWdJWUVBQUEwSkFBQW9DRUJBQUFOQ1FBQWFPZ1hmd01BQVByeEJBQUFHaElBQU5DUUFBQ0FoZ1FBQURRa0FBQ2dJUUVBQUEwSkFBQm9TQUFBUUVNQ0FBQWFFZ0FBMEpBQUFJQ0dCQUFBTkNRQUFLQWhBUUFBRFFrQUFHaElBQUJBUXdJQUFCb1NBQURRa0FBQWdJWUVBQUEwSkFBQW9DRUJBQUFOQ1FBQWFFZ0FBRUJEQWdBQUdoSUFBTkNRQUFDQWhnUUFBRFFrQUFDZ0lRRUFBQTBKQUFCb1NBQUFRRU1DQUFBYUVnQUEwSkFBQUlDRy9tUDFBVkRQZi8zUC96NzgzL3pybi8rWWNDUUEzUEx5NWV1Mzc2c1BndHkyRFA0amdnQmdMZ0hBWVNPRy81b1FBSmhEQUxEYkdjTi9UUWdBbkVzQXNObU00YjhtQkFETzRiOENZSk1WNDcveTV3SlVKd0I0YVBVSXIvNzVBQlVKQU82S01yNVJqZ09nQ2dIQVRkRkdOOXJ4QUdRbUFQaFUxTEdOZWx3QTJRZ0FQb2crc3RHUER5QURBY0E3V2NZMXkzRUNSQ1VBQUtBaEFjQVAyZTZxc3gwdlFDUUNBQUFhRWdCY0xwZThkOU5aanh0Z05RRUFBQTBKQU5MZlJXYy9mb0FWQkFBQU5DUUFBS0FoQVFBQURRbUE1cXA4ZjE3bGRRRE1JZ0FBb0NFQkFBQU5DUUFBYUVnQUFDVHk1Misvcmo0RWloQUFBRW04anI4SVlBUUJBSkRBOWVpTEFKNGxBQUNDdXpYMmYvNzJxeERnTUFFQUVOaVdnUmNCSENFQW12dlhQLyt4K2hDR3FQSTY0Q2dSd0Y0Q0FDQ292YU11QXRoREFBQUVkSFRNUlFCYkNRQ0FZSjRkY1JIQUZpOWZ2bjc3dnZvZ1dDL3ovNW1PNy8rcFpQUjQvK2QvLzkvUWY0ODZQQUVBQ09LTU8zZFBBN2hGQUhDNVhQTGVSV2M5YnJoMjVsQ0xBRDRqQUFBV216SFFJb0JyQW9BZnN0MU5aenRlV0UwRThKWUFBRmhvOWlqNzg4RzhFZ0M4aytXdU9zdHh3ajByaDFnRUlBRDRJUHE0Umo4KzJDTENBRWM0QnRZUkFId3E2c2hHUFM3WUk5THdSam9XNWhJQTNCUnRiS01kRHh3UmNYQWpIaFBuRXdEY0ZXVjBveHdIUENQeTBFWStOczdoVHdHenljby9GV3o4cVNEVHdQcnp3VDE0QXNBbXEwYlkrTU44bVdLRjR6d0JZTGNaVHdNTVA1VmtIVlJQQW1vVEFCeDJSZ2dZZnFveC9rUWxBSGphaUJBdy9GUmsvSWxNQUREY2xpQXcrRlJuL0lsT0FBQU1adnpKd0g4RkFEQlExdkduSHdFQU1Fam04WGYzMzQ4QUFHak8rUGNrQUFBR3lIcjNiL3o3RWdBQVR6TCtaQ1FBQUo1Zy9NbEtBQUFjWlB6SlRBQUFIR0Q4eVU0QUFPeVVkZnpoTFFFQXNFUG04WGYzejFzQ0FHQWo0MDhsQWdDZ09PUFBad1FBd0FaWjcvNk5QN2NJQUlBSGpEOFZDUUNBTzR3L1ZRa0FnQnVNUDVVSkFJQlBaQjEvMkVvQUFGekpQUDd1L3RsS0FBQzhZZnpwUWdBQUZHRDgyVXNBQVB4YjFydC80ODhSQWdEZ1l2enBSd0FBN1JsL09oSUFRR3ZHbjY0RUFOQ1c4YWN6QVFDMGxIWDhZUlFCQUxTVGVmemQvVE9LQUFCSXd2Z3prZ0FBV3NsNjkyLzhHVTBBQUcwWWYvaEpBQUF0R0g5NFR3QUE1UmwvK0VnQUFLVVpmL2ljQUFES3lqcitNSU1BQUVyS1BQN3UvcGxCQUFEbEdIOTRUQUFBQkdIOG1Va0FBS1ZrdmZzMy9zd21BSUF5akQ5c0p3Q0FFb3cvN0NNQWdQU01QK3duQUlEVXNvNC9yQ1lBZ0xReWo3KzdmMVlUQUVCS3hoK2VJd0FBSmpMK1JDRUFnSFN5M3YwYmZ5SVJBRUFxeGgvR0VBQkFHc1lmeGhFQVFBckdIOFlTQUVCNFdjY2ZJaE1BUUdpWng5L2RQNUVKQUNBczR3L25FUUFBZ3hsL01oQUFRRWhaNy82TlAxa0lBQ0FjNHcvbkV3QkFLTVlmNWhBQVFCakdIK1lSQUVBSXhoL21FZ0RBY2xuSEh6SVRBTUJTbWNmZjNUK1pDUUNBQTR3LzJRa0FZSm1zZC8vR253b0VBTENFOFllMUJBQXduZkdIOVFRQTAyUzk2RE5XMXMrQjhhY2FBY0FVcnhmOXJCZC94c2o2L2h0L0toSUFuTzc2b3A5MUJIaU85eDFpRVFDYzZ0WkYzeGowa3ZuOWR2ZFBWUUtBMHp5NjZHY2VCYmJML0Q0YmZ5b1RBSnhpNjBVLzh6aFFtL0duT2dIQWNIdEhYUVRVbGZXOU5mNTBJQUFZNnVnRlArdFFjRnZXOTlUNDA0VUFZSmhuTC9oWkI0T1BzcjZYeHA5T0JBQkRqTHJnWngwT2ZzcjZIaHAvdWhFQVBHMzBCVC9yZ09DOWcwd0VBRTg1NjRKdlNQTEovSjY1KzZjakFjQmhaMS93TXc5S041bmZLK05QVndLQVEyWmQ4RE1QQy9FWmZ6b1RBT3cyZTVSRlFHeFozeC9qVDNjQ2dGMVdYZXl6amt4MVdkOFg0dzhDZ0IxV1greFgvM3pleS9wK0dILzRtd0Jna3lnWCt5akgwVjNXOThINHcwOENnSWVpWGV5akhVODNXYysvOFlmM0JBQjNSYjNZUnoydTZweDNxRU1BY0ZQMGkzMzA0NnNtOC9sMjl3OGZDUUErbGVWaW4rVTRXY2Y0dytjRUFCOWtHOVZzeDV0UjFuTnMvT0UyQWNBN1dTLzBXWTg3ZzZ6bjF2akRmUUtBSDdKZTZGOWxQLzZJc3A1VDR3K1BDUUIrcUhEUnpEcFlFV1U5bHhVK3h6Q0RBT0NkQ2hmUHJNTVZTZFp6V09IekM3TUlBRDZvY0JITk9tQVJPSGZRZ3dEZ1V5S2dwOHpuck1KbkZtWVNBTnhVNFlLYWVkQm15M3l1S254V1lUWUJ3RjBWTHF5Wmg0M0hLbnhHWVFVQndFTVZMckFpNEw2czU2ZkNaeE5XRVFCc1V1RkNtM1hrenBiMXZGVDRUTUpLQW9ETktseHdzNDdkV2JLZWp3cWZSVmhOQUxCTGhRdHYxdEViTGV0NXFQQVpoQWdFQUx0VnVBQm5IYjlSdXI5K1FBQndrQWpJSy9QcnJ2QzVneWdFQUlkVnVCaG5Ic01qTXIvZUNwODNpRVFBOEpRS0YrWE1vOWhGaGM4WlJDTUFlRnFGaTNPSENNajZHaXQ4dmlBaUFjQVFGUzdTV1FkeWk2eXZyY0xuQ3FJU0FBeFQ0V0tkZFNqdnlmcWFLbnllSURJQndGQVZMdHBaQi9NeldWOUxoYzhSUkNjQUdLN0N4VHZyY0w1VjRUVUE1eEVBbkVJRXJKWDUyQ3Q4ZGlBREFjQnBLbHpJTXc1cHhtTitWZUV6QTFrSUFFNVY0WUtlZVZBenFmQlpnVXdFQUtlcmNHSFBFZ0ZaanZOYWhjOElaQ01BbUtMQ0JUNzZ1RVkvdmxzcWZEWWdJd0hBTkJVdTlGRkhOdXB4UFZMaE13RlpDUUNtcW5EQmp6YTIwWTVucXdxZkJjaE1BREJkaFF0L2xOR05jaHg3VmZnTVFIWUNnQ1VxRE1EcThWMzk4NEhjQkFETGlJQjhQM2VFQ3U4N1ZDQUFXS3JDR0dRZTQ5a3F2TjlRaFFCZ3VRcWpNRE1Dc2daSGhmY1pLaEVBaEZCaEhHWU1zL0VIUmhFQWhGRmhKTTRjYU9NUGpDUUFDS1hDV0p3eDFNWWZHRTBBRUU2RjBSZzUyTVlmT0lNQUlLUUs0ekZpdUxPT1B4Q2ZBQ0NzN2hHUWVmd3J2SGRRblFBZ3RBcERjbVRJalQ5d05nRkFlQlVHSmZPZzcxSGh2WUl1QkFBcFZCaVdyUkdRTlJZcXZFZlFpUUFnalFvRDgyamNqVDh3aXdBZ2xRcERjMnZralQ4d2t3QWduUXFEY3ozMnhoK1lUUUNRVW9YaGVSMzlyT01QNVBieTVldTM3NnNQQW80eW51dFVpRERvekJNQVVqTkNhemp2a0o4QUlEMWpOSmZ6RFRVSUFFb3dTbk00ejFDSEFLQU00M1F1NXhkcUVRQ1VZcVRPNGJ4Q1BRS0Fjb3pWV000bjFDUUFLTWxvamVFOFFsMENnTEtNRjhCdEFvRFNSTUJ4emgzVUpnQW96NUR0NTV4QmZRS0FGZ3phZHM0VjlDQUFhTU93UGVZY1FSOENnRllNM0czT0RmUWlBR2pIMEgza25FQS9Bb0NXRE41UHpnWDBKQUJveS9BQm5Ra0FXdXNlQWQxZlAzUW1BR2l2NndoMmZkM0Ezd1FBWFBxTlliZlhDM3drQU9EZnVveGlsOWNKM0NjQTRJM3E0MWo5OVFIYkNRQzRVblVrcTc0dTRCZ0JBSitvTnBiVlhnL3dQQUVBTnhoTm9ESUJBSGRVaUlBS3J3RVlUd0RBQTJjUDZKbi92dkVIYmhFQXNNRlpRL3I2NzU3eDd4dC80SjZYTDErL2ZWOTlFSkRGbjcvOU91emZ1alhRSTM2RzhRY2U4UVFBZGhnMXJQZituV2QvaHZFSHRoQUFzTk9NZ1Q3Nk00dy9zSlVBZ0FObURQVGVuMkg4Z1QwRUFCdzBZNkNOT25BV0FRQlAyRHJRend6NW1WOFpBSDM1cndCZ2dIdS91VDl5bkQvN09jWWZPTUlUQUJqZzFnaVBIdWZyZjgvNEEwY0pBQmhrMWppZitjZURnRDU4QlFDRC9mbmJyOFlaQ0U4QUFFQkR2Z0lBZ0lZRUFBQTBKQUFBb0NFQkFBQU5DUUFBYUVnQUFFQkRBZ0FBR2hJQUFOQ1FBQUNBaGdRQUFEUWtBQUNnSVFFQUFBMEpBQUJvU0FBQVFFTUNBQUFhRWdBQTBKQUFBSUNHQkFBQU5DUUFBS0FoQVFBQURRa0FBR2hJQUFCQVF3SUFBQm9TQUFEUWtBQUFnSVlFQUFBMEpBQUFvQ0VCQUFBTkNRQUFhRWdBQUVCREFnQUFHaElBQU5DUUFBQ0FoZ1FBQURRa0FBQ2dJUUVBQUEwSkFBQm9TQUFBUUVNQ0FBQWFFZ0FBMEpBQUFJQ0dCQUFBTkNRQUFLQWhBUUFBRFFrQUFHaElBQUJBUXdJQUFCb1NBQURRa0FBQWdJWisrZXVQMzE5V0h3UUFNSmNuQUFEUWtBQUFnSVlFQUFBMEpBQUFvQ0VCQUFBTkNRQUFhRWdBQUVCRHYxd3VsNHUvQlFBQWZmejF4Kzh2bmdBQVFFTUNBQUFhRWdBQTBKQUFBSUNHZmdTQVh3UUVnUHBlOTk0VEFBQm9TQUFBUUVNQ0FBQWFlaGNBZmc4QUFPcDZ1L09lQUFCQVF3SUFBQm9TQUFEUTBJY0E4SHNBQUZEUDliNTdBZ0FBRFFrQUFHam8wd0R3TlFBQTFQSFpybnNDQUFBTkNRQUFhT2htQVBnYUFBRHl1N1hubmdBQVFFTUNBQUFhdWhzQXZnWUFnTHp1N2JnbkFBRFEwTU1BOEJRQUFQSjV0TitlQUFCQVF3SUFBQnJhRkFDK0JnQ0FQTGJzdGljQUFORFE1Z0R3RkFBQTR0dTYxNTRBQUVCRHV3TEFVd0FBaUd2UFRuc0NBQUFON1E0QVR3RUFJSjY5Kyt3SkFBQTBkQ2dBUEFVQWdEaU83TEluQUFEUTBPRUE4QlFBQU5ZN3VzZFBQUUVRQVFDd3pqTTc3Q3NBQUdqbzZRRHdGQUFBNW50MmZ6MEJBSUNHaGdTQXB3QUFNTStJM1IzMkJFQUVBTUQ1UnUydHJ3QUFvS0doQWVBcEFBQ2NaK1RPRG44Q0lBSUFZTHpSKzNyS1Z3QWlBQURHT1dOWC9RNEFBRFIwV2dCNENnQUF6enRyVDA5OUFpQUNBT0M0TTNmMDlLOEFSQUFBN0hmMmZ2b2RBQUJvYUVvQWVBb0FBTnZOMk0xcFR3QkVBQUE4Tm1zdnAzNEZJQUlBNExhWk96bjlkd0JFQUFCOE5Ic2ZsL3dTb0FnQWdKOVc3T0t5L3dwQUJBREF1ajFjK3A4QmlnQUFPbHU1Zzh2L0RvQUlBS0NqMWZ1M1BBQXVsL1VuQVFCbWlyQjdJUUxnY29seE1nRGdiRkgyTGt3QVhDNXhUZ29BbkNIU3pvVUtnTXNsMXNrQmdGR2k3VnU0QUxoYzRwMGtBSGhHeEYwTEdRQ1hTOHlUQlFCN1JkMnpzQUZ3dWNROWFRQ3dSZVFkQ3gwQWwwdnNrd2NBdDBUZnI5QUhkKzNMMTIvZlZ4OERBTndUZmZoZmhYOEM4RmFXa3dwQVQ1bDJLbFVBWEM2NVRpNEFmV1RicDFRSGU4MVhBZ0NzbG0zNFg2VjdBdkJXMXBNT1FBMlpkeWgxQUZ3dXVVOCtBSGxsMzUvVUIzL05Wd0lBbkMzNzhMOUsvd1RnclNwdkNnQXhWZHFaTWkva21xY0JBSXhTYWZoZmxYdEIxNFFBQUVkVkhQNVhwYjRDK0V6bE53K0E4MVRmajlJdjdwcW5BUUE4VW4zNFg3VjRrZGVFQUFEWHVnei9xMVl2OXBvUUFLRGI4TDlxK2FLdkNRR0Fmcm9PLzZ2V0wvNmFFQUNvci92d3YzSVNiaEFEQUhVWS9ZK2NrQWVFQUVCZWh2ODJKMllITVFBUW45SGZ4a2s2U0F3QXhHSDA5M1BDQmhBREFQTVovZWM0ZVNjUUJBRGpHZnl4bk13SkJBSEFmZ2IvWEU3dUlxSUE0Q2RqUDkvL0E3ZmtoWHRDWUxsZ0FBQUFBRWxGVGtTdVFtQ0MiLCAic2l6ZXMiOiAiNTEyeDUxMiIsICJ0eXBlIjogImltYWdlL3BuZyIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9XX0=">
+<title>Surgical Cards</title>
+<style>
+  :root{
+    --bg:#0f172a;
+    --panel:#1e293b;
+    --panel-2:#273449;
+    --line:#334155;
+    --txt:#e2e8f0;
+    --muted:#94a3b8;
+    --accent:#38bdf8;
+    --accent-dim:#0ea5e9;
+    --done:#22c55e;
+    --flag:#fbbf24;
+    --task:#fb923c;
+    --danger:#f87171;
+    --radius:14px;
+    --tap:44px;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    -webkit-text-size-adjust:100%;}
+  body{padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);}
+
+  /* ---- Top bar ---- */
+  header{position:sticky;top:0;z-index:30;background:rgba(15,23,42,.92);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+    padding:10px 12px;}
+  .bar-row{display:flex;gap:8px;align-items:center;}
+  .brand{font-weight:800;letter-spacing:.5px;font-size:15px;color:var(--accent);
+    white-space:nowrap;}
+  .search{flex:1;display:flex;align-items:center;background:var(--panel);
+    border:1px solid var(--line);border-radius:999px;padding:0 12px;height:38px;}
+  .search input{flex:1;background:transparent;border:0;outline:0;color:var(--txt);
+    font-size:15px;}
+  .search input::placeholder{color:var(--muted);}
+  .icon-btn{min-width:var(--tap);height:38px;border:1px solid var(--line);
+    background:var(--panel);color:var(--txt);border-radius:10px;font-size:18px;
+    display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0 12px;}
+  .icon-btn:active{background:var(--panel-2);}
+  .icon-btn.primary{background:var(--accent-dim);border-color:var(--accent-dim);
+    color:#04222f;font-weight:800;}
+
+  /* ---- Group toggle ---- */
+  .group-toggle{display:flex;gap:6px;padding:10px 12px 0;}
+  .group-toggle .grp{flex:1;padding:10px;border-radius:11px;font-size:14px;font-weight:700;
+    background:var(--panel);border:1px solid var(--line);color:var(--muted);cursor:pointer;}
+  .group-toggle .grp.active{background:var(--panel-2);border-color:var(--accent);color:var(--accent);}
+
+  /* ---- Card tabs ---- */
+  .tabs{display:flex;gap:6px;overflow-x:auto;padding:10px 12px 4px;
+    scrollbar-width:none;}
+  .tabs::-webkit-scrollbar{display:none;}
+  .tab{white-space:nowrap;padding:7px 14px;border-radius:999px;
+    background:var(--panel);border:1px solid var(--line);color:var(--muted);
+    font-size:13px;font-weight:600;cursor:pointer;}
+  .tab.active{background:var(--accent);border-color:var(--accent);color:#04222f;}
+  .tabs .no-cards{color:var(--muted);font-size:13px;padding:7px 4px;}
+
+  /* ---- Search results overlay ---- */
+  .search-results{display:none;position:fixed;left:0;right:0;top:0;bottom:0;z-index:45;
+    background:var(--bg);overflow-y:auto;padding:12px;
+    padding-top:calc(12px + env(safe-area-inset-top));}
+  .search-results.show{display:block;}
+  .sr-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+  .sr-head .sr-title{font-size:16px;font-weight:800;}
+  .sr-head .sr-close{margin-left:auto;background:var(--panel);border:1px solid var(--line);
+    color:var(--txt);border-radius:10px;padding:8px 14px;font-size:14px;font-weight:700;cursor:pointer;}
+  .sr-hit{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:12px 14px;margin-bottom:8px;cursor:pointer;}
+  .sr-hit:active{background:var(--panel-2);}
+  .sr-hit .sr-card{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.5px;
+    text-transform:uppercase;margin-bottom:3px;}
+  .sr-hit .sr-card .sr-grp{color:var(--muted);font-weight:600;text-transform:none;letter-spacing:0;}
+  .sr-hit .sr-match{font-size:15px;color:var(--txt);}
+  .sr-hit .sr-match mark{background:rgba(56,189,248,.3);color:var(--txt);border-radius:3px;padding:0 2px;}
+  .sr-empty{color:var(--muted);text-align:center;padding:50px 20px;font-size:15px;}
+  .item.flash{animation:flashRow 1.6s ease;}
+  @keyframes flashRow{0%,40%{background:rgba(56,189,248,.22);}100%{background:transparent;}}
+
+  /* ---- Subset switcher (admission order-sets) ---- */
+  .subset-switch{display:flex;gap:6px;margin-bottom:14px;background:var(--panel);
+    border:1px solid var(--line);border-radius:12px;padding:5px;}
+  .subset-btn{flex:1;padding:9px 6px;border-radius:9px;font-size:14px;font-weight:700;
+    background:transparent;border:1px solid transparent;color:var(--muted);cursor:pointer;}
+  .subset-btn.active{color:#0b1220;}
+  .card-banner{background:rgba(251,191,36,.12);border:1px solid var(--flag);
+    border-radius:12px;padding:12px 14px;margin-bottom:14px;
+    color:var(--flag);font-size:14px;font-weight:700;line-height:1.45;text-align:center;}
+
+  /* accent-aware section headers + tasks when a card sets --card-accent */
+  .card[style*="--card-accent"] .section-head{color:var(--card-accent);}
+  .card[style*="--card-accent"] .label{color:var(--card-accent);}
+
+  /* ---- Attending preferences ---- */
+  .prefs-btn{width:100%;display:flex;align-items:center;justify-content:space-between;
+    gap:10px;background:linear-gradient(135deg,#1e293b,#273449);
+    border:1px solid var(--accent-dim);border-radius:var(--radius);
+    padding:14px 16px;margin-bottom:14px;cursor:pointer;color:var(--txt);
+    font-size:15px;font-weight:700;}
+  .prefs-btn:active{background:var(--panel-2);}
+  .prefs-btn .prefs-count{color:var(--accent);font-size:13px;font-weight:600;}
+
+  .prefs-overlay{display:none;position:fixed;inset:0;z-index:55;background:var(--bg);
+    flex-direction:column;}
+  .prefs-overlay.show{display:flex;}
+  .prefs-head{display:flex;align-items:center;gap:8px;padding:12px;
+    padding-top:calc(12px + env(safe-area-inset-top));
+    border-bottom:1px solid var(--line);background:var(--panel);}
+  .prefs-back{background:var(--panel-2);border:1px solid var(--line);color:var(--txt);
+    border-radius:10px;padding:8px 14px;font-size:14px;font-weight:700;cursor:pointer;}
+  .prefs-title{flex:1;font-size:16px;font-weight:800;text-align:center;}
+  .prefs-add{background:var(--accent-dim);border:none;color:#04222f;border-radius:10px;
+    width:38px;height:38px;font-size:20px;font-weight:800;cursor:pointer;}
+  .prefs-search-wrap{padding:10px 12px;border-bottom:1px solid var(--line);}
+  .prefs-search-wrap input{width:100%;background:var(--panel);border:1px solid var(--line);
+    border-radius:999px;padding:10px 16px;color:var(--txt);font-size:15px;outline:none;}
+  .prefs-body{flex:1;overflow-y:auto;padding:12px;max-width:680px;margin:0 auto;width:100%;}
+
+  .att-row{display:flex;align-items:center;justify-content:space-between;
+    background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:15px 16px;margin-bottom:8px;cursor:pointer;}
+  .att-row:active{background:var(--panel-2);}
+  .att-row .att-name{font-size:16px;font-weight:700;color:var(--accent);}
+  .att-row .att-meta{font-size:13px;color:var(--muted);}
+  .att-row .chev{color:var(--muted);font-size:18px;}
+
+  .proc-block{margin-bottom:18px;}
+  .proc-attname{font-size:18px;font-weight:800;color:var(--accent);margin:6px 2px 10px;}
+  .proc-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:14px 16px;margin-bottom:10px;}
+  .proc-card .proc-name{font-size:15.5px;font-weight:700;color:var(--task);margin-bottom:6px;}
+  .proc-card .proc-setup{font-size:14.5px;line-height:1.55;color:#cbd5e1;}
+  .att-header{background:var(--panel-2);border:1px solid var(--line);border-radius:12px;
+    padding:12px 14px;margin-bottom:14px;}
+  .att-h-row{font-size:13.5px;line-height:1.6;color:#cbd5e1;}
+  .att-h-lead{font-weight:700;color:var(--accent);}
+  .proc-group{margin-top:9px;}
+  .proc-group:first-of-type{margin-top:2px;}
+  .proc-glabel{font-size:12.5px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;
+    color:var(--task);margin-bottom:3px;}
+  ul.proc-list{list-style:none;margin:0;padding:0;border-left:2px solid var(--line);}
+  ul.proc-list li{position:relative;font-size:14px;line-height:1.45;color:#cbd5e1;
+    padding:3px 0 3px 14px;}
+  ul.proc-list li::before{content:"–";position:absolute;left:3px;color:var(--accent-dim);}
+  .prefs-empty{color:var(--muted);text-align:center;padding:50px 20px;font-size:15px;line-height:1.6;}
+  .card-intro{font-size:13.5px;color:var(--muted);font-style:italic;margin:0 2px 12px;line-height:1.5;}
+  .version-stamp{position:fixed;right:8px;bottom:4px;z-index:20;font-size:10px;
+    color:var(--muted);opacity:.5;pointer-events:none;letter-spacing:.5px;}
+  body.resident .editbar .edit{display:none;}
+  body.resident .editbar{justify-content:center;}
+
+  /* ---- Card ---- */
+  main{padding:12px 12px 120px;max-width:680px;margin:0 auto;}
+  .card{display:none;}
+  .card.active{display:block;animation:fade .18s ease;}
+  @keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+
+  .card-head{display:flex;align-items:flex-start;justify-content:space-between;
+    gap:10px;margin:6px 2px 14px;}
+  .card-title{font-size:22px;font-weight:800;line-height:1.15;}
+  .card-title small{display:block;font-size:12px;font-weight:600;color:var(--accent);
+    letter-spacing:1.2px;text-transform:uppercase;margin-bottom:4px;}
+  .progress{font-size:12px;color:var(--muted);white-space:nowrap;margin-top:6px;}
+
+  .section{margin-bottom:16px;background:var(--panel);border:1px solid var(--line);
+    border-radius:var(--radius);overflow:hidden;}
+  .section-head{display:flex;align-items:center;gap:8px;padding:11px 14px;
+    background:var(--panel-2);font-weight:700;font-size:13px;letter-spacing:1px;
+    text-transform:uppercase;color:var(--accent);}
+  .section-head .grab{margin-left:auto;color:var(--muted);font-size:12px;}
+
+  ul.items{list-style:none;margin:0;padding:4px 0;}
+  li.item{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;
+    border-top:1px solid rgba(51,65,85,.5);min-height:var(--tap);cursor:pointer;}
+  li.item:first-child{border-top:0;}
+  .check{flex:0 0 22px;width:22px;height:22px;border-radius:7px;
+    border:2px solid var(--line);margin-top:1px;display:flex;align-items:center;
+    justify-content:center;font-size:14px;color:transparent;transition:.12s;}
+  li.item.done .check{background:var(--done);border-color:var(--done);color:#04220f;}
+  li.item.done .label{color:var(--muted);text-decoration:line-through;}
+  .label{flex:1;font-size:16px;line-height:1.35;color:var(--task);font-weight:600;}
+  .label .note{display:block;font-size:13px;color:#cbd5e1;font-weight:400;margin-top:3px;}
+
+  /* reference (info) card rows */
+  .ref-row{align-items:center;gap:10px;}
+  .ref-name{flex:1;font-size:15.5px;font-weight:600;color:var(--txt);}
+  .ref-contact{display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right;}
+  a.tel{color:var(--accent);font-size:15px;font-weight:700;text-decoration:none;
+    white-space:nowrap;padding:4px 0;}
+  a.tel:active{color:var(--done);}
+  .pager{font-size:11.5px;color:var(--muted);}
+  .ref-empty{color:var(--muted);font-size:14px;}
+  .ref-phone-edit{font-size:14px;color:var(--accent);min-width:90px;text-align:right;}
+  .pager-edit{font-size:12px;color:var(--muted);min-width:60px;text-align:right;
+    outline:1px dashed var(--line);border-radius:5px;padding:1px 5px;}
+
+  /* full-width detail rows (schedules) */
+  .ref-detail-row{align-items:flex-start;gap:10px;padding:10px 14px;}
+  .ref-detail-wrap{flex:1;display:flex;gap:14px;align-items:flex-start;}
+  .ref-detail-wrap .ref-name{flex:0 0 auto;min-width:42px;max-width:110px;font-size:13px;
+    font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;padding-top:2px;}
+  .ev-list{flex:1;display:flex;flex-direction:column;gap:5px;}
+  .ev{display:flex;gap:10px;align-items:baseline;}
+  .ev-time{flex:0 0 46px;font-size:13px;font-weight:700;color:var(--txt);
+    font-variant-numeric:tabular-nums;letter-spacing:.5px;}
+  .ev-label{flex:1;font-size:14.5px;line-height:1.35;color:var(--muted);}
+  .ev-plain{color:var(--txt);font-weight:600;}
+  .detail-edit{flex:1;font-size:14.5px;line-height:1.5;color:var(--txt);
+    outline:1px dashed var(--line);border-radius:6px;padding:3px 6px;display:block;}
+  .tel-plain{color:var(--txt);font-size:14px;font-weight:600;white-space:nowrap;}
+
+  /* info rows (prose references: trauma, MTP) */
+  .info-row{align-items:flex-start;gap:0;padding:11px 16px;}
+  .info-bullet{flex:0 0 auto;width:7px;height:7px;border-radius:50%;
+    background:var(--accent);margin:7px 12px 0 0;}
+  .info-wrap{flex:1;min-width:0;}
+  .info-main{font-size:15px;line-height:1.5;color:#e2e8f0;}
+  .info-lead{font-weight:800;color:var(--accent);}
+  .info-text{color:#dbe4f0;}
+  ul.info-sub{list-style:none;margin:7px 0 2px;padding:0;
+    border-left:2px solid var(--line);}
+  ul.info-sub li{position:relative;font-size:14px;line-height:1.45;color:var(--muted);
+    padding:4px 0 4px 16px;}
+  ul.info-sub li::before{content:"–";position:absolute;left:4px;color:var(--accent-dim);}
+
+  /* drip guide rows */
+  .drip-row{padding:12px 14px;align-items:stretch;}
+  .drip-wrap{flex:1;min-width:0;}
+  .drip-name{font-size:16px;font-weight:800;color:var(--task);margin-bottom:7px;}
+  .drip-grid{display:flex;flex-direction:column;gap:5px;}
+  .drip-f{display:flex;gap:10px;align-items:baseline;}
+  .drip-k{flex:0 0 62px;font-size:11.5px;font-weight:800;letter-spacing:.4px;
+    text-transform:uppercase;color:var(--accent);padding-top:1px;}
+  .drip-v{flex:1;font-size:14.5px;line-height:1.4;color:#e2e8f0;}
+  .drip-warn{margin-top:7px;font-size:13px;color:var(--flag);font-weight:600;
+    background:rgba(251,191,36,.1);border-radius:8px;padding:6px 10px;line-height:1.4;}
+
+  /* edit mode */
+  body.editing .item .del{display:flex;}
+  .del{display:none;flex:0 0 auto;width:30px;height:30px;border-radius:8px;
+    background:rgba(248,113,113,.15);color:var(--danger);align-items:center;
+    justify-content:center;font-size:16px;border:0;cursor:pointer;}
+  body.editing .label{outline:1px dashed var(--line);border-radius:6px;padding:2px 6px;}
+  .add-item{display:none;width:100%;text-align:left;background:transparent;border:0;
+    border-top:1px dashed var(--line);color:var(--accent);padding:12px 14px;
+    font-size:14px;font-weight:600;cursor:pointer;}
+  body.editing .add-item{display:block;}
+  .add-section,.del-card{display:none;}
+  body.editing .add-section{display:flex;}
+  body.editing .del-card{display:flex;}
+  .add-section{width:100%;justify-content:center;gap:8px;background:var(--panel);
+    border:1px dashed var(--accent);color:var(--accent);border-radius:var(--radius);
+    padding:14px;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:14px;}
+
+  .card-actions{display:flex;gap:8px;margin-top:10px;}
+  .reset-btn{flex:1;background:var(--panel);border:1px solid var(--line);
+    color:var(--muted);border-radius:10px;padding:11px;font-size:13px;font-weight:600;cursor:pointer;}
+  .del-card{flex:1;background:rgba(248,113,113,.12);border:1px solid var(--danger);
+    color:var(--danger);border-radius:10px;padding:11px;font-size:13px;font-weight:700;
+    align-items:center;justify-content:center;cursor:pointer;}
+
+  .empty{color:var(--muted);text-align:center;padding:60px 20px;font-size:15px;line-height:1.6;}
+
+  /* edit toggle floating */
+  .editbar{position:fixed;left:0;right:0;bottom:0;z-index:40;
+    background:rgba(15,23,42,.95);backdrop-filter:blur(10px);
+    border-top:1px solid var(--line);padding:10px 12px;
+    padding-bottom:calc(10px + env(safe-area-inset-bottom));
+    display:flex;gap:8px;max-width:680px;margin:0 auto;}
+  .editbar button{flex:1;height:46px;border-radius:12px;font-size:15px;font-weight:800;
+    cursor:pointer;border:1px solid var(--line);background:var(--panel);color:var(--txt);}
+  .editbar .save{background:var(--done);border-color:var(--done);color:#04220f;display:none;}
+  body.editing .editbar .save{display:block;}
+  body.editing .editbar .edit{display:none;}
+  .editbar .reset-all{flex:0 0 auto;width:auto;padding:0 14px;color:var(--muted);font-weight:600;}
+
+  .modal-bg{display:none;position:fixed;inset:0;z-index:60;background:rgba(2,6,23,.78);
+    backdrop-filter:blur(4px);align-items:flex-start;justify-content:center;
+    padding:20px 14px;overflow-y:auto;}
+  .modal-bg.show{display:flex;}
+  .modal{background:var(--panel);border:1px solid var(--line);border-radius:18px;
+    width:100%;max-width:480px;padding:20px;margin-top:20px;}
+  .modal-title{font-size:20px;font-weight:800;margin-bottom:6px;}
+  .modal-sub{font-size:13.5px;color:var(--muted);line-height:1.5;margin:0 0 16px;}
+  .modal-block{background:var(--bg);border:1px solid var(--line);border-radius:12px;
+    padding:14px;margin-bottom:12px;}
+  .block-label{font-size:12px;font-weight:800;letter-spacing:1px;color:var(--accent);margin-bottom:6px;}
+  .block-help{font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 12px;}
+  .modal-btn{display:block;width:100%;padding:13px;border-radius:11px;font-size:15px;
+    font-weight:700;cursor:pointer;border:1px solid var(--line);background:var(--panel-2);
+    color:var(--txt);margin-bottom:8px;}
+  .modal-btn:last-child{margin-bottom:0;}
+  .modal-btn.green{background:var(--done);border-color:var(--done);color:#04220f;}
+  .modal-btn.blue{background:var(--accent-dim);border-color:var(--accent-dim);color:#04222f;}
+  .modal-btn.close{background:transparent;color:var(--muted);margin-top:4px;}
+  #restoreBox{width:100%;min-height:90px;background:var(--panel);border:1px solid var(--line);
+    border-radius:10px;color:var(--txt);padding:10px;font-size:13px;font-family:monospace;
+    margin-bottom:10px;resize:vertical;}
+
+  .toast{position:fixed;left:50%;bottom:80px;transform:translateX(-50%) translateY(20px);
+    background:var(--done);color:#04220f;padding:10px 18px;border-radius:999px;
+    font-weight:700;font-size:14px;opacity:0;transition:.25s;z-index:50;pointer-events:none;}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar-row">
+    <span class="brand">CARDS</span>
+    <div class="search">
+      <input id="search" type="search" placeholder="Search all cards…" autocomplete="off">
+    </div>
+    <button class="icon-btn" id="backupBtn" title="Backup / Restore">☁</button>
+    <button class="icon-btn primary" id="addCardBtn" title="Add card">＋</button>
+  </div>
+  <div class="group-toggle" id="groupToggle">
+    <button class="grp active" data-grp="checklist">✓ Checklists</button>
+    <button class="grp" data-grp="reference">☎ Reference</button>
+  </div>
+  <div class="tabs" id="tabs"></div>
+</header>
+
+<div class="search-results" id="searchResults"></div>
+
+<div class="prefs-overlay" id="prefsOverlay">
+  <div class="prefs-head">
+    <button class="prefs-back" id="prefsBack">‹ Back</button>
+    <span class="prefs-title" id="prefsTitle">Attending Preferences</span>
+    <button class="prefs-add" id="prefsAdd" title="Add attending">＋</button>
+  </div>
+  <div class="prefs-search-wrap">
+    <input id="prefsSearch" type="search" placeholder="Search attending or procedure…" autocomplete="off">
+  </div>
+  <div class="prefs-body" id="prefsBody"></div>
+</div>
+
+<main id="main"></main>
+
+<div class="editbar">
+  <button class="edit" id="editToggle">✎ Edit this card</button>
+  <button class="save" id="saveBtn">✓ Done editing</button>
+  <button class="reset-all" id="uncheckAll" title="Uncheck all boxes">↺ Reset checks</button>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<div class="modal-bg" id="backupModal">
+  <div class="modal">
+    <div class="modal-title">Backup &amp; Restore</div>
+    <p class="modal-sub">Your safety net. Save a backup any time you change cards. If your cards ever disappear, paste a backup here to bring them all back.</p>
+
+    <div class="modal-block">
+      <div class="block-label">① SAVE A BACKUP</div>
+      <p class="block-help">Tap to copy all your cards. Then paste it into a note or message to yourself so it's saved somewhere safe.</p>
+      <button class="modal-btn green" id="copyBackup">📋 Copy my cards</button>
+      <button class="modal-btn" id="downloadBackup">⬇ Save as a file</button>
+    </div>
+
+    <div class="modal-block">
+      <div class="block-label">② RESTORE FROM BACKUP</div>
+      <p class="block-help">Paste a backup below and tap Restore. This replaces what's currently here.</p>
+      <textarea id="restoreBox" placeholder="Paste your backup here…"></textarea>
+      <button class="modal-btn blue" id="doRestore">↻ Restore these cards</button>
+    </div>
+
+    <div class="modal-block">
+      <div class="block-label">③ ADD A SINGLE CARD</div>
+      <p class="block-help">Got a new card from Claude? Paste it here to ADD it to your cards without touching the rest.</p>
+      <textarea id="addCardBox" placeholder="Paste one card here…"></textarea>
+      <button class="modal-btn green" id="doAddCard">＋ Add this card</button>
+    </div>
+
+    <button class="modal-btn close" id="closeBackup">Close</button>
+  </div>
+</div>
+
+<script>
+/* ====== BUILD CONFIG ======
+   AUTHOR_MODE = true  → full editing (your build, for creating/updating content)
+   AUTHOR_MODE = false → resident build: content is read-only & always from SEED,
+                          only checkbox states persist on the resident's device. */
+const AUTHOR_MODE = false;
+const CONTENT_VERSION = "2026.08.28";   // bump this whenever you publish new content
+
+const STORE_KEY = "surgical_cards_v1";          // author-mode full state
+const CHECK_KEY = "surgical_cards_checks_v1";    // resident-mode checkbox states only
+
+/* ---------- Seed data (used only on first load) ---------- */
+const SEED = {
+  active: 0,
+  cards: [
+    {
+      id: "consult-daily",
+      tag: "Daily To-Do",
+      title: "Consult Resident",
+      sections: [
+        { name: "Chart Check", items: [
+            { t: "Chart check — AM", note: "Floor + ICU + consults on your service" },
+            { t: "Chart check — PM", note: "Re-check before evening sign-out (1800)" }
+        ]},
+        { name: "Notes", items: [
+            { t: "Surgery patients in ICU", note: "INP progress note — daily, incl. weekends" },
+            { t: "Consult patients", note: "New consult = note before you leave. Old/active = daily progress note" }
+        ]},
+        { name: "Consults (as they come)", items: [
+            { t: "See + staff every consult on your shift", note: "Urgent < 30 min · Routine before shift ends. It's yours — don't punt to night team" },
+            { t: "Pre-op your operative consults", note: "YOU own consent + labs/COVID/upreg — not night/weekend" }
+        ]},
+        { name: "Keep the List Current", items: [
+            { t: "Update your section of the consult list", note: "So night cover understands each patient" },
+            { t: "Move pre-ops / post-ops to those sections", note: "For night team follow-up" }
+        ]},
+        { name: "PHI", items: [
+            { t: "Update PHI before you leave", note: "New consults + next-day cases (check SIS)" },
+            { t: "Don't forget deaths / OR / transfers", note: "Add unplanned cases (appys, class I, trauma bay)" },
+            { t: "If overnight: email PHI 0520–0600", note: "To attendings, S. Yoselowitz, all residents" }
+        ]},
+        { name: "Evening Sign-Out (1800)", items: [
+            { t: "List updated, printed, stapled", note: "Coordinate readiness with other consult residents" },
+            { t: "Vitals updated before PM rounds", note: "No surprises at rounds — escalate in real time" }
+        ]},
+        { name: "Periodic (not daily)", items: [
+            { t: "TTS — trauma patients 24–72h", note: "Only if assigned by trauma chief; track on trauma list" },
+            { t: "Tumor board — every other Thu 0800", note: "Review GS cases beforehand; submit to cancerregistry@numc.edu" },
+            { t: "Weekly schedule — email by Fri", note: "GS consult compiles: M&M, mock orals, Score, angios, colonoscopies, cases. Don't wait til Friday" }
+        ]}
+      ]
+    },
+    {
+      id: "or-checklist",
+      tag: "NUMC",
+      title: "Operating Room",
+      hasPrefs: true,
+      prefs: [
+        {
+          attending: "Dr. Sasthakonar",
+          header: [
+            { lead:"DVT ppx:", val:"variable" },
+            { lead:"Music:", val:"popular pop, Hindi" },
+            { lead:"Glove:", val:"7.5 brown / 7.5 white" },
+            { lead:"Local:", val:"0.25% bupivacaine via 22G 3.5\" spinal needle" },
+            { lead:"Closure:", val:"skin staples, or poliglecaprone + steri-strips (case-dependent)" }
+          ],
+          procedures: [
+            { name:"Robotic Sleeve Gastrectomy / RYGB", groups:[
+              { label:"Set up", items:["Doesn't tuck arms","LE taped to bed at ankle/knee/feet, footrest in place","36 Fr ViSiGi","If Roux-en-Y: always foley"] },
+              { label:"Sutures", items:["0 polyglactin CT-1: fascial closure","2-0 V-LOC nonabsorbable: HH repair"] },
+              { label:"Abdominal entry", items:["Veress needle in LUQ","8 mm Optiview trocar + 5 mm 0° scope, left of umbilicus","12 mm R abdomen","Two more 8 mm trocars on left abdomen","Nathanson liver retractor in RUQ"] },
+              { label:"Robotic instruments", items:["Vessel sealer arm 3","Fenestrated bipolar grasper arm 1","Tip-up fenestrated bipolar grasper arm 4","60 mm endo GIA: first green load, then multiple blue loads"] },
+              { label:"Dressings", items:["Telfa, tegaderm"] },
+              { label:"RYGB adds", items:["Robotic 45 mm staples w/ reloads (black, green, blue, white)","Monopolar","Sutures: 2-0 silk SH · 2-0 polyglactin SH · 2-0 V-LOC nonabsorbable 15 cm · 3-0 V-LOC absorbable 15 cm ×4 · 3-0 V-LOC nonabsorbable 15 cm ×3","Vistaseal"] }
+            ]},
+            { name:"Laparoscopic Cholecystectomy", groups:[
+              { label:"Set up", items:["Does not tuck arms","Drapes with blue towels + skin stapler"] },
+              { label:"Abdominal entry", items:["If Veress: Veress at Palmer's point, 10 mm 0° scope w/ Optiview, then switch to 10 mm 45° scope","If Hassan: 10 mm 45° scope first","Trocars: Hassan vs 12 mm gun · two 5 mm along R costal margin · 12 mm epigastrium"] },
+              { label:"Sutures", items:["0 PDS CT-2: fascial closure (figure-of-8 around Hassan)","4-0 poliglecaprone PS-2 ×2: skin"] }
+            ]},
+            { name:"Appendectomy", groups:[
+              { label:"Set up", items:["Always places a foley","Left arm tucked"] },
+              { label:"Abdominal entry", items:["Trocars: 12 mm gun · 5 mm ×2","10 mm 0° scope, then 5 mm 30° scope"] },
+              { label:"Sutures", items:["0 polyglactin","0 PDS CT-2 ×2","4-0 poliglecaprone PS-2"] },
+              { label:"Other", items:["Likes LigaSure","Endo GIA 45 mm white, blue reloads available"] }
+            ]}
+          ]
+        },
+        {
+          attending: "Dr. Gonzalez",
+          header: [
+            { lead:"On-call dinner:", val:"Wayback, Calda, Pearl Inn" },
+            { lead:"DVT ppx:", val:"holds" },
+            { lead:"Music:", val:"Latin" },
+            { lead:"Glove:", val:"7.5 brown / 7.5 white" },
+            { lead:"Local:", val:"0.5% bupivacaine; or 1% lidocaine + 0.5% bupivacaine equal parts" },
+            { lead:"Closure:", val:"4-0 poliglecaprone + steri-strips" }
+          ],
+          procedures: [
+            { name:"Cholecystectomy", groups:[
+              { label:"Set up", items:["No arms tucked"] },
+              { label:"Abdominal entry", items:["0.5% bupivacaine","Open Hassan w/ U-stitch either side, supra-umbilical","Two 5 mm along R costal margin","10 mm epigastrium","10 mm 0° scope","No electrocautery during initial dissection"] },
+              { label:"Sutures", items:["0 PDS CT-2 ×2: Hassan fascial closure","4-0 poliglecaprone PS-2 ×2: skin"] }
+            ]},
+            { name:"Appendectomy", groups:[
+              { label:"Set up", items:["Both arms tucked","No foley if voided"] },
+              { label:"Abdominal entry", items:["0.5% bupivacaine","Open Hassan via vertical umbilical incision","Two 5 mm trocars: suprapubic + LLQ","5 mm 0° scope"] },
+              { label:"Stapler", items:["Endo GIA 45 mm: gold (mesoappendix), purple (appendix)"] },
+              { label:"Sutures", items:["0 PDS CT-2: figure-of-8 fascial closure","4-0 poliglecaprone PS-2: skin"] }
+            ]},
+            { name:"Open Hernia Repair", groups:[
+              { label:"Position", items:["Supine, doesn't tuck arms (all types)"] },
+              { label:"Umbilical", items:["Local: 0.5% bupivacaine","Sutures: 2-0 prolene CT-2 ×3 · 3-0 polyglactin CT-2 · 4-0 poliglecaprone PS-2","Mesh: Ventralex patch / Composix kugel"] },
+              { label:"Inguinal", items:["Local: 0.5% bupivacaine","Sutures: 2-0 prolene CT-2 · 2-0 polyglactin CT-2 · 3-0 polyglactin CT-2 · 4-0 poliglecaprone PS-2","Mesh: mesh plug","Other: peanuts, Penrose"] },
+              { label:"Ventral / incisional", items:["Local: 1% lidocaine + 0.5% bupivacaine equal parts","Sutures: 2-0 prolene CT-2 · 2-0 polyglactin CT-2 · 3-0 polyglactin CT-2 · 4-0 poliglecaprone PS-2","Mesh: Ventralex patch / Composix kugel","Other: bacitracin irrigation"] }
+            ]},
+            { name:"Lumpectomy / Mastectomy", groups:[
+              { label:"Local", items:["1% lidocaine + 0.5% bupivacaine equal parts"] },
+              { label:"Mastectomy", items:["As many Lahey clamps / Adairs as possible (≥6)"] },
+              { label:"Specimen suture marks", items:["Short = superior · Long = lateral · Double = deep"] },
+              { label:"Sutures", items:["Lumpectomy: 3-0 polyglactin SH · 4-0 polyglactin SH","Mastectomy: 2-0 polyglactin CT-1 · 2-0 polyglactin CT-2 · 3-0 polyglactin CT-2","2-0 silk: specimen marking · 2-0 nylon: drain · 4-0 poliglecaprone PS-2: skin · 3-0 polyglactin ties"] },
+              { label:"Drain / dressing", items:["10 mm flat JP drain","Mastectomy: mastisol + steri-strips, fluffs, surgical bra"] }
+            ]}
+          ]
+        },
+        {
+          attending: "Dr. Cirincione",
+          header: [
+            { lead:"DVT ppx:", val:"holds" },
+            { lead:"Music:", val:"Classic Rock" },
+            { lead:"Glove:", val:"6.5 green / 6 white" },
+            { lead:"Local:", val:"0.5% or 0.25% bupivacaine with epinephrine" },
+            { lead:"Closure:", val:"4-0 poliglecaprone + steri-strips" },
+            { lead:"Set up:", val:"leave stickies on drapes, heavy scissors to cut to shape" }
+          ],
+          procedures: [
+            { name:"Laparoscopic Cholecystectomy", groups:[
+              { label:"Set up", items:["Tuck right arm"] },
+              { label:"Abdominal entry", items:["0.5% bupivacaine with epinephrine","Sometimes Veress: 5 mm Optiview trocar supra-umbilical","Hassan at umbilicus","Two bladed 5 mm R subcostal","Bladed 11 mm subxiphoid"] },
+              { label:"Sutures", items:["0 PDS CT-2 ×2: U-stitches around Hassan","4-0 poliglecaprone PS-2 ×2"] },
+              { label:"Other", items:["Silver-handled laparoscopic atraumatic grasper"] }
+            ]},
+            { name:"Appendectomy", groups:[
+              { label:"Set up", items:["Tuck left arm"] },
+              { label:"Abdominal entry", items:["0.25% bupivacaine with epinephrine","Veress needle","Bladed 12 mm Optiview at umbilicus","Two bladed 5 mm: suprapubic + LLQ"] },
+              { label:"Stapler", items:["Endo GIA stapler"] },
+              { label:"Sutures", items:["0 PDS: fascial closure","4-0 poliglecaprone: skin"] }
+            ]},
+            { name:"Open Hernia", groups:[
+              { label:"Position", items:["Supine, doesn't tuck arms (all types)"] },
+              { label:"Local (all)", items:["0.25% bupivacaine with epinephrine"] },
+              { label:"Umbilical", items:["Sutures: 2-0 polyglactin SH · 2-0 prolene CT-2 · 4-0 poliglecaprone PS-2 · 0 polyglactin ties · 3-0 polyglactin ties","Mesh: mesh plug"] },
+              { label:"Inguinal", items:["Sutures: 3-0 polyglactin SH · 2-0 prolene CT-2 ×3 · 4-0 poliglecaprone PS-2 · 0 polyglactin ties · 3-0 polyglactin ties","Mesh: mesh plug","Other: peanuts, ½\" Penrose drain"] },
+              { label:"Ventral / incisional", items:["Sutures: 2-0 polyglactin CT-2 · 3-0 polyglactin CT-2 · 4-0 poliglecaprone PS-2","Mesh: Bard dual mesh"] }
+            ]},
+            { name:"Colonoscopies", groups:[
+              { label:"When", items:["Wednesdays after education"] },
+              { label:"INP provider note", items:["Reason for scope","Bowel prep","Last meal","Abdominal exam"] },
+              { label:"Orders", items:["Endo procedure","Surgical pathology — note the specimen location in the order"] }
+            ]}
+          ]
+        },
+        {
+          attending: "Dr. Gordon",
+          header: [
+            { lead:"DVT ppx:", val:"does not hold" },
+            { lead:"Glove:", val:"7 green / 6.5 white" },
+            { lead:"Local:", val:"1% lidocaine with epinephrine + 0.5% bupivacaine" },
+            { lead:"Closure:", val:"4-0 poliglecaprone, dermabond" },
+            { lead:"Set up:", val:"NO blue towels; stickies for all cases; cleans belly button with alcohol swab every time" }
+          ],
+          procedures: [
+            { name:"Appendectomy", groups:[
+              { label:"Set up", items:["Tuck left arm"] },
+              { label:"Abdominal entry", items:["5 mm 0° scope","Hassan at umbilicus","5 mm suprapubic + LLQ"] },
+              { label:"Other", items:["Blunt-tipped LigaSure","Endo GIA stapler: purple load ×2"] },
+              { label:"Sutures", items:["0 polyglactin UR-6: fascial closure","4-0 poliglecaprone PS-2: skin"] }
+            ]}
+          ]
+        },
+        {
+          attending: "Dr. K Mehta",
+          header: [
+            { lead:"On-call dinner:", val:"Protein" },
+            { lead:"DVT ppx:", val:"almost never holds" },
+            { lead:"Music:", val:"Heavy Metal" },
+            { lead:"Glove:", val:"8 ×2 white" },
+            { lead:"Local:", val:"0.25% bupivacaine for robotic TAPP block; 0.25% bupivacaine + 1% lidocaine for skin/soft tissue" },
+            { lead:"Closure:", val:"suture passer for lap cases; 4-0 poliglecaprone, dermabond" }
+          ],
+          procedures: [
+            { name:"Robotic Cholecystectomy", groups:[
+              { label:"Set up", items:["Patient double taped; appreciates steep reverse Trendelenburg","5 mm 30° scope in the warmer","Always 2.5 mg ICG pre-op"] },
+              { label:"Abdominal entry", items:["Local before port placement AND at end of case","Veress at Palmer's point","Optiview trocar periumbilical: 5 mm 0° scope up to 8","Two right-sided 8 mm ports · one left-sided 8 mm port"] },
+              { label:"Arms", items:["#1 fenestrated bipolar · #2 camera · #3 hook/clips/scissors · #4 Prograsp"] },
+              { label:"Sutures", items:["0 polyglactin: fascial closure","4-0 poliglecaprone PS-2 ×2: skin"] },
+              { label:"If cholangiogram", items:["Clip onto cystic duct with ductotomy, pass the cholangiocath"] }
+            ]},
+            { name:"Laparoscopic Appendectomy", groups:[
+              { label:"Set up", items:["Left arm tucked","Always foley (no foley in robotic appendectomy)"] },
+              { label:"Abdominal entry", items:["0.25% bupivacaine before ports and at end","Veress at Palmer's point","Two 5 mm trocars: first Visiport at Veress site if anatomy allows, otherwise peri-umbilical; second suprapubic midline","12 mm trocar LLQ","Steep Trendelenburg, right side up · 5 mm 30° scope"] },
+              { label:"Instruments", items:["LigaSure + blunt dissection to mobilize appendix (atraumatic to mesentery)","Endo GIA 45 mm purple load to transect appendix","LigaSure or endo GIA 45 mm vascular (gold/tan) for mesoappendix"] },
+              { label:"Sutures", items:["0 polyglactin: fascial closure","4-0 poliglecaprone PS-2: skin"] },
+              { label:"Dressings", items:["Dermabond"] }
+            ]},
+            { name:"Robotic Hernia", groups:[
+              { label:"Set up", items:["Tuck left arm","0.25% bupivacaine before ports and at end"] },
+              { label:"Abdominal entry", items:["Veress at Palmer's point","8 mm trocar ×3; have a 12 mm in the room","#2 scissors · #3 camera · #4 fenestrated bipolar"] },
+              { label:"Sutures", items:["4-0 poliglecaprone","2-0 V-LOC absorbable: close peritoneal defects","2-0 V-LOC nonabsorbable: primarily close ventral hernia defects"] },
+              { label:"Mesh", items:["Covidien Symbotex composite mesh"] }
+            ]},
+            { name:"Trach and Gastrostomy Tube", groups:[
+              { label:"Set up", items:["OR table","Shoulder roll to extend neck","Communication with anesthesia key; prefers another attending to bronch","7–8 Fr Shiley tracheostomy","0.25% bupivacaine"] },
+              { label:"Kit", items:["Percutaneous Blue Rhino kit vs open trach kit — variable"] },
+              { label:"PEG tube", items:["Have abdominal binder in room","OK to start feeds immediately on return to ICU","Lap-assisted G tube: Avanos introducer kit + standard PEG kit"] }
+            ]}
+          ]
+        },
+        {
+          attending: "Dr. Senese",
+          header: [
+            { lead:"On-call dinner:", val:"mood-dependent" },
+            { lead:"DVT ppx:", val:"varies, hold night before" },
+            { lead:"Music:", val:"Pop, Hip Hop, Throwbacks" },
+            { lead:"Glove:", val:"7 ×1 white" },
+            { lead:"Local:", val:"0.25% bupivacaine for robotic TAPP block; 0.25% bupivacaine w/ epi + 1% lidocaine for skin/soft tissue" },
+            { lead:"Closure:", val:"suture passer for lap cases; 4-0 poliglecaprone, dermabond" },
+            { lead:"Note:", val:"gives local before port placement and at the end of the case" }
+          ],
+          procedures: [
+            { name:"Robotic Cholecystectomy", groups:[
+              { label:"Set up", items:["Patient double taped; appreciates steep reverse Trendelenburg","5 mm 30° scope in the warmer","Always ICG pre-op"] },
+              { label:"Abdominal entry", items:["Veress at Palmer's point","Optiview trocar periumbilical: 5 mm 0° scope up to 8","Two right-sided 8 mm ports · one left-sided 8 mm port"] },
+              { label:"Arms", items:["#1 fenestrated bipolar · #2 camera · #3 hook/clips/scissors · #4 Prograsp"] },
+              { label:"Sutures", items:["0 polyglactin: fascial closure","4-0 poliglecaprone PS-2 ×2: skin"] }
+            ]},
+            { name:"Laparoscopic Appendectomy", groups:[
+              { label:"Set up", items:["Left arm tucked","Foley varies"] },
+              { label:"Abdominal entry", items:["0.25% bupivacaine before ports and at end","Umbilical Hassan","Two 5 mm trocars · 12 mm umbilical Hassan","Steep Trendelenburg, right side up · 5 mm 30° scope"] },
+              { label:"Instruments", items:["LigaSure + blunt dissection to mobilize appendix","Endo GIA 45 mm purple load to transect appendix"] },
+              { label:"Sutures", items:["0 polyglactin: figure-of-8 fascial closure","4-0 poliglecaprone PS-2: skin"] },
+              { label:"Dressings", items:["Dermabond"] }
+            ]}
+          ]
+        },
+        {
+          attending: "Dr. De Oliveira",
+          header: [
+            { lead:"Pre-op pearls:", val:"Hemoglobin >10; anyone over 60 gets an echo" },
+            { lead:"Tamponade:", val:"cardiology should be the one reading tamponade on echo" },
+            { lead:"Note:", val:"usually in contact with device reps" }
+          ],
+          procedures: [
+            { name:"Tracheostomy", groups:[
+              { label:"Set up", items:["5 towels and a stapler, vertical shoulder roll","Have size 6, 7, 8 and XLTs available in the room","Have surgicel and a clip applier in the room","2 Weitlaner retractors, 15 blade"] },
+              { label:"Post-op", items:["NEVER remove trach sutures post-operatively"] },
+              { label:"Sutures (varies)", items:["2-0 nylon · 2-0 silk · 2-0 silk ties","4-0 poliglecaprone · 2-0 ethibond"] }
+            ]}
+          ]
+        },
+        {
+          attending: "Dr. Suman",
+          header: [
+            { lead:"Parathyroid:", val:"talk to shared labs ahead of time about ordering PTH and Ca so the lab doesn't cancel them" },
+            { lead:"General prep:", val:"neck roll with 2 rolled sheets; tuck both arms with blue towels" }
+          ],
+          procedures: [
+            { name:"Post-op Thyroid (varies — clarify per case)", groups:[
+              { label:"Orders", items:["No DVT ppx","Labs depend on procedure and need for electrolyte checks","Clears to start, regular next day"] },
+              { label:"Meds", items:["Calcium acetate 667 mg TID","Calcitriol 0.5 mcg daily or BID","Levothyroxine — may depend on pre-op endocrine recommendation"] }
+            ]}
+          ]
+        },
+        {
+          attending: "Dr. Velcu",
+          header: [
+            { lead:"DVT ppx:", val:"holds" },
+            { lead:"Closure:", val:"4-0 poliglecaprone and dermabond" }
+          ],
+          procedures: [
+            { name:"Robotic Cholecystectomy", groups:[
+              { label:"Set up", items:["Pre-operative ICG"] },
+              { label:"Abdominal entry", items:["Hassan at umbilicus 12 mm, two 0 polyglactin sutures for stays","3 × 5 mm ports"] }
+            ]},
+            { name:"Appendectomy", groups:[
+              { label:"Set up", items:["Tuck left arm"] },
+              { label:"Abdominal entry", items:["Hassan anchored with 0 polyglactin ×2 at umbilicus","Two 5 mm trocars suprapubic and LLQ"] },
+              { label:"Stapler", items:["Endo GIA through a window for both base and mesoappendix"] },
+              { label:"Sutures", items:["0 polyglactin ×2: fascia","4-0 poliglecaprone: skin"] }
+            ]}
+          ]
+        },
+        {
+          attending: "Dr. V Mehta",
+          header: [
+            { lead:"On-call dinner:", val:"vegetarian, Indian food" },
+            { lead:"DVT ppx:", val:"DOES NOT HOLD — for longer cases / obese patients gives a pre-induction dose" },
+            { lead:"Music:", val:"variety, Hipster BBQ Spotify playlist" },
+            { lead:"Glove:", val:"7.5 green / 7 white" },
+            { lead:"Local:", val:"varies — 0.25% bupivacaine + 1% lidocaine 50/50, or 0.25% bupivacaine w/ epi, or plain 0.25%" },
+            { lead:"Closure:", val:"suture passer with cone (lap cases); 4-0 poliglecaprone, dermabond. Does NOT use figure-of-8 in fascia" },
+            { lead:"Set up:", val:"leave stickies on drape (heavy scissors to shape); silk tape to double-tape legs; steep reverse Trendelenburg; Ioban if mesh will be used" }
+          ],
+          procedures: [
+            { name:"Appendectomy", groups:[
+              { label:"Set up", items:["Left arm tucked","Void before case, no foley"] },
+              { label:"Abdominal entry", items:["0.25% bupivacaine w/ epi before ports and at end","Veress at Palmer's point","Two 5 mm trocars: first Visiport at Veress site if anatomy allows, else peri-umbilical; second suprapubic midline","12 mm trocar LLQ","Steep Trendelenburg, right side up · 5 mm 30° scope"] },
+              { label:"Instruments", items:["LigaSure + blunt dissection (atraumatic to mesentery)","Endo GIA 45 mm purple load for appendix","LigaSure or endo GIA 45 mm vascular (gold/tan) for mesoappendix"] },
+              { label:"Sutures", items:["0 polyglactin with needle cut off: suture-passer fascial closure","4-0 poliglecaprone PS-2: skin"] },
+              { label:"Other", items:["Irrigate the 12 mm port site with a sloppy wet before closing skin","Dressings: dermabond"] }
+            ]},
+            { name:"Open Inguinal Hernia Repair", groups:[
+              { label:"Set up", items:["Does not tuck arms","Ioban if mesh will be used"] },
+              { label:"Mesh", items:["Bard lightweight pre-shape or Bard 3D Max","Does NOT like plug mesh (migration/adhesion/SBO risk)","2-0 prolene to anchor mesh at pubic tubercle, run along shelving edge"] },
+              { label:"Incision", items:["~8 cm, 2 fingerbreadths superior and 1 fingerbreadth lateral to pubic tubercle","Metzenbaum to enter external oblique aponeurosis"] },
+              { label:"Sutures", items:["0 prolene CT-2 ×2","0 silk: suture ligation of hernia sac if needed","3-0 polyglactin: Scarpa's closure","2-0 polyglactin: external oblique reapproximation","4-0 poliglecaprone: skin"] },
+              { label:"Other", items:["Bacitracin irrigation","Scrotal support at end of case"] }
+            ]}
+          ]
+        }
+      ],
+      sections: [
+        { name: "Pre-op — Documentation", items: [
+            { t: "H&P within 30 days", note: "Signed by the attending" },
+            { t: "Consent within 60 days", note: "" },
+            { t: "Case booked", note: "Confirm it's actually on the schedule" },
+            { t: "Pre-op note written", note: "Morning-of for ASU cases; day-before for inpatients" }
+        ]},
+        { name: "Pre-op — Labs & Studies", items: [
+            { t: "Active Type & Screen", note: "Within 72 hrs" },
+            { t: "Pregnancy test", note: "Female <65 (unless hysterectomy); within 7 days" },
+            { t: "Medical / cardiac clearance", note: "If needed" },
+            { t: "EKG / CXR", note: "If indicated" }
+        ]},
+        { name: "Pre-op — Day Of", items: [
+            { t: "NPO / stopped tube feeds after midnight", note: "Anesthesia wants NPO from midnight regardless. NJ/post-duodenal feeds + intubated non-airway cases are exceptions" },
+            { t: "Hold anticoagulation after midnight", note: "Attending-specific — confirm" },
+            { t: "ICG given at appropriate time", note: "If indicated, per senior resident" },
+            { t: "Local anesthetic + charge orders", note: "Attending-specific — see Attending Preferences" },
+            { t: "Fluoroscopy ordered + front desk informed", note: "For angiograms, IOC" },
+            { t: "Notify GS chief of any hold-ups", note: "Keeps cases running smoothly" }
+        ]},
+        { name: "Before You Scrub", items: [
+            { t: "Read the case", note: "History, labs/imaging, anatomy, planned procedure" },
+            { t: "Tell the team you're scrubbing", note: "So they know who's unavailable — communication is key" }
+        ]},
+        { name: "Post-op — Documentation", items: [
+            { t: "Brief Op Note — before you leave the OR", note: "Must be written at completion of the case" },
+            { t: "Operative Report — within 1 hr", note: "Of case completion" },
+            { t: "LOG your cases", note: "" }
+        ]},
+        { name: "Post-op — If Going Home (ASU)", items: [
+            { t: "Pain meds sent to pharmacy", note: "" },
+            { t: "Sunrise d/c documentation in", note: "" },
+            { t: "PACU pain medication ordered", note: "" }
+        ]},
+        { name: "Post-op — If Admitted", items: [
+            { t: "Sign out patient + procedure + plan to primary team", note: "" },
+            { t: "Post-op orders", note: "Med rec · diet · IVF · DVT ppx · abx · pain · drains/tubes/I&Os · imaging" },
+            { t: "Post-op check 4–6h", note: "If patient remains in-house" },
+            { t: "Update the list", note: "Procedure, plan, new orders" }
+        ]}
+      ]
+    },
+    {
+      id: "admission-orders",
+      tag: "NUMC",
+      title: "Admission Orders",
+      subsets: [
+        {
+          name: "General",
+          accent: "#fb923c",
+          sections: [
+            { name: "DO THESE FIRST", items: [
+                { t: "SATC", note: "Order before anything else — avoids annoying pop-ups later" },
+                { t: "Thrombosis risk assessment", note: "Also before other orders. Open blue box, answer age / current dx / contraindications" }
+            ]},
+            { name: "Admit", items: [
+                { t: "Admit order", note: "Only needed if patient is NOT coming from the ED" }
+            ]},
+            { name: "VTE Prophylaxis", items: [
+                { t: "SCDs — bilateral LE", note: "All patients, unless contraindicated. While in bed. Frequency: standing" },
+                { t: "Chemical DVT ppx — discuss with senior first", note: "Heparin SC 5000 units q8h · Enoxaparin (check CrCl first): GS 40 mg daily · Trauma 30 mg BID — obesity by actual weight: 61–99 kg 40 mg BID, 100+ kg 50 mg BID · Head bleed 40 mg daily (ONLY when cleared) · Bariatric: BMI 40+ 40 mg BID, BMI 50+ 60 mg BID" }
+            ]},
+            { name: "Pain Meds", items: [
+                { t: "Acetaminophen IV 1000 mg q6h standing", note: "Needs verification by another resident" },
+                { t: "Oxycodone 5 mg q6h PRN", note: "Moderate pain" },
+                { t: "Morphine 2 mg IV q2h PRN", note: "Severe pain" },
+                { t: "Lidocaine patch", note: "Rib fractures" },
+                { t: "Consider NSAIDs", note: "If no contraindications" },
+                { t: "Consider gabapentin / cyclobenzaprine", note: "Uncontrolled pain" },
+                { t: "Geriatric: reduce oxycodone", note: "2.5 mg q6 PRN moderate · 5 mg q6 PRN severe" }
+            ]},
+            { name: "Other Meds", items: [
+                { t: "IVF — LR or NS at maintenance", note: "Unless otherwise specified" },
+                { t: "Home meds (with hold parameters for BP meds)", note: "Confirm with senior before anticoagulation, ACE/ARB, diuretic. ALWAYS continue beta-blockers unless hemodynamically unstable" },
+                { t: "GI prophylaxis (if meets criteria)", note: "Pantoprazole 40 mg daily · famotidine 20 mg BID · esomeprazole 20 mg daily (if NGT/OGT/G-tube)" },
+                { t: "Bowel regimen (if on opiates)", note: "Unless diarrhea. Senna 17.2 mg daily · mineral oil 10 mL daily · polyethylene glycol 17 g in 8 oz water daily · bisacodyl supp if still constipated" }
+            ]},
+            { name: "Diet / Imaging", items: [
+                { t: "Diet order", note: "Usually NPO unless otherwise specified" },
+                { t: "Daily CXR — portable & routine", note: "Patients with chest tube or intubated" }
+            ]},
+            { name: "Nursing", items: [
+                { t: "Condition + vitals", note: "Floor: stable, vitals q4h" },
+                { t: "Activity", note: "Usually as tolerated; at least OOBTC w/ assist daily. Set weight-bearing status" },
+                { t: "Strict I/Os", note: "Floor: qShift" },
+                { t: "Incentive spirometry", note: "10x every hour while awake" },
+                { t: "Drains / tubes / lines orders", note: "" }
+            ]},
+            { name: "Diabetes", items: [
+                { t: "Hold oral diabetic meds on admission", note: "" },
+                { t: "Hold metformin 48h if IV contrast", note: "Even if discharged" },
+                { t: "Insulin sliding scale (regular)", note: "Q6h if NPO · before meals + bedtime if on diet · fingersticks same frequency · basal insulin detemir if indicated" }
+            ]}
+          ]
+        },
+        {
+          name: "SICU",
+          accent: "#38bdf8",
+          sections: [
+            { name: "DO THESE FIRST", items: [
+                { t: "SATC", note: "Order before anything else — avoids annoying pop-ups" },
+                { t: "Thrombosis risk assessment", note: "Open blue box, answer age / current dx / contraindications. SCDs bilateral LE, in bed, standing" }
+            ]},
+            { name: "Labs", items: [
+                { t: "Time-critical AM labs to 23:00 tonight", note: "Before you leave AM, every ICU patient should have routine labs time-criticalled to 23:00 the SAME night" },
+                { t: "Sunday 23:00 labs → CMP + prealbumin", note: "Saturday resident orders these before leaving Sun AM, so Monday morning report has CMP (liver enzymes/albumin) + prealbumin, not just BMP" },
+                { t: "ABG", note: "Room-air ABG: COPD or rib fractures · AM ABG if vented" },
+                { t: "UA + urine detox panel", note: "All trauma patients" },
+                { t: "MRSA screen", note: "" },
+                { t: "Type & Screen active", note: "Every patient — needed every 72 hrs" }
+            ]},
+            { name: "Pain Meds", items: [
+                { t: "Acetaminophen IV 1000 mg q6h standing", note: "Needs verification by another resident" },
+                { t: "Oxycodone 5 mg q6h PRN", note: "Moderate pain" },
+                { t: "Morphine 2 mg IV q2h PRN", note: "Severe pain" },
+                { t: "Lidocaine patch", note: "Rib fractures" },
+                { t: "Consider NSAIDs / gabapentin / cyclobenzaprine", note: "NSAIDs if no contraindications; others for uncontrolled pain" },
+                { t: "Geriatric: reduce oxycodone", note: "2.5 mg q6 PRN moderate · 5 mg q6 PRN severe" }
+            ]},
+            { name: "Other Meds", items: [
+                { t: "IVF — LR or NS at maintenance", note: "Unless otherwise specified" },
+                { t: "Home meds (with hold parameters for BP meds)", note: "Confirm with senior before anticoagulation, ACE/ARB, diuretic. ALWAYS continue beta-blockers unless hemodynamically unstable" },
+                { t: "GI prophylaxis (if meets criteria)", note: "Pantoprazole 40 mg daily · famotidine 20 mg BID · esomeprazole 20 mg daily (if NGT/OGT/G-tube)" },
+                { t: "Bowel regimen (if on opiates)", note: "Unless diarrhea. Senna · mineral oil · polyethylene glycol · bisacodyl supp if still constipated" }
+            ]},
+            { name: "Diet / Vent / Imaging", items: [
+                { t: "Diet order", note: "Usually NPO unless otherwise specified" },
+                { t: "Ventilator order set (if vented)", note: "Vent-Initial Order Set · chlorhexidine · artificial tears" },
+                { t: "Daily CXR — portable & routine", note: "Chest tube or intubated" }
+            ]},
+            { name: "Nursing", items: [
+                { t: "Neuro / neurovascular checks q1h", note: "Neurovascular for injured extremities" },
+                { t: "Condition: critical (q2h) · vitals q1h", note: "" },
+                { t: "Activity", note: "OOBTC w/ assist daily. Bedrest w/ spinal precautions in spinal trauma. Set weight-bearing status" },
+                { t: "Strict I/Os q1h", note: "" },
+                { t: "Incentive spirometry", note: "10x every hour while awake" },
+                { t: "Chest PT q4h", note: "" },
+                { t: "Drains / tubes / lines orders", note: "" },
+                { t: "Specialty mattress", note: "If anticipated prolonged immobility" }
+            ]},
+            { name: "Intoxicated Trauma", items: [
+                { t: "Screen with EtOH + urine detox", note: "" },
+                { t: "If positive: SBIRT · banana bag · CIWA", note: "" }
+            ]},
+            { name: "Diabetes", items: [
+                { t: "Hold oral diabetic meds on admission", note: "" },
+                { t: "Hold metformin 48h if IV contrast", note: "Even if discharged" },
+                { t: "Insulin sliding scale (regular)", note: "Q6h if NPO · before meals + bedtime if on diet · fingersticks same frequency · basal insulin detemir if indicated" }
+            ]}
+          ]
+        },
+        {
+          name: "Floor / CDS",
+          accent: "#a78bfa",
+          sections: [
+            { name: "DO THESE FIRST", items: [
+                { t: "SATC", note: "To admitting attending + first call to intern service pager. Order before anything else — avoids pop-ups" },
+                { t: "Thrombosis risk assessment", note: "Open blue box, answer age / current dx / contraindications" }
+            ]},
+            { name: "Labs", items: [
+                { t: "Routine daily labs for 0400", note: "CBC, BMP, magnesium, phosphorus, PT/INR, PTT" },
+                { t: "Type & Screen on admission", note: "All patients" },
+                { t: "UA + MRSA screen", note: "Utox/detox panel for trauma or suspected drug use" },
+                { t: "B-hCG / urine pregnancy", note: "All pre-menopausal females" }
+            ]},
+            { name: "Meds & Diet", items: [
+                { t: "Same as SICU admission", note: "See the SICU tab for pain, IVF, home meds, GI ppx, bowel regimen" }
+            ]},
+            { name: "Nursing (floor frequencies)", items: [
+                { t: "Condition: stable · vitals q4h", note: "" },
+                { t: "Checks q4h", note: "Floor orders cannot be more frequent than q4" },
+                { t: "Drains / tubes / I&Os — every shift", note: "" }
+            ]},
+            { name: "CDS (\u201CObs\u201D)", items: [
+                { t: "Use CDS documents, not AMB/INP", note: "CDS H&P · CDS Progress Note · CDS Discharge Plan · CDS Discharge Summary · CDS provider note" },
+                { t: "9th floor, up to 48 hrs", note: "If admission continues past 48h: place an \u201Cadmit\u201D order to gen surg/trauma floor + write a new INP H&P" },
+                { t: "Continuous cardiac monitoring → 11th floor", note: "Required for IV push beta blockers or anti-HTN; needs a continuous cardiac monitoring order" },
+                { t: "Patients under arrest → 18th floor", note: "" }
+            ]}
+          ]
+        },
+        {
+          name: "Hip Fx",
+          accent: "#f472b6",
+          banner: "In addition to the standard SICU admit orders.",
+          sections: [
+            { name: "Consults", items: [
+                { t: "Orthopedics", note: "If not already placed" },
+                { t: "Medicine / Cardiology", note: "If indicated by chief or attending" },
+                { t: "PM&R", note: "" },
+                { t: "Physical therapy", note: "" },
+                { t: "Case management", note: "" },
+                { t: "Social work", note: "" },
+                { t: "Speech & swallow", note: "Do NOT place until after surgery. Only for patients unable to pass bedside S&S per Yale protocol" }
+            ]},
+            { name: "Orders", items: [
+                { t: "Foley — insert AND maintain", note: "Two separate orders; if indicated by chief or attending" },
+                { t: "Anticoagulation — one STAT dose", note: "Ask senior: SC heparin vs enoxaparin. Give before day of procedure" },
+                { t: "EKG 12-lead", note: "All patients" },
+                { t: "Echo", note: "As indicated by chief or attending" },
+                { t: "2 units pRBC on hold", note: "Usually needed" }
+            ]}
+          ]
+        },
+        {
+          name: "Bariatric",
+          accent: "#34d399",
+          banner: "NO PILLS / CAPSULES — everything must be crushed or liquid. Extended-release meds CANNOT be crushed.",
+          sections: [
+            { name: "Throughout Stay", items: [
+                { t: "Strict NPO, IVF, enoxaparin BID, hold home meds", note: "Almost all bariatric patients immediately post-op" },
+                { t: "Monitor: persistent HR >120, temp spike, SOB", note: "Watch the entire hospital stay" }
+            ]},
+            { name: "POD0 — Pain Meds", items: [
+                { t: "Acetaminophen IV 1000 mg q6h standing", note: "" },
+                { t: "Ketorolac 15–30 mg q6h, max 4 doses", note: "" },
+                { t: "NO NARCOTICS unless cleared by chief", note: "" }
+            ]},
+            { name: "POD0 — Orders", items: [
+                { t: "NPO / IVF / Foley", note: "" },
+                { t: "Famotidine IV 20 mg BID", note: "" },
+                { t: "Capnography — all patients", note: "" },
+                { t: "CPAP if sleep apnea", note: "" },
+                { t: "Ambulate q2h starting 6–8h post-op", note: "" },
+                { t: "Monitor HR — notify senior if >120 or tachy >2h", note: "" },
+                { t: "Start enoxaparin 8h post-op", note: "Unless otherwise indicated" },
+                { t: "If DM: FS glucose q6h + ISS", note: "" },
+                { t: "If HTN: start IV equivalent of home meds", note: "Check pre-op / home meds" },
+                { t: "NO AM labs", note: "Unless otherwise specified" }
+            ]},
+            { name: "POD1 AM — advance with senior / bari PA", items: [
+                { t: "D/C Foley if present", note: "" },
+                { t: "Start bariatric clears", note: "Specify NO carbonated beverages on the order" },
+                { t: "Switch pain meds", note: "Acetaminophen IV → liquid acetaminophen 975 mg q6h standing · D/C ketorolac" },
+                { t: "Famotidine IV → PO 20 mg BID", note: "" },
+                { t: "Half the IVF rate", note: "" },
+                { t: "Restart home meds", note: "Check pharmacy re: crushing or liquid versions — if unavailable, DON'T START. Do NOT restart home diabetic meds (leave on ISS)" },
+                { t: "Continue ambulate q2h", note: "" },
+                { t: "JP drain — leave alone", note: "Removal in clinic" }
+            ]},
+            { name: "POD1 PM / Night", items: [
+                { t: "If tolerating bariatric liquid diet → home", note: "When chief / bari PA says OK" }
+            ]},
+            { name: "Discharge Meds", items: [
+                { t: "LIQUID acetaminophen 650 mg (20.3 mL) q6 × 2 weeks", note: "" },
+                { t: "Famotidine 20 mg BID × 14 days (30 tabs)", note: "Very small tabs — can be taken whole" },
+                { t: "Ursodiol 300 mg BID × 6 months", note: "Give 180 with 1 refill. Open capsule, pour powder into liquid — do NOT swallow whole. Not needed if s/p band or prior cholecystectomy" },
+                { t: "Enoxaparin 40 mg BID × 30 days", note: "Or higher per BMI — see VTE dosing" },
+                { t: "Diabetic: do NOT restart home meds", note: "Send with ISS (regular insulin). PCP within 1 week. Confirm they have glucometer/needles/test strips at home" },
+                { t: "HTN: crushable or liquid only", note: "If neither, PCP follow-up within 1 week. Extended-release CANNOT be crushed" },
+                { t: "Follow-up in bariatric clinic within 1 week", note: "Tue 1230 or Thu 0900, 6th floor" }
+            ]},
+            { name: "Diet Advancement", items: [
+                { t: "Bari clear — POD 1–2", note: "" },
+                { t: "Bari full — 2 weeks", note: "" },
+                { t: "Bari puree — 2 weeks", note: "" },
+                { t: "Bari regular — from 4 weeks post-op, for life", note: "" }
+            ]},
+            { name: "Crushing Meds", items: [
+                { t: "Size reference: famotidine tab (0.5 × 0.5 cm)", note: "That's the biggest that can be swallowed whole" },
+                { t: "Crushable: all beta blockers, metformin, amlodipine", note: "Beta blockers crushable UNLESS extended-release" },
+                { t: "NOT crushable: valsartan, pantoprazole, enteric-coated ASA", note: "Enteric ASA can be switched to chewable ASA" },
+                { t: "Extended-release may convert to immediate-release", note: "Ask pharmacy" },
+                { t: "IV:PO conversions", note: "Levothyroxine 1:2 (50 mcg IV = 100 mcg PO) · Metoprolol 1:2.5. Call pharmacy if unsure" }
+            ]},
+            { name: "CT A/P with Oral Contrast", items: [
+                { t: "Dilute contrast in 300 cc sterile water", note: "" },
+                { t: "Patient drinks only 100 mL (3–4 oz) before the scan", note: "" },
+                { t: "Last sip on the CT table right before scanning", note: "" }
+            ]}
+          ]
+        }
+      ]
+    },
+    {
+      id: "numc-extensions",
+      type: "reference",
+      tag: "NUMC",
+      title: "Hospital Extensions",
+      secondaryLabel: "",
+      sections: [
+        { name: "How to dial", items: [
+            { name: "Full number for any extension", phone: "516-572", pager: "or 516-296", noCall: true },
+            { name: "Operator", phone: "0", pager: "" },
+            { name: "Dial out", phone: "9-1", pager: "then number", noCall: true },
+            { name: "Page someone", phone: "9651", pager: "then pager #", noCall: true },
+            { name: "Overhead announcements", phone: "26222", pager: "" }
+        ]},
+        { name: "Surgery", items: [
+            { name: "Surgery Office", phone: "26703", pager: "" },
+            { name: "Surgery Clinic", phone: "62294", pager: "" },
+            { name: "PST", phone: "23161", pager: "26051" },
+            { name: "OR Main", phone: "23181", pager: "" },
+            { name: "OR Booking", phone: "26750", pager: "" },
+            { name: "ORs", phone: "625", pager: "+ room #", noCall: true },
+            { name: "PACU", phone: "26291", pager: "26292" },
+            { name: "SICU", phone: "26191", pager: "" },
+            { name: "SICU back room", phone: "24822", pager: "" },
+            { name: "SPA", phone: "62159", pager: "" }
+        ]},
+        { name: "Radiology — Reading Rooms", items: [
+            { name: "Neuro", phone: "28861", pager: "" },
+            { name: "Body", phone: "62238", pager: "" },
+            { name: "XR", phone: "25699", pager: "" },
+            { name: "US", phone: "62748", pager: "" },
+            { name: "IR", phone: "25709", pager: "" },
+            { name: "Other", phone: "67385", pager: "62751 / 25653" }
+        ]},
+        { name: "Radiology — Imaging", items: [
+            { name: "CT ER", phone: "26524", pager: "" },
+            { name: "CT 2nd floor", phone: "28766", pager: "" },
+            { name: "XR ER", phone: "62325", pager: "" },
+            { name: "XR 2nd floor", phone: "25627", pager: "" },
+            { name: "MRI", phone: "25777", pager: "26380" },
+            { name: "US (ultrasound)", phone: "29411", pager: "26872" }
+        ]},
+        { name: "Pagers (dial 651 + number)", items: [
+            { name: "Ortho", phone: "4556", pager: "", noCall: true },
+            { name: "Neurosurgery", phone: "5050", pager: "", noCall: true },
+            { name: "Radiology", phone: "5416", pager: "", noCall: true },
+            { name: "Intern — Trauma", phone: "6575", pager: "", noCall: true },
+            { name: "Intern — Gen Surg", phone: "8865", pager: "", noCall: true },
+            { name: "ENT", phone: "8911", pager: "", noCall: true },
+            { name: "Urology", phone: "5474", pager: "", noCall: true },
+            { name: "Midlevel — Trauma", phone: "1287", pager: "", noCall: true },
+            { name: "Midlevel — Gen Surg", phone: "0106", pager: "", noCall: true },
+            { name: "Trauma Chief", phone: "7006", pager: "", noCall: true }
+        ]},
+        { name: "Other Services", items: [
+            { name: "Blood bank", phone: "26344", pager: "" },
+            { name: "Pharmacy", phone: "23241", pager: "" },
+            { name: "Shared labs", phone: "24901", pager: "" },
+            { name: "Chemistry", phone: "25148", pager: "" },
+            { name: "MAR", phone: "21615", pager: "" },
+            { name: "Medical examiner", phone: "24779", pager: "25043" },
+            { name: "ED", phone: "62100", pager: "62400 / 62300" },
+            { name: "Interpreter", phone: "6-CHAT", pager: "", noCall: true },
+            { name: "Clinic appointments", phone: "62525", pager: "" },
+            { name: "CCU", phone: "24771", pager: "50456" },
+            { name: "MICU", phone: "26516", pager: "50452" },
+            { name: "IR nursing station", phone: "50423", pager: "26637" },
+            { name: "Rehab (5th)", phone: "24721", pager: "63248" },
+            { name: "BURN (6th)", phone: "23207", pager: "" },
+            { name: "11E", phone: "25831", pager: "" },
+            { name: "9E", phone: "64915", pager: "" },
+            { name: "Beth Beyer", phone: "24817", pager: "" },
+            { name: "Katie Eslinger", phone: "62113", pager: "" }
+        ]},
+        { name: "Room Codes", items: [
+            { name: "SICU hallway", phone: "6911", pager: "", noCall: true },
+            { name: "BURN supply closet", phone: "9494", pager: "", noCall: true },
+            { name: "OR locker room", phone: "6477", pager: "", noCall: true },
+            { name: "8th floor stairway door", phone: "2201", pager: "", noCall: true },
+            { name: "11th floor med/saline room", phone: "7606", pager: "", noCall: true },
+            { name: "9th floor med/saline room", phone: "8713", pager: "", noCall: true }
+        ]},
+        { name: "On-Call Attending", items: [
+            { name: "On-Call Attending", phone: "516-591-4887", pager: "" }
+        ]}
+      ]
+    },
+
+    {
+      id: "weekly-clinic-schedule",
+      type: "reference",
+      tag: "NUMC",
+      title: "Weekly Schedule",
+      secondaryLabel: "",
+      sections: [
+        { name: "Trauma", items: [
+          { name:"Mon", detail:"Rounds 0600 · Morning report 0700 · Endocrine clinic 1300" },
+          { name:"Tue", detail:"Rounds 0600 · Morning report 0700 · Multi-D 0900" },
+          { name:"Wed", detail:"Rounds 0600 · M&M 0700 · Grand rounds 0800 · Education 0900" },
+          { name:"Thu", detail:"Rounds 0600 · Morning report 0700 · Mega clinic 0830" },
+          { name:"Fri", detail:"Rounds 0600 · Morning report 0700 · Score lecture 0800 · ENT clinic 1300" },
+          { name:"Sat", detail:"Rounds 0600 · Morning report 0700" },
+          { name:"Sun", detail:"Rounds 0600 · Morning report 0700" }
+        ]},
+        { name: "General Surgery", items: [
+          { name:"Mon", detail:"Rounds 0600 · Morning report 0700 · GU clinic 1300 · Endocrine clinic 1300" },
+          { name:"Tue", detail:"Rounds 0600 · Morning report 0700 · Vascular clinic 0830 · Multi-D 0900" },
+          { name:"Wed", detail:"Rounds 0600 · M&M 0700 · Grand rounds 0800 · Education 0900 · C's colonoscopies 1200 · Breast clinic 1230" },
+          { name:"Thu", detail:"Rounds 0600 · Morning report 0700 · Biopsy clinic 0800 · Mega clinic 0830 · Endocrine clinic 1100" },
+          { name:"Fri", detail:"Rounds 0600 · Morning report 0700 · Score lecture 0800 · GU clinic 0800" },
+          { name:"Sat", detail:"Rounds 0600 · Morning report 0700" },
+          { name:"Sun", detail:"Rounds 0600 · Morning report 0700" }
+        ]},
+        { name: "SICU", items: [
+          { name:"Mon", detail:"Rounds 0600 · Morning report 0700" },
+          { name:"Tue", detail:"Rounds 0600 · Morning report 0700 · Multi-D 0900" },
+          { name:"Wed", detail:"Rounds 0600 · M&M 0700 · Grand rounds 0800 · Education 0900" },
+          { name:"Thu", detail:"Rounds 0600 · Morning report 0700" },
+          { name:"Fri", detail:"Rounds 0600 · Morning report 0700 · Score lecture 0800" },
+          { name:"Sat", detail:"Rounds 0600 · Morning report 0700" },
+          { name:"Sun", detail:"Rounds 0600 · Morning report 0700" }
+        ]},
+        { name: "Other Clinics", items: [
+          { name:"Neurosurgery", detail:"Tue 10am · Thu 1pm" },
+          { name:"Bariatric surgery", detail:"Tue 1pm · Thu 9am" },
+          { name:"Plastic surgery hand", detail:"Tue 1pm" },
+          { name:"Plastic surgery", detail:"Mon 1pm" },
+          { name:"OMFS", detail:"Mon 9am" },
+          { name:"Ortho fracture", detail:"Wed 9am" },
+          { name:"Endocrine clinic", detail:"Every other Thu 1pm" }
+        ]}
+      ]
+    },
+    {
+      id: "trauma-activation",
+      type: "reference",
+      tag: "Trauma",
+      title: "Trauma Activation",
+      sections: [
+        { name: "Who Responds", items: [
+          { info:"The entire trauma team goes down for all Level I and Level II traumas." },
+          { info:"All Level I and II activations are called overhead and paged to the trauma pagers." },
+          { lead:"Everyone:", info:"MUST wear protective gear." }
+        ]},
+        { name: "Two Interns in the Bay", items: [
+          { info:"There should be at least two interns in the trauma bay — one at the computer, one at the bedside." }
+        ]},
+        { name: "Intern at the Computer", items: [
+          { lead:"Documents:", info:"Intake & Home Med Collection Form", sub:[
+              "Lactation/pregnancy status (n/a or unknown)",
+              "Allergies — unknown",
+              "Diagnosis: Trauma"
+          ]},
+          { lead:"Orders:", info:"\u201CTrauma Panel Order Set\u201D", sub:[
+              "Must select Trauma Team Activation Level 1 or 2",
+              "Order imaging / labs / consults as called out by midlevel/chief",
+              "Meds go on the trauma flow sheet — NOT ordered in the EMR",
+              "Order MTP when needed"
+          ]},
+          { info:"Document HPI & exam as called out by EMS / team at bedside (get arrival time + first vitals from the trauma flow sheet)." },
+          { info:"Help transport: imaging, then back to ED or up to SICU / OR / IR as indicated." }
+        ]},
+        { name: "Intern at the Bedside", items: [
+          { info:"Take off all the patient's clothes, jewelry, etc." },
+          { info:"Set up the FAST on US with patient information." },
+          { info:"Grab gowns, warm blankets, and other supplies the chief/midlevel asks for." },
+          { info:"Assist in rolling the patient." },
+          { info:"Help transport: imaging, then back to ED or up to SICU / OR / IR as indicated." }
+        ]},
+        { name: "If MTP Is Ordered", items: [
+          { info:"An intern will be assigned as the blood runner — see the MTP card." }
+        ]}
+      ]
+    },
+    {
+      id: "mtp",
+      type: "reference",
+      tag: "Trauma",
+      title: "MTP",
+      sections: [
+        { name: "Blood Runner", items: [
+          { lead:"You are the most important person on the team.", info:"Keep the right blood products always available, trend real-time labs, and keep every team member aware of where the MTP stands. You are the point person between all teams." }
+        ]},
+        { name: "When to Activate", items: [
+          { info:"Class 4 shock (>2 L EBL) with no imminent end." },
+          { info:"6+ units pRBC given in a 4-hour period." },
+          { lead:"ABC score >2:", info:"penetrating mechanism · ED SBP <90 · ED HR >120 · positive FAST." },
+          { lead:"Pediatrics:", info:"shock with EBL >20 mL/kg." }
+        ]},
+        { name: "Activate MTP", items: [
+          { lead:"Order:", info:"MTP1 Blood Component Order Set, OR MTP1 Whole Blood Order Set — your chief/attending will tell you which." },
+          { lead:"Whole blood:", info:"2 units are in the trauma bay fridge. If you use them, when picking up the first cooler also bring down the white WB pickup slip and the transfusion sheet, plus a new pickup sheet for the cooler." },
+          { lead:"Call blood bank:", info:"26344 — give your info as the contact person." },
+          { lead:"Transfusion slip:", info:"half-sheet of paper (grab several as backups, in the trauma packet):", sub:[
+              "CORRECT patient sticker (check the wristband)",
+              "Product requested",
+              "Ordering physician (you)",
+              "Patient location: trauma bay, OR, or SICU",
+              "If getting 2 uncrossed pRBC: fill out lower portion and sign"
+          ]}
+        ]},
+        { name: "Cooler", items: [
+          { info:"Do NOT let it out of your sight at any time." },
+          { info:"Once it reaches the patient, have 2 team members check all product bags so they're ready to transfuse at all times." },
+          { info:"The cooler must be returned to the blood bank." }
+        ]},
+        { name: "Track Products Given", items: [
+          { lead:"Goal ratio:", info:"4:4:1 — pRBC : FFP : platelets." },
+          { info:"STOP crystalloids — only blood should be going." },
+          { lead:"TXA:", info:"1 g over 10 minutes, then 1 g over 8 hours." },
+          { info:"Also track: fibrinogen, calcium, vasopressors, urine output." }
+        ]},
+        { name: "Triad of Death — catch it early", items: [
+          { lead:"Hypothermia:", info:"set up the Bair Hugger." },
+          { lead:"Acidosis", info:"" },
+          { lead:"Coagulopathy:", info:"monitor coags." }
+        ]},
+        { name: "Blood Usage Criteria", items: [
+          { lead:"Blood:", info:"EBL 500 cc+ · Hgb <7 or Hct <21%." },
+          { lead:"Plasma:", info:"PT >17 sec (INR >1.5) · PTT >55 sec." },
+          { lead:"Platelets:", info:"", sub:[
+              "<10k/uL if not on platelet antagonists",
+              "IR: <50k/uL",
+              "Routine surgical procedures: <80k/uL",
+              "Neurosurgical and ophthalmic procedures: <100k/uL"
+          ]}
+        ]},
+        { name: "Transfusion Facts", items: [
+          { info:"Type & Screen is good for 3 days. Confirmatory must NOT be drawn at the same time as the type & screen." },
+          { info:"If something delays prompt infusion, return to blood bank within 30 minutes of issuance." },
+          { info:"Once a unit is spiked it cannot be returned — infuse within 4 hours of spike time, or discard and document." }
+        ]},
+        { name: "Labs", items: [
+          { info:"Order, collect, label properly, send down, then receive and trend results." }
+        ]},
+        { name: "Kcentra (warfarin reversal)", items: [
+          { lead:"Dose:", info:"units/kg × kg. Units/kg depends on pretreatment INR — ranges 25–50 u/kg, maximum 5000 u." },
+          { info:"Kcentra comes in 500 u and 1000 u vials, but the actual units are written on the vial." },
+          { lead:"Also give:", info:"vitamin K IV (typically 10 mg IV)." },
+          { info:"See the AC safety program on ITWeb or the Chief folder for more." }
+        ]},
+        { name: "Cancel MTP", items: [
+          { info:"Once told by the senior resident, call the blood bank at 26344 and tell them to cancel MTP. Do NOT \u201Ccancel\u201D any orders in the computer." },
+          { info:"Canceling just tells the blood bank to stop emergently cross-matching — it does not mean you stop using available products." },
+          { info:"Return and sign the cooler back in to the blood bank." }
+        ]}
+      ]
+    },
+
+    {
+      id: "clinic-guide",
+      type: "reference",
+      tag: "NUMC",
+      title: "Clinic Guide",
+      sections: [
+        { name: "Booking / Pre-opping (outpatient)", items: [
+          { info:"Usually done by our NPs — but be ready to do it if they're out (especially endo clinic)." },
+          { lead:"Book case:", info:"itweb → medical services → OR case request." },
+          { info:"Forward the submitted booking sheet/info to the operating attending and involved residents." },
+          { lead:"AMB Surgery Clinic Note / H&P:", info:"good for 30 days." },
+          { lead:"Consent:", info:"good for 60 days." },
+          { lead:"PST clearance:", info:"good for 30 days — they call the patient automatically." },
+          { info:"Order any needed pre-op labs / imaging." }
+        ]},
+        { name: "Colonoscopy Prep", items: [
+          { lead:"Polyethylene glycol (PEG) electrolyte soln 4000 mL:", info:"10 oz PO q15min until 1 gallon done. Start 8 AM the day before." },
+          { info:"Light breakfast the day before, before 8 AM; clear liquids the rest of the day." },
+          { lead:"Bisacodyl:", info:"4 tabs (5 mg each) PO ×1 at 6 PM the day before." },
+          { lead:"Fleet enema:", info:"1 PR the night before AND 1 PR the morning of." },
+          { info:"NPO after midnight." }
+        ]},
+        { name: "Colon Resection Prep", items: [
+          { lead:"Polyethylene glycol (PEG) electrolyte soln 4000 mL:", info:"10 oz PO q15min until 1 gallon done. Start 8 AM the day before." },
+          { info:"Clear liquids only the day before; NPO after midnight." },
+          { lead:"Bisacodyl:", info:"4 tabs PO ×1 at 6 PM the day before." },
+          { lead:"Fleet enema:", info:"1 PR night before AND morning of." },
+          { lead:"Erythromycin 500 mg PO:", info:"at 1 PM, 2 PM, 11 PM the day before." },
+          { lead:"Neomycin 1 g PO:", info:"at 1 PM, 2 PM, 11 PM the day before." }
+        ]},
+        { name: "Anorectal Case Prep", items: [
+          { lead:"Fleet enema:", info:"1 PR at 10 PM the night before AND 1 PR the morning of, 1 hr before scheduled arrival." }
+        ]},
+        { name: "Endocrine Clinic", items: [
+          { info:"6th floor, every other Thursday 1300. One general surgery resident is assigned to cover." },
+          { info:"Bring the ultrasound from SICU to clinic (let the SICU team know)." },
+          { info:"You do the booking here \u2014 this clinic has no dedicated booking person." },
+          { lead:"Always ask Dr. Suman:", info:"does the patient need medical clearance or special testing?" },
+          { lead:"Admission type:", info:"usually AM Admit (confirm with Dr. Suman). If AM admit, ICU bed required = always yes." },
+          { lead:"In free-text area write:", info:"CBC, CMP, Mg, Phos, EKG." },
+          { lead:"Pre-admission orders:", info:"session type = PreAdmission testing \u2192 Pre-Surgical Testing Orders.", sub:[
+              "CBC, CMP, Mg, Phos, EKG",
+              "NPO day of surgery",
+              "T&S + confirmatory, with 2 units pRBC on hold for day of surgery"
+          ]},
+          { lead:"Pre-op orders:", info:"session type = ASU/Preop orders.", sub:[
+              "Fill out date and procedure",
+              "Whole blood K (if dialysis) morning of surgery",
+              "Fingerstick glucose (if DM) morning of surgery",
+              "Saline lock"
+          ]}
+        ]}
+      ]
+    },
+    {
+      id: "procedures",
+      type: "reference",
+      tag: "Bedside",
+      title: "Procedures",
+      intro: "What to have at bedside. Instructions intentionally left out.",
+      sections: [
+        { name: "Abscess I&D", items: [
+          { info:"Lidocaine with epinephrine (unless end-artery region) · 18G + 25G needles · 10 cc syringe · #11 or #15 blade · plastic surgery kit · culture swab · saline flushes · 4×4s · betadine · packing + Q-tips · paper tape." }
+        ]},
+        { name: "Wound Debridement", items: [
+          { info:"Sterile gloves · 1–2 #10 blades (per wound size) · plastics kit · several 2-0 / 3-0 vicryl sutures-ties · long Surgicel · Kerlix · Dakin's or normal saline · 4×4 gauze · abdominal pads · overlying dry dressing (paper tape vs duoderm)." }
+        ]},
+        { name: "Arterial Line", items: [
+          { info:"Arterial line kit (single-lumen central line if femoral, or radial A-line kit) · 18G needle · lidocaine · 18G + 25G needles · 10 cc syringe · chlorhexidine · tegaderms · silk stitch on straight needle · ± US with sterile probe cover · sterile gloves · silk tape." }
+        ]},
+        { name: "Central Line", items: [
+          { info:"Central line kit (TLC vs introducer vs Shiley) · bundle kit · sterile gloves · silk tape for positioning · chlorhexidine · 3 blue caps (if TLC) · US + probe cover · sterile flushes · 3 bottles heparin 1000 units/mL (if Shiley, to hep-lock)." }
+        ]},
+        { name: "Chest Tube", items: [
+          { info:"Suction set-up (nursing readies it) · pleura-vac, appropriately filled · chest tube · #10 blade · betadine or chlorhexidine · lidocaine with epinephrine · 18G + 25G needles · 10 cc syringe · chest tube tray · bundle kit · sterile gloves · 4×4s · 5\"×9\" Xeroform · silk tape · 2 Ethilon (heavy non-absorbable) sutures." }
+        ]},
+        { name: "Chest Tube Removal", items: [
+          { info:"If a purse-string/U-stitch is present, TWO people are required: one ties the stitch, one pulls the tube." },
+          { lead:"Supplies:", info:"dressing (gauze/tape: several 6\" silk tape strips, 4×4s, 5\"×9\" Xeroform — or duoderm sheet ± Xeroform) · chuck · suture removal kit." },
+          { info:"Always perform a post-pull x-ray." }
+        ]},
+        { name: "Bronchoscopy", items: [
+          { info:"Bronchoscopy machine · bronchoscope · bronchoscopy kit (lubrication, sputum trap, drape, ET tube adapter) · sterile gloves · saline flushes / small cup of saline · suction set-up · 1% lidocaine · rocuronium 50 mg · sedative." },
+          { lead:"Not a sterile procedure.", info:"Pre-oxygenate at 100% FiO2 for at least 10 minutes. Always post-procedure CXR." }
+        ]},
+        { name: "Procedure Note — what to document", items: [
+          { lead:"Chest tube placement:", info:"laterality · depth of insertion · indication (pneumo vs hemo vs effusion) · what came out on entry · post-placement x-ray findings." },
+          { lead:"Central line:", info:"laterality/location · post-placement x-ray findings." },
+          { lead:"Arterial line:", info:"location." },
+          { lead:"Laceration repair:", info:"thickness · location · size (length, width, depth, shape) · tissues involved · suture type and number placed." },
+          { lead:"Bronchoscopy:", info:"presence/absence and quality of secretions · mucosal findings · pre-medications given." },
+          { lead:"Chest tube / JP removal:", info:"short INP provider note is fine." },
+          { lead:"Foley:", info:"\u201CUrinary Device Placement Procedure Note.\u201D" }
+        ]},
+        { name: "Lines & Tubes — daily", items: [
+          { info:"For ANY drain, at rounds and sign-out know: color, consistency, amount drained, and whether it changed." },
+          { lead:"Chest tube:", info:"check tubing + canister daily for color, clarity, amount, air leak. Canister filled correctly. Occlusive dressing. Daily CXR. Orders: suction vs water seal, I&O qShift. When swapping the pleura-vac, fill water seal and air leak chambers before connecting." },
+          { lead:"NG tube:", info:"3 black marks on the proximal end — you want 2 inside the nose. Keep a 60 cc Tumi syringe + sterile water to flush. Replace output qShift, usually 1:1 with NS (check with senior). Switch meds to IV where possible." },
+          { lead:"JP drain:", info:"strip on rounds daily. Misc nursing order for suction vs gravity, and JP teaching if going home with it." }
+        ]}
+      ]
+    },
+    {
+      id: "protocols",
+      type: "reference",
+      tag: "Trauma",
+      title: "Protocols",
+      sections: [
+        { name: "Angiography Activation", items: [
+          { info:"Indicated for active extravasation needing angiographic intervention." },
+          { info:"Contact the radiology resident → they contact the IR attending." },
+          { info:"Trauma attending discusses the need with the IR attending." },
+          { lead:"EMR:", info:"place an \u201CUrgent\u201D Interventional Radiology consult, and order Angiography as urgent (per the rad resident): visceral / select additional vessel / pelvic / extremity." },
+          { info:"After hours/weekend/holiday: call the nursing supervisor to open the IR suite + staff it." },
+          { info:"Bring patient to the 2nd-floor IR suite IMMEDIATELY once angio is confirmed." },
+          { info:"In-house CT tech initiates & assists until IR tech arrives (IR tech ≤60 min; attending radiologist ≤30 min)." },
+          { lead:"Important:", info:"ensure active T&S and blood products available — consider activating MTP." }
+        ]},
+        { name: "Chest Tube tPA Protocol", items: [
+          { info:"Take ALL chest tubes on the indicated side off suction during the process." },
+          { lead:"Alteplase:", info:"reconstitute 10 mg in 30 mL NS (use 60 mL syringe + 3-way stopcock + 10 mL syringe for even mixing)." },
+          { lead:"Dornase:", info:"reconstitute 5 mg in 30 mL NS, same technique. Keep dornase and alteplase in SEPARATE syringes." },
+          { info:"Connect a 3-way stopcock to the chest tube and flush (pigtail only — for a regular chest tube, administer directly into the tube; clamp, disconnect from pleura-vac, attach syringe before unclamping so it's never open to air). Stay sterile." },
+          { lead:"Inject in order:", info:"alteplase → dornase → 10 mL normal saline." },
+          { info:"Clamp the chest tube for 1 hour — monitor vitals carefully — then return to suction." }
+        ]}
+      ]
+    },
+    {
+      id: "ent",
+      type: "reference",
+      tag: "Rotation",
+      title: "ENT",
+      intro: "One trauma intern covers ENT each month. Round with trauma in the AM.",
+      sections: [
+        { name: "Responsibilities", items: [
+          { info:"All patients admitted to ENT go on BOTH the trauma and ENT lists. All consults admitted to other services go on the ENT list." },
+          { info:"Round on all consults and inpatients daily — daily progress notes, and discuss with the appropriate attending. Includes weekends and holidays." },
+          { info:"ENT sign-out must be done with a mid-level resident present, every time." },
+          { lead:"Staffing:", info:"see new consults and staff DIRECTLY with the ENT attending." },
+          { lead:"Dr. Berman:", info:"very receptive to calls/texts and will come in if needed. Simple things (sinusitis) — an FYI text is fine. Major things (persistent epistaxis, peritonsillar abscess, foreign body) — call early." },
+          { info:"If unsure whether to call, run it by the mid-level on call. Overnight you can often see the patient, write the note, and call the attending in the morning." },
+          { lead:"Clinic:", info:"Tuesday and Friday afternoons at 1300." }
+        ]},
+        { name: "Neck / Peritonsillar Abscess", items: [
+          { lead:"Airway first:", info:"always be concerned — new stridor, snoring, or change in voice." },
+          { info:"Needs a CT scan with IV contrast." },
+          { info:"Abscesses <2 cm usually improve with antibiotics (ampicillin-sulbactam or clindamycin). If admitted, trend CRP and WBC." }
+        ]},
+        { name: "Epistaxis", items: [
+          { info:"First ask what's already been tried." },
+          { info:"If stable and bleeding is mild: have the primary team spray ¼ bottle of oxymetazoline in the bleeding nares and pinch the nose shut, holding pressure 20 minutes — this stops most bleeding." },
+          { lead:"Assess:", info:"vitals, hemoglobin, platelets, coags, and any anticoagulation/antiplatelet therapy." },
+          { info:"If bleeding continues: rhino rockets, or gauze soaked with lidocaine with epinephrine. If packing stays in, the patient needs antibiotics." }
+        ]}
+      ]
+    },
+    {
+      id: "gu",
+      type: "reference",
+      tag: "Rotation",
+      title: "GU",
+      intro: "One general surgery intern covers GU each month. Round with gen surg in the AM.",
+      sections: [
+        { name: "Responsibilities", items: [
+          { info:"All patients admitted to GU go on BOTH the general surgery and GU lists. All consults admitted to other services go on the GU list." },
+          { info:"Round on all consults and inpatients daily — daily progress notes, discussed with the appropriate attending. Includes weekends and holidays." },
+          { info:"GU sign-out must be done with a mid-level resident present, every time." },
+          { lead:"Staffing:", info:"see new consults and staff DIRECTLY with the GU attending. Simple things (stones, hematuria, foley) — FYI text. Major things (priapism, torsion, infected stones) — call early." },
+          { lead:"Clinic:", info:"Monday and Thursday afternoons 1300; Friday morning 0800." }
+        ]},
+        { name: "Torsion — SURGICAL EMERGENCY", items: [
+          { info:"See the patient IMMEDIATELY." },
+          { info:"Get the exact time it first occurred." },
+          { info:"Speak with the attending immediately." },
+          { info:"Will likely require urgent operative intervention depending on timing." }
+        ]},
+        { name: "Priapism", items: [
+          { info:"If the penis is bendable, likely no intervention. If not, they'll likely need aspiration ± intracavernosal phenylephrine." },
+          { info:"Order the phenylephrine (and plain lidocaine) early and make sure it gets sent up — pharmacy can take a while." },
+          { info:"A senior will come to the bedside to do this with you." }
+        ]},
+        { name: "Hematuria", items: [
+          { info:"Often benign, most often after foley placement. Mild hematuria is usually managed outpatient; if no obvious source send UA with micro and culture." },
+          { info:"If a foley is in, LEAVE IT IN." },
+          { lead:"Clot retention:", info:"place the largest foley you can (24 or 26 Fr three-way).", sub:[
+              "Irrigate foleys with significant hematuria (more than pink lemonade) to flush clots",
+              "Get an irrigation tray (60 cc catheter-tipped syringe) and a liter of sterile water",
+              "Always keep ≥60 cc in the bladder: instill 60, then another 60",
+              "Pull back the second 60, leaving 60 in. Repeat until urine runs clear — may take 500 cc to multiple liters",
+              "Patients may require CBI"
+          ]}
+        ]},
+        { name: "Stones", items: [
+          { info:"Obstructing stone with hydroureteronephrosis, Cr >1.5, elevated WBC, positive nitrites, fever, or unstable vitals → likely admit for IV antibiotics and urgent OR for cysto with ureteral stent." },
+          { info:"Smaller non-obstructing stones, or obstructing without systemic changes/infection → usually follow up in 2–4 weeks with medical expulsive therapy (fluids >2 L UOP/day, tamsulosin, strain urine)." },
+          { lead:"Likelihood of passing:", info:"<5 mm about 90% · 5–7 mm about 50% · >7 mm unlikely." }
+        ]},
+        { name: "Foleys", items: [
+          { info:"Always make sure an MD from their team has attempted placement before you agree — they should go up their own chain of command first." },
+          { lead:"Bigger is better:", info:"whatever size was attempted, grab several larger. If they tried a 16 Fr, get an 18, 20 and 22. Diameter provides the stiffness you need. Available in the OR office (bring a patient sticker)." },
+          { lead:"Coude catheters:", info:"designed to pass around large prostates (BPH). Try 18, 22 or 24 Fr Coude." },
+          { lead:"Traumatic foley:", info:"(pulled with balloon up, or false passage) — no foley needed if the patient voids spontaneously. Otherwise attempt a large foley ONCE, then leave in place 5–7 days." }
+        ]}
+      ]
+    },
+    {
+      id: "gi-ppx",
+      type: "reference",
+      tag: "ICU",
+      title: "GI Prophylaxis",
+      intro: "Indications for stress ulcer prophylaxis.",
+      sections: [
+        { name: "Any ONE of these", items: [
+          { info:"Mechanical ventilation > 48 hours." },
+          { lead:"Coagulopathy:", info:"platelets <50,000 · INR >1.5 · on therapeutic anticoagulation." },
+          { info:"TBI." },
+          { lead:"Significant burn:", info:">20% TBSA partial + full thickness." },
+          { info:"History of previous GI hemorrhage." },
+          { info:"It's on their home medication list." }
+        ]},
+        { name: "OR any TWO of these", items: [
+          { info:"Chronic NSAID / ASA use." },
+          { lead:"High-dose NSAID therapy:", info:"ibuprofen >1200 mg/day, or any standing ketorolac regimen." },
+          { info:"Sepsis." },
+          { info:"Vasopressor or inotropic therapy." },
+          { lead:"Corticosteroids:", info:"≥250 mg/day hydrocortisone equivalent." },
+          { info:"New gastroduodenal or gastrojejunal anastomosis." },
+          { info:"Spinal cord injury." }
+        ]},
+        { name: "Agents", items: [
+          { lead:"Pantoprazole", info:"40 mg daily." },
+          { lead:"Famotidine", info:"20 mg BID." },
+          { lead:"Esomeprazole", info:"20 mg daily — via tube for NGT/OGT/G-tube patients." }
+        ]}
+      ]
+    },
+    {
+      id: "electrolytes",
+      type: "reference",
+      tag: "ICU",
+      title: "Electrolytes",
+      intro: "There is a new order set. Do NOT replete in dialysis patients.",
+      sections: [
+        { name: "Watch carefully in", items: [
+          { lead:"Renal / dialysis:", info:"DO NOT replete electrolytes." },
+          { lead:"Neurosurgery:", info:"sodium levels." },
+          { info:"Patients receiving multiple transfusions." }
+        ]},
+        { name: "Potassium — goal >4", items: [
+          { info:"Every 10 mEq KCl raises K+ by about 0.10 mmol/L." },
+          { info:"Doses over 40 mEq need 4 hours between them." },
+          { info:"Do NOT exceed 60 mEq replacement without rechecking a BMP." },
+          { info:"Watch for EKG changes." },
+          { info:"IV KCl burns — switch to PO/tube when you can. Tabs cannot be crushed. Can give PO and IV together if very low; consult senior if very low." },
+          { lead:"Peripheral IV:", info:"KCl IVPB rider 10 mEq · q1h · rate 100 mL/hr · stop after 3." },
+          { lead:"Central line:", info:"KCl IVPB rider 20 mEq · q1h · rate 100 mL/hr · stop after 3 (can vary)." },
+          { lead:"PO / tube:", info:"potassium chloride liquid 10–20 mEq q1h, stop after 3 (can vary)." }
+        ]},
+        { name: "Phosphorus — goal >3.0", items: [
+          { info:"Phosphorus packets give minimal repletion — replete IV." },
+          { info:"Choose K-Phos vs sodium phos based on the K+ and Na+ levels." },
+          { lead:"If K+ low:", info:"K-Phos rider 15/30/45 mMol · q1h · stop after 1–2." },
+          { lead:"If K+ normal:", info:"sodium phosphate IVPB 45 mMol · q4h/once · D5W 500 mL · hang 4 hrs." }
+        ]},
+        { name: "Magnesium — goal >2.0", items: [
+          { info:"May need repleting if other electrolytes resist repletion." },
+          { info:"PO magnesium absorbs poorly — replete IV." },
+          { lead:"IV:", info:"magnesium sulfate IVPB premix 2 g · once · rate 100 mL/hr · hang 1 hr." }
+        ]},
+        { name: "Calcium — goal >8", items: [
+          { lead:"Correct for albumin first:", info:"measured Ca + 0.8 × (4 − albumin). Albumin should be within 3 days." },
+          { info:"Can also check ionized calcium." },
+          { info:"Calcium chloride is roughly 10× stronger than calcium gluconate." },
+          { info:"If the patient got pRBCs, order calcium repletion — the bicarb in pRBCs eats up calcium." },
+          { lead:"Gluconate:", info:"calcium gluconate 10% IVPB 1 g once." },
+          { lead:"Chloride:", info:"CaCl 10% IVPB 3 mL in NS 100 mL · once · rate 100 mL/hr · hang 1 hr (nurse instruction: dilute 3 mL in 100 mL NS)." }
+        ]}
+      ]
+    },
+    {
+      id: "sepsis",
+      type: "reference",
+      tag: "Protocol",
+      title: "Sepsis",
+      sections: [
+        { name: "Cultures & Labs", items: [
+          { lead:"Blood cultures:", info:"sterile technique · 4 bottles total (2 anaerobic, 2 aerobic) · one of each from 2 SEPARATE sticks · draw BEFORE antibiotics." },
+          { lead:"Lactate:", info:"repeat in 3 hours if the initial lactate is >2." },
+          { info:"Respiratory culture." },
+          { lead:"Urine:", info:"UA only if the patient has a foley; culture is fine if no foley." }
+        ]},
+        { name: "Antibiotics", items: [
+          { lead:"STAT dose:", info:"must be given within 1 hour. Call pharmacy to verify the med, then follow up to make sure it is actually hanging." },
+          { info:"Also order the standing dose." }
+        ]},
+        { name: "Fluids", items: [
+          { lead:"IVF:", info:"30 mL/kg crystalloid for hypotension or lactate >2." }
+        ]}
+      ]
+    },
+    {
+      id: "nutrition",
+      type: "reference",
+      tag: "ICU",
+      title: "Nutrition",
+      intro: "PepUp enteral nutrition protocol. 24-hr period runs 0600–0559.",
+      sections: [
+        { name: "How it works", items: [
+          { info:"EN orders are written as a dose VOLUME PER DAY, not a run rate. The nurse adjusts the rate to deliver the full dose over 24 hrs." },
+          { info:"Tell the nurse if a patient needs NPO after midnight so they can recalculate the rate and still deliver the full volume." },
+          { lead:"Pivot 1.5:", info:"semi-elemental tube feed — 45% carbs, 25% protein, 30% fat, with omega-3s." }
+        ]},
+        { name: "Orders — PepUp Panel", items: [
+          { info:"Confirm enteral access by CXR or other acceptable method first." },
+          { lead:"GRV checks q4h:", info:"not needed with a jejunal tube. GRV <500 mL needs no intervention unless other signs of intolerance." },
+          { lead:"Consider metoclopramide:", info:"10 mg IV q6h × 24 hr then reassess · 5 mg IV q6h × 24 hr if renal dysfunction." }
+        ]},
+        { name: "Volume-Based Feeding (by admission weight)", items: [
+          { lead:"≤50 kg:", info:"700 mL / 24 hrs" },
+          { lead:"50.1–65 kg:", info:"900 mL / 24 hrs" },
+          { lead:"65.1–80 kg:", info:"1100 mL / 24 hrs" },
+          { lead:"80.1–95 kg:", info:"1300 mL / 24 hrs" },
+          { lead:">95.1 kg:", info:"1600 mL / 24 hrs" },
+          { info:"Order the 24-hr volume by continuous drip. Do NOT include a run rate." }
+        ]},
+        { name: "Trophic Feeds", items: [
+          { info:"Start Pivot 1.5 at 30 mL/hr." },
+          { info:"For patients on vasopressors or not suitable for volume-based EN." },
+          { info:"Reassess for transition to volume-based feeding the next day." }
+        ]},
+        { name: "NPO", items: [
+          { lead:"Use when EN is contraindicated:", info:"bowel perforation, obstruction, active GI bleed, DKA, proximal high-output fistula." },
+          { info:"Consider a jejunally placed feeding tube. Reassess for enteral feeding every day." }
+        ]},
+        { name: "Diarrhea on EN", items: [
+          { lead:"Definition:", info:">4–5 loose stools or >750 mL liquid stool in 24 hrs." },
+          { info:"Review history for pre-existing causes (UC, short bowel, diverticulitis)." },
+          { info:"Assess the abdomen — distention, tympany, pain." },
+          { info:"Hold laxatives/cathartics 24 hrs and send stool for C. diff." },
+          { info:"Rule out impaction / overflow incontinence." },
+          { info:"Consult dietitian re: changing formula. Consider probiotics, or baby food via tube q8–12h." },
+          { info:"Consider a fecal management system (e.g. flexiseal) per unit protocol." },
+          { lead:"C. diff negative:", info:"consider an anti-diarrheal (loperamide, diphenoxylate-atropine)." },
+          { lead:"C. diff positive:", info:"start C. diff treatment." }
+        ]}
+      ]
+    },
+    {
+      id: "med-pearls",
+      type: "reference",
+      tag: "Pearls",
+      title: "Med Pearls",
+      sections: [
+        { name: "BID ≠ q12", items: [
+          { lead:"q12:", info:"patient gets it at 10 AM and 10 PM — usually choose this one." },
+          { lead:"BID:", info:"patient gets it at 10 AM and 6 PM." }
+        ]},
+        { name: "Antihypertensives", items: [
+          { info:"Always give HOLD parameters — e.g. \u201Chold for SBP <100 or HR <60.\u201D" }
+        ]},
+        { name: "PCA Pump (hydromorphone)", items: [
+          { lead:"Order as:", info:"Hydromorphone IV PCA." },
+          { lead:"Settings:", info:"total dose 20 mg · concentration 0.2 · base sodium chloride 0.9% 100 mL · IV · continuous · loading dose 1 mg · demand dose 0.2 mg · basal rate 0.2 mg/hr · admin rate 1 mL/hr · lockout 8 min · 4-hr limit 4 mg · hang time 102 hrs." }
+        ]},
+        { name: "Radiology — Trauma Panscan", items: [
+          { info:"CT head w/o contrast · CT c-spine w/o contrast · CT max/face w/o (if facial trauma) · CT angio thoracic · CT abd/pelvis with contrast." },
+          { lead:"Ortho:", info:"usually x-rays one bone above and below the injury." },
+          { lead:"MRI from the ED:", info:"if the tech is called in, order it URGENT so the attending radiologist reads it promptly." }
+        ]},
+        { name: "CT with Contrast", items: [
+          { info:"Check creatinine before IV contrast; bolus IVF beforehand to prevent contrast-induced kidney injury." },
+          { info:"Must call the radiology resident to protocol the scan once the order is placed." },
+          { lead:"Oral contrast:", info:"browse → diagnostic imaging contrast → CT scan contrast protocols. Diatrizoate meglumine 30 cc bottle mixed in 1 L normal saline." },
+          { lead:"PEG tube study:", info:"call pharmacy and have the 30 cc bottle sent up WITHOUT being mixed in saline." }
+        ]}
+      ]
+    },
+    {
+      id: "drip-guide",
+      type: "reference",
+      tag: "ICU",
+      title: "Drip Guide",
+      intro: "ICU infusions. ALWAYS verify dose & concentration against pharmacy / institutional protocol before starting.",
+      sections: [
+        { name: "Vasopressors / Inotropes", items: [
+          { drug:"Norepinephrine (Levophed)", fields:[
+            {k:"Mix", v:"4 mg peripheral / 8 mg central"},
+            {k:"Start", v:"5 mcg/min ≈ 9.8 mL/hr"},
+            {k:"Titrate", v:"yes — MAP >65"},
+            {k:"Max", v:"75 mcg/min"} ]},
+          { drug:"Phenylephrine", fields:[
+            {k:"Mix", v:"40 mg / 250 mL (40 mcg/mL)"},
+            {k:"Start", v:"100 mcg/min ≈ 150 mL/hr"},
+            {k:"Titrate", v:"yes — MAP >65"} ],
+            warn:"Alt (fluid-restricted): 10 mg/250 mL, 60 mL/hr — use 20 mg if too much fluid." },
+          { drug:"Vasopressin", fields:[
+            {k:"Mix", v:"20 units / 100 mL"},
+            {k:"Rate", v:"0.04 units/min = 12 mL/hr"},
+            {k:"Titrate", v:"no (fixed dose)"} ]},
+          { drug:"Dopamine", fields:[
+            {k:"Mix", v:"400 mg"},
+            {k:"Dose", v:"5 mcg/kg/min ≈ 12 mL/hr · 7.5 mcg/kg/min ≈ 18 mL/hr"} ]},
+          { drug:"Dobutamine (β1/β2)", fields:[
+            {k:"Mix", v:"500 mg / 250 mL D5W"},
+            {k:"Start", v:"2.5 mcg/kg/min"},
+            {k:"Use", v:"SVR >1200 → dobutamine · SVR <800 → norepinephrine"} ]},
+          { drug:"Epinephrine — see pharmacy protocol", fields:[
+            {k:"Note", v:"add your institutional recipe here"} ]}
+        ]},
+        { name: "Sedation / Analgesia", items: [
+          { drug:"Propofol", fields:[
+            {k:"Dose", v:"5 mcg/kg/min"},
+            {k:"Rate", v:"(mcg × 60 × kg) / 10,000"},
+            {k:"Target", v:"Riker 3 (sedated)"} ]},
+          { drug:"Fentanyl", fields:[
+            {k:"Rate", v:"1 mcg/kg/hr ≈ 8 mL/hr"},
+            {k:"Target", v:"Ramsay 3–4"} ]},
+          { drug:"Midazolam (Versed)", fields:[
+            {k:"Mix", v:"50 mg peripheral / 100 mg central"},
+            {k:"Start", v:"5 mg/hr = 5 mL/hr"},
+            {k:"Titrate", v:"to minimal sedation"} ]},
+          { drug:"Lorazepam (Ativan)", fields:[
+            {k:"Mix", v:"20 mg / 100 mL"},
+            {k:"Bolus", v:"0.03–0.05 mg/kg"},
+            {k:"Maint", v:"0.01–0.1 mg/kg/hr — usually start 1 mg/hr (5 mL/hr)"} ]},
+          { drug:"Dexmedetomidine (Precedex)", fields:[
+            {k:"Mix", v:"200 mcg in NaCl 0.9% (100 mcg/mL)"},
+            {k:"Rate", v:"0.2 mcg/kg/hr ≈ 7 mL/hr"},
+            {k:"Formula", v:"rate × kg ÷ concentration"} ]},
+          { drug:"Cisatracurium (Nimbex)", fields:[
+            {k:"Rate", v:"1 mcg/kg/min ≈ 13.5 mL/hr"},
+            {k:"Titrate", v:"to train-of-four"} ]}
+        ]},
+        { name: "BP / Rate Control", items: [
+          { drug:"Nicardipine", fields:[
+            {k:"Start", v:"5 mg/hr = 50 mL/hr"},
+            {k:"Titrate", v:"reduce to 3 mg/hr once target BP reached"} ]},
+          { drug:"Diltiazem", fields:[
+            {k:"Mix", v:"125 mg / 125 mL D5W"},
+            {k:"Bolus", v:"0.25 mg/kg over 2 min (~20 mg); 2nd 0.35 mg/kg at 15 min"},
+            {k:"Maint", v:"5 mg/hr, ↑ by 5, MAX 15 mg/hr"} ]},
+          { drug:"Esmolol", fields:[
+            {k:"Mix", v:"2 g / 100 mL NS"},
+            {k:"Load", v:"500 mcg/kg/min over 1 min"},
+            {k:"Maint", v:"50 mcg/kg/min over 4 min"} ]},
+          { drug:"Labetalol", fields:[
+            {k:"Bolus", v:"20 mg IV over 2 min"},
+            {k:"Maint", v:"2–8 mg/min, MAX 300 mg"} ]},
+          { drug:"Nitroglycerin", fields:[
+            {k:"Mix", v:"50 mg / 250 mL"},
+            {k:"Start", v:"100 mcg/min = 30 mL/hr"} ]},
+          { drug:"Amiodarone", fields:[
+            {k:"1", v:"150 mg IVP over 10 min"},
+            {k:"2", v:"360 mg over 6 hr — 1 mg/min ≈ 33.3 mL/hr"},
+            {k:"3", v:"540 mg over 18 hr — 0.5 mg/min ≈ 16.6 mL/hr"},
+            {k:"4", v:"then PO 200 mg daily"} ]},
+          { drug:"Digoxin load (AFib)", fields:[
+            {k:"Load", v:"500 mcg ×1 → 250 mcg at 3 hr → 250 mcg at 3 hr"},
+            {k:"Maint", v:"250 mcg daily"} ]}
+        ]},
+        { name: "Other", items: [
+          { drug:"Insulin (regular) IV", fields:[
+            {k:"Rate", v:"0.1 units/kg/hr"} ]},
+          { drug:"Pantoprazole (Protonix) drip", fields:[
+            {k:"Bolus", v:"80 mg, run at 400 mL/hr"},
+            {k:"Drip", v:"8 mg/hr = 10 mL/hr"} ]},
+          { drug:"Octreotide", fields:[
+            {k:"Mix", v:"500 mcg / 250 mL"},
+            {k:"Rate", v:"50 mcg/hr = 100 mL/hr"},
+            {k:"Titrate", v:"no"} ]},
+          { drug:"Furosemide (Lasix)", fields:[
+            {k:"Mix", v:"100 mg / 100 mL NS"},
+            {k:"Load", v:"20–40 mg over 1–2 min"},
+            {k:"Maint", v:"0.05 mg/kg/hr, not >4 mg/min"} ]},
+          { drug:"Sodium bicarbonate", fields:[
+            {k:"Mix", v:"3 amps (75 mEq) in 500 mL D5W"},
+            {k:"Rate", v:"125 mL/hr"},
+            {k:"Titrate", v:"no"} ]},
+          { drug:"Albumin 25%", fields:[
+            {k:"Dose", v:"50 mL once at 50 mL/hr q12h"} ]},
+          { drug:"N-acetylcysteine", fields:[
+            {k:"Load", v:"150 mg/kg in 200 mL D5W over 1 hr"},
+            {k:"2nd", v:"50 mg/kg in 500 mL D5W over 4 hr"},
+            {k:"3rd", v:"100 mg/kg in 1000 mL D5W over 16 hr"} ]},
+          { drug:"Pamidronate", fields:[
+            {k:"Dose", v:"90 mg in 500 mL NaCl 0.9%"},
+            {k:"Rate", v:"20 mL/hr over 24 hr"} ]},
+          { drug:"Naloxone drip", fields:[
+            {k:"Dose", v:"4 mg"},
+            {k:"Rate", v:"100 mL/hr"} ]},
+          { drug:"Mannitol (20%)", fields:[
+            {k:"Dose", v:"1.5 g/kg — 50 g stat IVP, place foley"},
+            {k:"Also", v:"elevate HOB 30°"} ]}
+        ]}
+      ]
+    },
+    {
+      id: "table-rounds",
+      type: "reference",
+      tag: "Daily",
+      title: "Table Rounds",
+      intro: "Meet at the nursing station with multidisciplinary faculty to review the daily patient plan. Times vary by day.",
+      sections: [
+        { name: "Monday", items: [
+          { name:"Ortho", detail:"8:30 AM" },
+          { name:"General Surgery", detail:"10:30 AM" },
+          { name:"Trauma", detail:"10:30 AM" },
+          { name:"Neurosurgery", detail:"10:30 AM" }
+        ]},
+        { name: "Tuesday", items: [
+          { name:"Ortho", detail:"8:30 AM" },
+          { name:"Neurosurgery", detail:"8:30 AM" },
+          { name:"General Surgery", detail:"10:30 AM" },
+          { name:"Trauma", detail:"10:30 AM" }
+        ]},
+        { name: "Wednesday", items: [
+          { name:"Ortho", detail:"8:30 AM" },
+          { name:"Neurosurgery", detail:"10:30 AM" },
+          { name:"General Surgery", detail:"11:15 AM" },
+          { name:"Trauma", detail:"11:15 AM" }
+        ]},
+        { name: "Thursday", items: [
+          { name:"Ortho", detail:"8:30 AM" },
+          { name:"Neurosurgery", detail:"10:30 AM" },
+          { name:"General Surgery", detail:"12:00 PM" },
+          { name:"Trauma", detail:"12:00 PM" }
+        ]},
+        { name: "Friday", items: [
+          { name:"Ortho", detail:"8:30 AM" },
+          { name:"General Surgery", detail:"10:30 AM" },
+          { name:"Trauma", detail:"10:30 AM" },
+          { name:"Neurosurgery", detail:"10:30 AM" }
+        ]}
+      ]
+    },
+    {
+      id: "death-protocol",
+      type: "reference",
+      tag: "VERY IMPORTANT",
+      title: "Death",
+      sections: [
+        { name: "Notify", items: [
+          { lead:"Senior resident", info:"" },
+          { lead:"Family member:", info:"get their name, relationship, and phone number." },
+          { lead:"LiveOnNY:", info:"must be called within 1 hour of death. Get the name of who you spoke with, document the time, and get the LiveOnNY reference number." },
+          { lead:"Vital statistics:", info:"document name of person + time you spoke." },
+          { lead:"Medical examiner:", info:"ALWAYS call for trauma patients. Gen surg — ask your senior; if unsure, call anyway." }
+        ]},
+        { name: "Documents", items: [
+          { info:"Mortality Information Sheet" },
+          { info:"Organ / Tissue Routine Referral Form" },
+          { info:"Medical Examiner form" },
+          { lead:"Death Note:", info:"short paragraph on how the patient died (comfort care + terminal extubation vs unexpected code, no ROSC). Include names/times of everyone you contacted above." },
+          { lead:"Death Summary:", info:"delete the discharge summary if already started — the death summary replaces it." },
+          { lead:"Death Certificate:", info:"complete ASAP if NOT an ME case (if ME takes the case, they complete it). On the Health Commerce System portal. The body cannot be released to family without it — one of the most important documents." }
+        ]}
+      ]
+    }
+  ]
+};
+
+/* ---------- State ---------- */
+let state = load();
+
+function load(){
+  if(AUTHOR_MODE){
+    // author build: full editable state persists (content + checks)
+    try{
+      const raw = localStorage.getItem(STORE_KEY);
+      if(raw){ const p = JSON.parse(raw); if(p && p.cards) return p; }
+    }catch(e){}
+    return structuredClone(SEED);
+  }
+  // resident build: content ALWAYS from SEED; only checkbox states merged from storage
+  const fresh = structuredClone(SEED);
+  try{
+    const raw = localStorage.getItem(CHECK_KEY);
+    if(raw){
+      const checks = JSON.parse(raw) || {};
+      applyChecks(fresh, checks);
+    }
+  }catch(e){}
+  return fresh;
+}
+
+function checkKey(cardId, si, ii){ return cardId + "|" + si + "|" + ii; }
+
+function applyChecks(st, checks){
+  st.cards.forEach(c=>{
+    const groups = Array.isArray(c.subsets)&&c.subsets.length
+      ? c.subsets.map(s=>s.sections) : [c.sections||[]];
+    groups.forEach((secs, gi)=>{
+      secs.forEach((sec,si)=>{
+        (sec.items||[]).forEach((it,ii)=>{
+          const k = checkKey(c.id, (Array.isArray(c.subsets)?gi+":":"")+si, ii);
+          if(checks[k]) it.done = true;
+        });
+      });
+    });
+  });
+}
+
+function save(){
+  if(AUTHOR_MODE){
+    try{ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }catch(e){}
+    return;
+  }
+  // resident build: persist ONLY checkbox states, keyed stably so they survive content updates
+  const checks = {};
+  state.cards.forEach(c=>{
+    const groups = Array.isArray(c.subsets)&&c.subsets.length
+      ? c.subsets.map(s=>s.sections) : [c.sections||[]];
+    groups.forEach((secs, gi)=>{
+      secs.forEach((sec,si)=>{
+        (sec.items||[]).forEach((it,ii)=>{
+          if(it.done){
+            const k = checkKey(c.id, (Array.isArray(c.subsets)?gi+":":"")+si, ii);
+            checks[k] = 1;
+          }
+        });
+      });
+    });
+  });
+  try{ localStorage.setItem(CHECK_KEY, JSON.stringify(checks)); }catch(e){}
+}
+
+/* ---------- Render ---------- */
+const tabsEl = document.getElementById("tabs");
+const mainEl = document.getElementById("main");
+
+function groupOf(card){ return card.type === "reference" ? "reference" : "checklist"; }
+if(!state.group) state.group = "checklist";
+
+function cardsInGroup(){
+  return state.cards.map((c,i)=>({c,i})).filter(x=>groupOf(x.c)===state.group);
+}
+
+function render(){
+  // sync group toggle UI
+  document.querySelectorAll("#groupToggle .grp").forEach(b=>{
+    b.classList.toggle("active", b.dataset.grp===state.group);
+  });
+
+  const inGroup = cardsInGroup();
+  // make sure active card belongs to current group; if not, pick first in group
+  if(!inGroup.some(x=>x.i===state.active)){
+    state.active = inGroup.length ? inGroup[0].i : -1;
+  }
+
+  // tabs (only cards in active group)
+  tabsEl.innerHTML = "";
+  if(inGroup.length===0){
+    const span=document.createElement("span");
+    span.className="no-cards";
+    span.textContent = state.group==="checklist" ? "No checklists yet — tap ＋ to add one." : "No reference cards yet — tap ＋ to add one.";
+    tabsEl.appendChild(span);
+  }
+  inGroup.forEach(({c,i})=>{
+    const t = document.createElement("button");
+    t.className = "tab" + (i===state.active ? " active":"");
+    t.textContent = c.title || "Untitled";
+    t.onclick = ()=>{ state.active=i; save(); render(); };
+    tabsEl.appendChild(t);
+  });
+
+  // cards
+  mainEl.innerHTML = "";
+  if(state.cards.length===0){
+    mainEl.innerHTML = '<div class="empty">No cards yet.<br>Tap ＋ to create your first card.</div>';
+    return;
+  }
+  state.cards.forEach((c,ci)=>{
+    const card = document.createElement("section");
+    card.className = "card" + (ci===state.active ? " active":"");
+
+    // SUBSETS: point c.sections at the active subset so all index logic works unchanged
+    let subAccent = null, subBanner = null;
+    if(Array.isArray(c.subsets) && c.subsets.length){
+      if(typeof c.activeSubset !== "number" || c.activeSubset>=c.subsets.length) c.activeSubset = 0;
+      const sub = c.subsets[c.activeSubset];
+      c.sections = sub.sections;           // live reference — checks/edits persist into the subset
+      subAccent = sub.accent || null;
+      subBanner = sub.banner || null;
+    }
+    if(subAccent) card.style.setProperty("--card-accent", subAccent);
+
+    const isRef = c.type === "reference";
+    const isSchedule = isRef && c.sections.some(s=>s.items.some(it=>it.detail || it.isDetailRow));
+    const isInfo = isRef && c.sections.some(s=>s.items.some(it=>it.info !== undefined || it.sub));
+    const isDrip = isRef && c.sections.some(s=>s.items.some(it=>it.drug !== undefined));
+
+    const total = c.sections.reduce((a,s)=>a+s.items.length,0);
+    const done = c.sections.reduce((a,s)=>a+s.items.filter(x=>x.done).length,0);
+
+    let countLabel;
+    if(isSchedule || isInfo || isDrip) countLabel = "";
+    else if(isRef) countLabel = total + " contacts";
+    else countLabel = done + "/" + total + " done";
+
+    const head = document.createElement("div");
+    head.className="card-head";
+    head.innerHTML = `<div class="card-title"><small>${esc(c.tag||"")}</small>${esc(c.title||"Untitled")}</div>
+      ${countLabel ? `<div class="progress">${countLabel}</div>` : ``}`;
+    card.appendChild(head);
+
+    if(isRef){ renderReference(card, c, ci); mainEl.appendChild(card); return; }
+
+    if(Array.isArray(c.subsets) && c.subsets.length){
+      const sw = document.createElement("div");
+      sw.className = "subset-switch";
+      c.subsets.forEach((sub,si)=>{
+        const b = document.createElement("button");
+        b.className = "subset-btn" + (si===c.activeSubset ? " active":"");
+        b.textContent = sub.name;
+        if(si===c.activeSubset && sub.accent){
+          b.style.background = sub.accent; b.style.borderColor = sub.accent; b.style.color = "#0b1220";
+        }
+        b.onclick = ()=>{ c.activeSubset = si; save(); render(); };
+        sw.appendChild(b);
+      });
+      card.appendChild(sw);
+    }
+
+    if(subBanner){
+      const bn = document.createElement("div");
+      bn.className = "card-banner";
+      bn.textContent = subBanner;
+      card.appendChild(bn);
+    }
+
+    if(c.hasPrefs){
+      const prefsBtn = document.createElement("button");
+      prefsBtn.className = "prefs-btn";
+      const count = (c.prefs||[]).length;
+      prefsBtn.innerHTML = `<span>🩺 Attending Preferences</span><span class="prefs-count">${count} attending${count!==1?"s":""} ›</span>`;
+      prefsBtn.onclick = ()=>openPrefs(ci);
+      card.appendChild(prefsBtn);
+    }
+
+    c.sections.forEach((sec,si)=>{
+      const sEl = document.createElement("div");
+      sEl.className="section";
+      const sHead = document.createElement("div");
+      sHead.className="section-head";
+      sHead.innerHTML = `<span class="sec-name" data-c="${ci}" data-s="${si}">${esc(sec.name)}</span>`;
+      sEl.appendChild(sHead);
+
+      const ul = document.createElement("ul");
+      ul.className="items";
+      sec.items.forEach((it,ii)=>{
+        const li = document.createElement("li");
+        li.className="item"+(it.done?" done":"");
+        li.innerHTML = `
+          <span class="check">✓</span>
+          <span class="label" data-c="${ci}" data-s="${si}" data-i="${ii}">${esc(it.t)}${it.note?`<span class="note">${esc(it.note)}</span>`:""}</span>
+          <button class="del" data-c="${ci}" data-s="${si}" data-i="${ii}">✕</button>`;
+        li.querySelector(".check").parentElement.addEventListener("click",(e)=>{
+          if(document.body.classList.contains("editing")) return;
+          if(e.target.classList.contains("del")) return;
+          it.done = !it.done; save(); render();
+        });
+        li.querySelector(".del").addEventListener("click",(e)=>{
+          e.stopPropagation(); sec.items.splice(ii,1); save(); render();
+        });
+        ul.appendChild(li);
+      });
+      sEl.appendChild(ul);
+
+      const addI = document.createElement("button");
+      addI.className="add-item";
+      addI.textContent = "＋ add item";
+      addI.onclick = ()=>{ sec.items.push({t:"New item",note:""}); save(); render(); };
+      sEl.appendChild(addI);
+
+      card.appendChild(sEl);
+    });
+
+    const addS = document.createElement("button");
+    addS.className="add-section";
+    addS.textContent = "＋ add section";
+    addS.onclick = ()=>{ c.sections.push({name:"New Section",items:[]}); save(); render(); };
+    card.appendChild(addS);
+
+    const actions = document.createElement("div");
+    actions.className="card-actions";
+    const del = document.createElement("button");
+    del.className="del-card";
+    del.textContent="🗑 Delete this card";
+    del.onclick = ()=>{
+      if(confirm("Delete this entire card?")){
+        state.cards.splice(ci,1);
+        state.active = Math.max(0, state.active-1);
+        save(); render();
+      }
+    };
+    actions.appendChild(del);
+    card.appendChild(actions);
+
+    mainEl.appendChild(card);
+  });
+
+  attachEditable();
+
+  // bottom bar: hide "Reset checks" on reference cards (no checkboxes)
+  const activeCard = state.cards[state.active];
+  const isRefActive = activeCard && activeCard.type === "reference";
+  document.getElementById("uncheckAll").style.display = isRefActive ? "none" : "";
+}
+
+function esc(s){return (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+
+/* ---------- Reference (info) card rendering ---------- */
+function renderReference(card, c, ci){
+  if(c.intro){
+    const intro=document.createElement("div");
+    intro.className="card-intro";
+    intro.textContent=c.intro;
+    card.appendChild(intro);
+  }
+  c.sections.forEach((sec,si)=>{
+    const sEl = document.createElement("div");
+    sEl.className="section";
+    const sHead = document.createElement("div");
+    sHead.className="section-head";
+    sHead.innerHTML = `<span class="sec-name" data-c="${ci}" data-s="${si}">${esc(sec.name)}</span>`;
+    sEl.appendChild(sHead);
+
+    const ul = document.createElement("ul");
+    ul.className="items ref-items";
+    sec.items.forEach((it,ii)=>{
+      const li = document.createElement("li");
+      li.className="item ref-row";
+      const phone = (it.phone||"").trim();
+      const tel = phone.replace(/[^\d+]/g,"");
+      const pager = (it.pager||"").trim();
+      const detail = (it.detail||"").trim();
+      const secLabel = c.secondaryLabel !== undefined ? c.secondaryLabel : "pager ";
+      const editing = document.body.classList.contains("editing");
+
+      // DRIP ROW: drug name header + labeled fields (Mix / Dose / Rate / Titrate)
+      if(it.drug !== undefined){
+        li.className = "item drip-row";
+        const rows = (it.fields||[]).map(f=>
+          `<div class="drip-f"><span class="drip-k">${esc(f.k)}</span><span class="drip-v">${esc(f.v)}</span></div>`
+        ).join("");
+        let inner = `<div class="drip-name">${esc(it.drug)}</div><div class="drip-grid">${rows}</div>`;
+        if(it.warn){ inner += `<div class="drip-warn">${esc(it.warn)}</div>`; }
+        if(editing){ inner += `<button class="del" data-c="${ci}" data-s="${si}" data-i="${ii}">✕</button>`; }
+        li.innerHTML = `<div class="drip-wrap">${inner}</div>`;
+        const delBtn = li.querySelector(".del");
+        if(delBtn) delBtn.addEventListener("click",(e)=>{ e.stopPropagation(); sec.items.splice(ii,1); save(); render(); });
+        ul.appendChild(li);
+        return;
+      }
+
+      // INFO ROW: prose bullet (optional bold lead + optional nested sub-bullets)
+      if(it.info !== undefined || it.sub){
+        li.className = "item info-row";
+        const lead = (it.lead||"").trim();
+        const body = (it.info||"").trim();
+        let inner = `<div class="info-main">`;
+        if(lead) inner += `<span class="info-lead">${esc(lead)}</span> `;
+        inner += `<span class="info-text">${esc(body)}</span></div>`;
+        if(Array.isArray(it.sub) && it.sub.length){
+          inner += `<ul class="info-sub">` + it.sub.map(s=>`<li>${esc(s)}</li>`).join("") + `</ul>`;
+        }
+        if(editing){
+          inner += `<button class="del" data-c="${ci}" data-s="${si}" data-i="${ii}">✕</button>`;
+        }
+        li.innerHTML = `<span class="info-bullet"></span><div class="info-wrap">${inner}</div>`;
+        const delBtn = li.querySelector(".del");
+        if(delBtn) delBtn.addEventListener("click",(e)=>{ e.stopPropagation(); sec.items.splice(ii,1); save(); render(); });
+        ul.appendChild(li);
+        return;
+      }
+
+      if(detail || it.isDetailRow){
+        // full-width day row (schedule) — parse "·"-separated events into time + label
+        li.className = "item ref-detail-row";
+        let dCell;
+        if(editing){
+          dCell = `<span class="detail-edit label" data-c="${ci}" data-s="${si}" data-i="${ii}" data-f="detail">${esc(detail)||"details"}</span>`;
+        } else {
+          const events = detail.split("·").map(s=>s.trim()).filter(Boolean);
+          const rows = events.map(ev=>{
+            // pull a leading time like 0600 / 0830 / 10am / 1pm
+            const m = ev.match(/^(\d{3,4}|\d{1,2}\s?[ap]m)\b[:\s]*(.*)$/i);
+            if(m){
+              const time = m[1].replace(/\s+/g,"");
+              const label = m[2].trim();
+              return `<div class="ev"><span class="ev-time">${esc(time)}</span><span class="ev-label">${esc(label)}</span></div>`;
+            }
+            // no leading time (e.g. "Tue 10am" in Other Clinics) — show as-is
+            return `<div class="ev"><span class="ev-label ev-plain">${esc(ev)}</span></div>`;
+          }).join("");
+          dCell = `<div class="ev-list">${rows}</div>`;
+        }
+        li.innerHTML = `
+          <div class="ref-detail-wrap">
+            <span class="ref-name label" data-c="${ci}" data-s="${si}" data-i="${ii}" data-f="name">${esc(it.name||"")}</span>
+            ${dCell}
+          </div>
+          <button class="del" data-c="${ci}" data-s="${si}" data-i="${ii}">✕</button>`;
+        li.querySelector(".del").addEventListener("click",(e)=>{
+          e.stopPropagation(); sec.items.splice(ii,1); save(); render();
+        });
+        ul.appendChild(li);
+        return;
+      }
+
+      const phoneCell = editing
+        ? `<span class="ref-phone-edit label" data-c="${ci}" data-s="${si}" data-i="${ii}" data-f="phone">${esc(phone)||"phone"}</span>`
+        : (phone ? (it.noCall ? `<span class="tel-plain">${esc(phone)}</span>` : `<a class="tel" href="tel:${esc(tel)}">${esc(phone)}</a>`) : `<span class="ref-empty">—</span>`);
+      const secCell = editing
+        ? `<span class="pager-edit label" data-c="${ci}" data-s="${si}" data-i="${ii}" data-f="pager">${esc(pager)||"+ note"}</span>`
+        : (pager ? `<span class="pager">${esc(secLabel)}${esc(pager)}</span>` : ``);
+      li.innerHTML = `
+        <span class="ref-name label" data-c="${ci}" data-s="${si}" data-i="${ii}" data-f="name">${esc(it.name||"")}</span>
+        <span class="ref-contact">
+          ${phoneCell}
+          ${secCell}
+        </span>
+        <button class="del" data-c="${ci}" data-s="${si}" data-i="${ii}">✕</button>`;
+      // in edit mode the phone becomes editable text instead of a call link
+      li.querySelector(".del").addEventListener("click",(e)=>{
+        e.stopPropagation(); sec.items.splice(ii,1); save(); render();
+      });
+      ul.appendChild(li);
+    });
+    sEl.appendChild(ul);
+
+    const addI = document.createElement("button");
+    addI.className="add-item";
+    addI.textContent = "＋ add contact";
+    addI.onclick = ()=>{ sec.items.push({name:"New name",phone:"",pager:""}); save(); render(); };
+    sEl.appendChild(addI);
+
+    card.appendChild(sEl);
+  });
+
+  const addS = document.createElement("button");
+  addS.className="add-section";
+  addS.textContent = "＋ add group";
+  addS.onclick = ()=>{ c.sections.push({name:"New Group",items:[]}); save(); render(); };
+  card.appendChild(addS);
+
+  const actions = document.createElement("div");
+  actions.className="card-actions";
+  const del = document.createElement("button");
+  del.className="del-card";
+  del.textContent="🗑 Delete this card";
+  del.onclick = ()=>{
+    if(confirm("Delete this entire card?")){
+      state.cards.splice(ci,1);
+      state.active = Math.max(0, state.active-1);
+      save(); render();
+    }
+  };
+  actions.appendChild(del);
+  card.appendChild(actions);
+}
+
+/* contenteditable saving */
+function attachEditable(){
+  document.querySelectorAll(".label").forEach(el=>{
+    el.contentEditable = document.body.classList.contains("editing");
+    el.onblur = ()=>{
+      const ci=+el.dataset.c, si=+el.dataset.s, ii=+el.dataset.i;
+      const item = state.cards[ci].sections[si].items[ii];
+      const field = el.dataset.f;
+      if(field==="name"){ item.name = el.innerText.trim(); save(); return; }
+      if(field==="phone"){ let v=el.innerText.trim(); if(v==="phone")v=""; item.phone = v; save(); return; }
+      if(field==="pager"){ let v=el.innerText.trim(); if(v==="+ note")v=""; item.pager = v; save(); return; }
+      if(field==="detail"){ let v=el.innerText.trim(); if(v==="details")v=""; item.detail = v; save(); return; }
+      const noteEl = el.querySelector(".note");
+      const note = noteEl ? noteEl.innerText.trim() : "";
+      let main = el.innerText;
+      if(noteEl) main = main.replace(noteEl.innerText,"");
+      item.t = main.trim();
+      item.note = note;
+      save();
+    };
+  });
+  document.querySelectorAll(".sec-name").forEach(el=>{
+    el.contentEditable = document.body.classList.contains("editing");
+    el.onblur = ()=>{
+      const ci=+el.dataset.c, si=+el.dataset.s;
+      state.cards[ci].sections[si].name = el.innerText.trim();
+      save();
+    };
+  });
+  document.querySelectorAll(".card-title").forEach((el)=>{
+    el.contentEditable = document.body.classList.contains("editing");
+    el.onblur = ()=>{
+      const c = state.cards[state.active];
+      const small = el.querySelector("small");
+      const tag = small ? small.innerText.trim() : "";
+      let title = el.innerText;
+      if(small) title = title.replace(small.innerText,"");
+      c.title = title.trim(); c.tag = tag;
+      save(); render();
+    };
+  });
+}
+
+/* ---------- Controls ---------- */
+document.querySelectorAll("#groupToggle .grp").forEach(btn=>{
+  btn.onclick = ()=>{
+    if(document.body.classList.contains("editing")) return; // avoid losing edits
+    state.group = btn.dataset.grp;
+    save(); render();
+  };
+});
+
+document.getElementById("editToggle").onclick = ()=>{
+  document.body.classList.add("editing"); render();
+};
+document.getElementById("saveBtn").onclick = ()=>{
+  document.body.classList.remove("editing"); save(); render(); toast("Saved");
+};
+document.getElementById("addCardBtn").onclick = ()=>{
+  const inRef = state.group === "reference";
+  const kind = inRef ? "reference (phone/info)" : "checklist";
+  const title = prompt(`New ${kind} card — title?\n(e.g. ${inRef?"Phone Numbers, Codes":"Pre-op, Admit, Discharge"})`);
+  if(title===null) return;
+  const tag = prompt("Hospital / subtitle? (optional, e.g. NUMC)") || "";
+  if(inRef){
+    state.cards.push({ id:"c"+Date.now(), type:"reference", tag, title:title||"Untitled",
+      sections:[{name:"Group 1", items:[{name:"New name",phone:"",pager:""}]}] });
+  } else {
+    state.cards.push({ id:"c"+Date.now(), tag, title:title||"Untitled",
+      sections:[{name:"Section 1", items:[{t:"New item",note:""}]}] });
+  }
+  state.active = state.cards.length-1;
+  document.body.classList.add("editing");
+  save(); render();
+};
+document.getElementById("uncheckAll").onclick = ()=>{
+  const c = state.cards[state.active];
+  if(!c) return;
+  c.sections.forEach(s=>s.items.forEach(i=>i.done=false));
+  save(); render(); toast("Checks reset");
+};
+
+/* ---------- Backup / Restore ---------- */
+const backupModal = document.getElementById("backupModal");
+document.getElementById("backupBtn").onclick = ()=>{ backupModal.classList.add("show"); };
+document.getElementById("closeBackup").onclick = ()=>{ backupModal.classList.remove("show"); };
+backupModal.addEventListener("click", e=>{ if(e.target===backupModal) backupModal.classList.remove("show"); });
+
+function backupString(){ return JSON.stringify(state); }
+
+document.getElementById("copyBackup").onclick = async ()=>{
+  const txt = backupString();
+  try{
+    await navigator.clipboard.writeText(txt);
+    toast("Copied — now paste it somewhere safe");
+  }catch(e){
+    // fallback: show it in the restore box to copy manually
+    const box = document.getElementById("restoreBox");
+    box.value = txt; box.focus(); box.select();
+    toast("Select all & copy this text");
+  }
+};
+
+document.getElementById("downloadBackup").onclick = ()=>{
+  const blob = new Blob([backupString()], {type:"application/json"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  const d = new Date();
+  a.href = url;
+  a.download = `cards-backup-${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}.json`;
+  document.body.appendChild(a); a.click(); a.remove();
+  URL.revokeObjectURL(url);
+  toast("Backup file saved");
+};
+
+document.getElementById("doRestore").onclick = ()=>{
+  const raw = document.getElementById("restoreBox").value.trim();
+  if(!raw){ toast("Paste a backup first"); return; }
+  let parsed;
+  try{ parsed = JSON.parse(raw); }
+  catch(e){ alert("That doesn't look like a valid backup. Make sure you pasted the whole thing."); return; }
+  if(!parsed || !Array.isArray(parsed.cards)){ alert("That backup is missing card data."); return; }
+  if(!confirm("Restore these cards? This replaces everything currently in the app.")) return;
+  state = parsed;
+  if(typeof state.active!=="number" || state.active>=state.cards.length) state.active=0;
+  save(); render();
+  document.getElementById("restoreBox").value="";
+  backupModal.classList.remove("show");
+  toast("Cards restored ✓");
+};
+
+document.getElementById("doAddCard").onclick = ()=>{
+  const raw = document.getElementById("addCardBox").value.trim();
+  if(!raw){ toast("Paste a card first"); return; }
+  let card;
+  try{ card = JSON.parse(raw); }
+  catch(e){ alert("That doesn't look like a valid card. Make sure you pasted the whole thing."); return; }
+  // accept either a bare card object or {cards:[...]}
+  if(card && Array.isArray(card.cards)) card = card.cards[0];
+  if(!card || !Array.isArray(card.sections)){ alert("That card is missing its content."); return; }
+  if(!card.id) card.id = "c"+Date.now();
+  state.cards.push(card);
+  state.active = state.cards.length-1;
+  state.group = groupOf(card);
+  save(); render();
+  document.getElementById("addCardBox").value="";
+  backupModal.classList.remove("show");
+  toast("Card added ✓");
+};
+
+/* ---------- Global search (jump to card) ---------- */
+const searchEl = document.getElementById("search");
+const srEl = document.getElementById("searchResults");
+
+function itemText(it){
+  // works for checklist items, reference contacts, schedule, info rows, and drips
+  const dripText = it.drug ? (it.drug + " " + (it.fields||[]).map(f=>f.k+" "+f.v).join(" ") + " " + (it.warn||"")) : "";
+  return [it.t, it.note, it.name, it.phone, it.pager, it.detail, it.lead, it.info, dripText, ...(it.sub||[])].filter(Boolean).join(" ");
+}
+
+function runSearch(q){
+  q = q.toLowerCase().trim();
+  if(!q){ srEl.classList.remove("show"); srEl.innerHTML=""; return; }
+
+  const hits = [];
+  state.cards.forEach((c,ci)=>{
+    const grp = groupOf(c);
+    const titleHit = (c.title||"").toLowerCase().includes(q) || (c.tag||"").toLowerCase().includes(q);
+    if(titleHit){
+      hits.push({ci, sub:-1, si:-1, ii:-1, grp, card:c, label:(c.tag?c.tag+" — ":"")+(c.title||"Untitled"), matched:c.title});
+    }
+    // iterate subsets if present, otherwise the card's own sections
+    const groupsToScan = Array.isArray(c.subsets)&&c.subsets.length
+      ? c.subsets.map((s,idx)=>({sections:s.sections, sub:idx, subName:s.name}))
+      : [{sections:c.sections||[], sub:-1, subName:null}];
+    groupsToScan.forEach(g=>{
+      g.sections.forEach((sec,si)=>{
+        sec.items.forEach((it,ii)=>{
+          const txt = itemText(it).toLowerCase();
+          if(txt.includes(q)){
+            const secLabel = g.subName ? g.subName+" › "+sec.name : sec.name;
+            hits.push({ci, sub:g.sub, si, ii, grp, card:c, label:it.t||it.name||it.info||it.lead||"(item)", sec:secLabel, matched:it.t||it.name||it.info});
+          }
+        });
+      });
+    });
+  });
+
+  srEl.innerHTML = "";
+  const head = document.createElement("div");
+  head.className="sr-head";
+  head.innerHTML = `<span class="sr-title">${hits.length} result${hits.length!==1?"s":""} for "${esc(q)}"</span>
+    <button class="sr-close" id="srClose">Close</button>`;
+  srEl.appendChild(head);
+  head.querySelector("#srClose").onclick = ()=>{ searchEl.value=""; runSearch(""); };
+
+  if(hits.length===0){
+    const e=document.createElement("div"); e.className="sr-empty";
+    e.textContent="Nothing found. Try a different word.";
+    srEl.appendChild(e);
+  }
+
+  hits.forEach(h=>{
+    const div=document.createElement("div");
+    div.className="sr-hit";
+    const grpName = h.grp==="reference" ? "Reference" : "Checklist";
+    const crumb = h.si>=0 ? `${h.card.title} › ${h.sec}` : `${h.card.title}`;
+    div.innerHTML = `<div class="sr-card">${esc(crumb)} <span class="sr-grp">· ${grpName}</span></div>
+      <div class="sr-match">${highlight(h.label, q)}</div>`;
+    div.onclick = ()=>{ jumpTo(h); };
+    srEl.appendChild(div);
+  });
+
+  srEl.classList.add("show");
+}
+
+function highlight(text, q){
+  text = text||"";
+  const i = text.toLowerCase().indexOf(q);
+  if(i<0) return esc(text);
+  return esc(text.slice(0,i))+"<mark>"+esc(text.slice(i,i+q.length))+"</mark>"+esc(text.slice(i+q.length));
+}
+
+function jumpTo(h){
+  state.group = h.grp;
+  state.active = h.ci;
+  // if the hit is inside a subset, switch to it so the row is visible
+  if(typeof h.sub === "number" && h.sub >= 0){
+    const c = state.cards[h.ci];
+    if(c && Array.isArray(c.subsets)) c.activeSubset = h.sub;
+  }
+  save();
+  searchEl.value="";
+  srEl.classList.remove("show"); srEl.innerHTML="";
+  render();
+  // after render, flash the matched row
+  if(h.si>=0){
+    requestAnimationFrame(()=>{
+      const sel = `.card.active li.item .label[data-c="${h.ci}"][data-s="${h.si}"][data-i="${h.ii}"]`;
+      const lbl = document.querySelector(sel);
+      const row = lbl ? lbl.closest("li.item") : null;
+      if(row){ row.classList.add("flash"); row.scrollIntoView({behavior:"smooth", block:"center"}); }
+    });
+  }
+}
+
+searchEl.addEventListener("input", e=>runSearch(e.target.value));
+
+/* ---------- Attending Preferences overlay ---------- */
+const prefsOverlay = document.getElementById("prefsOverlay");
+const prefsBody = document.getElementById("prefsBody");
+const prefsTitle = document.getElementById("prefsTitle");
+const prefsSearch = document.getElementById("prefsSearch");
+let prefsCardIdx = -1;   // which card's prefs we're viewing
+let prefsView = "list";  // "list" or "detail"
+let prefsAtt = -1;       // which attending index in detail
+
+function openPrefs(ci){
+  prefsCardIdx = ci;
+  prefsView = "list";
+  prefsSearch.value = "";
+  renderPrefs();
+  prefsOverlay.classList.add("show");
+}
+function closePrefs(){ prefsOverlay.classList.remove("show"); }
+
+document.getElementById("prefsBack").onclick = ()=>{
+  if(prefsView==="detail"){ prefsView="list"; renderPrefs(); }
+  else closePrefs();
+};
+
+function renderPrefs(){
+  const card = state.cards[prefsCardIdx];
+  if(!card){ closePrefs(); return; }
+  if(!card.prefs) card.prefs = [];
+  const q = prefsSearch.value.toLowerCase().trim();
+
+  if(prefsView==="list"){
+    prefsTitle.textContent = "Attending Preferences";
+    let list = card.prefs.map((a,idx)=>({a,idx}));
+    if(q){
+      list = list.filter(({a})=>
+        a.attending.toLowerCase().includes(q) ||
+        (a.procedures||[]).some(p=>{
+          const groupText = (p.groups||[]).map(g=>g.label+" "+(g.items||[]).join(" ")).join(" ");
+          return (p.name+" "+(p.setup||"")+" "+groupText).toLowerCase().includes(q);
+        })
+      );
+    }
+    if(list.length===0){
+      prefsBody.innerHTML = `<div class="prefs-empty">${q?"No matches.":"No attendings yet.<br>Tap ＋ to add one."}</div>`;
+      return;
+    }
+    prefsBody.innerHTML = "";
+    list.forEach(({a,idx})=>{
+      const row=document.createElement("div");
+      row.className="att-row";
+      const n=(a.procedures||[]).length;
+      row.innerHTML=`<div><div class="att-name">${esc(a.attending)}</div>
+        <div class="att-meta">${n} procedure${n!==1?"s":""}</div></div><span class="chev">›</span>`;
+      row.onclick=()=>{ prefsAtt=idx; prefsView="detail"; prefsSearch.value=""; renderPrefs(); };
+      prefsBody.appendChild(row);
+    });
+  } else {
+    const a = card.prefs[prefsAtt];
+    if(!a){ prefsView="list"; renderPrefs(); return; }
+    prefsTitle.textContent = a.attending;
+    prefsBody.innerHTML = "";
+
+    // attending-level header preferences (glove size, music, DVT, etc.)
+    if(Array.isArray(a.header) && a.header.length){
+      const hb=document.createElement("div");
+      hb.className="att-header";
+      hb.innerHTML = a.header.map(x=>`<div class="att-h-row"><span class="att-h-lead">${esc(x.lead)}</span> <span class="att-h-val">${esc(x.val)}</span></div>`).join("");
+      prefsBody.appendChild(hb);
+    }
+
+    const block=document.createElement("div");
+    block.className="proc-block";
+    if((a.procedures||[]).length===0){
+      block.innerHTML = `<div class="prefs-empty">No procedures listed yet.</div>`;
+    } else {
+      a.procedures.forEach(p=>{
+        const pc=document.createElement("div");
+        pc.className="proc-card";
+        let html=`<div class="proc-name">${esc(p.name)}</div>`;
+        if(Array.isArray(p.groups) && p.groups.length){
+          html += p.groups.map(g=>{
+            const items = (g.items||[]).map(it=>`<li>${esc(it)}</li>`).join("");
+            return `<div class="proc-group"><div class="proc-glabel">${esc(g.label)}</div><ul class="proc-list">${items}</ul></div>`;
+          }).join("");
+        } else if(p.setup){
+          html += `<div class="proc-setup">${esc(p.setup)}</div>`;
+        }
+        pc.innerHTML = html;
+        block.appendChild(pc);
+      });
+    }
+    prefsBody.appendChild(block);
+  }
+}
+
+prefsSearch.addEventListener("input", ()=>{ if(prefsView==="list") renderPrefs(); });
+
+document.getElementById("prefsAdd").onclick = ()=>{
+  const card = state.cards[prefsCardIdx];
+  if(!card) return;
+  if(!card.prefs) card.prefs=[];
+  if(prefsView==="list"){
+    const name = prompt("Attending name? (e.g. Dr. Mehta)");
+    if(!name) return;
+    card.prefs.push({attending:name.trim(), procedures:[]});
+    save(); renderPrefs(); render();
+  } else {
+    const a = card.prefs[prefsAtt];
+    const pname = prompt("Procedure name? (e.g. Lap Chole)");
+    if(!pname) return;
+    const setup = prompt("Setup notes? (positioning, equipment, etc.)") || "";
+    a.procedures.push({name:pname.trim(), setup:setup.trim()});
+    save(); renderPrefs();
+  }
+};
+
+function toast(msg){
+  const t=document.getElementById("toast");
+  t.textContent=msg; t.classList.add("show");
+  clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove("show"),1400);
+}
+
+/* ---------- Build mode setup ---------- */
+function applyBuildMode(){
+  if(!AUTHOR_MODE){
+    document.body.classList.add("resident");
+    // hide content-editing controls
+    ["editToggle","addCardBtn","backupBtn","prefsAdd"].forEach(id=>{
+      const el=document.getElementById(id); if(el) el.style.display="none";
+    });
+    // never allow edit mode
+    document.body.classList.remove("editing");
+  }
+  // version stamp (both builds, so you can confirm what's live)
+  const stamp=document.createElement("div");
+  stamp.className="version-stamp";
+  stamp.textContent = (AUTHOR_MODE?"author · ":"") + "v" + CONTENT_VERSION;
+  document.body.appendChild(stamp);
+}
+applyBuildMode();
+
+/* ---------- PWA: offline service worker (external sw.js) ---------- */
+if("serviceWorker" in navigator && location.protocol === "https:"){
+  window.addEventListener("load", ()=>{ navigator.serviceWorker.register("sw.js").catch(()=>{}); });
+}
+
+render();
+</script>
+</body>
+</html>
