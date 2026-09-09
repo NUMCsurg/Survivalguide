@@ -1,7 +1,7 @@
 /* NUMC Surgical Cards — offline service worker
    Cache-first so the app opens instantly and works with no signal.
    Bump CACHE when you publish a new version to force-refresh content. */
-const CACHE = "surgcards-2026.09.09";
+const CACHE = "surgcards-2026.09.09c";
 const CORE = ["./", "./index.html"];
 
 self.addEventListener("install", (e) => {
