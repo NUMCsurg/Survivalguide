@@ -421,7 +421,7 @@
    AUTHOR_MODE = false → resident build: content is read-only & always from SEED,
                           only checkbox states persist on the resident's device. */
 const AUTHOR_MODE = false;
-const CONTENT_VERSION = "2026.09.09c";   // bump this whenever you publish new content
+const CONTENT_VERSION = "2026.09.23";   // bump this whenever you publish new content
 
 const STORE_KEY = "surgical_cards_v1";          // author-mode full state
 const CHECK_KEY = "surgical_cards_checks_v1";    // resident-mode checkbox states only
@@ -1841,6 +1841,11 @@ const SEED = {
       tag: "VERY IMPORTANT",
       title: "Death",
       sections: [
+        { name: "⚠ Brain Death — Ancillary Testing", items: [
+          { lead:"STOP — before ANY ancillary test:", info:"If brain death cannot be declared by clinical exam and any ancillary test is needed (e.g. brain perfusion / nuclear flow scan, EEG, angiography), the \"Pronouncing Death\" checklist form on ITWeb MUST be completed FIRST." },
+          { lead:"Tell the attending:", info:"the ITWeb Pronouncing Death checklist has to be filled out before the test is ordered or performed — the test cannot proceed without it." },
+          { info:"This applies whenever clinical brain-death criteria can't be met and you're reaching for ancillary confirmation. Do not obtain the scan first and paperwork later." }
+        ]},
         { name: "Notify", items: [
           { lead:"Senior resident", info:"" },
           { lead:"Family member:", info:"get their name, relationship, and phone number." },
